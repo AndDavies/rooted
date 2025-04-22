@@ -10,6 +10,7 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Progress } from '@/components/ui/progress';
+import { Card, CardContent } from "@/components/ui/card";
 
 // Define the structure for answers state
 type Answer = string | string[] | null; // string for single choice/text, string[] for checkbox
@@ -217,141 +218,139 @@ export function SurveyForm() {
           {currentSection.questions.filter(shouldShowQuestion).map((question) => {
              const questionError = validationErrors[question.id];
              return (
-                <div key={question.id} className="space-y-3 pb-4 border-b last:border-b-0">
-                    <Label htmlFor={question.id} className="text-lg font-semibold block">
-                        {question.text}
-                        {question.required && <span className="text-destructive ml-1">*</span>}
-                        {question.selectMax && <span className="text-sm text-muted-foreground ml-2">(Select up to {question.selectMax})</span>}
-                    </Label>
+                <Card key={question.id} className="overflow-hidden">
+                    <CardContent className="pt-6 space-y-4">
+                        <Label htmlFor={question.id} className="text-lg font-bold block">
+                            {question.text}
+                            {question.required && <span className="text-destructive ml-1">*</span>}
+                            {question.selectMax && <span className="text-sm text-muted-foreground ml-2">(Select up to {question.selectMax})</span>}
+                        </Label>
 
-                    {/* Radio Group */} 
-                    {question.type === 'radio' && question.options && (
-                        <RadioGroup
-                            id={question.id}
-                            value={answers[question.id] as string || ''}
-                            onValueChange={(value) => handleRadioChange(question.id, value)}
-                            className="space-y-2"
-                        >
-                        {question.options.map((option) => {
-                           const specifyKey = `${question.id}_${option.id}`;
-                           const specifyError = validationErrors[specifyKey];
-                            return (
-                                <div key={option.id} className="flex flex-wrap items-center space-x-2">
-                                    <div className="flex items-center space-x-2 flex-shrink-0">
-                                        <RadioGroupItem value={option.id} id={`${question.id}-${option.id}`} />
-                                        <Label htmlFor={`${question.id}-${option.id}`} className="font-normal">
-                                            {option.label}
-                                        </Label>
-                                    </div>
-                                    {option.specify && answers[question.id] === option.id && (
-                                        <div className="flex-grow pl-6 sm:pl-0 sm:ml-4 mt-1 sm:mt-0 w-full sm:w-auto">
-                                            <Input
-                                                type="text"
-                                                placeholder="Please specify"
-                                                value={specifyValues[specifyKey] || ''}
-                                                onChange={(e) => handleSpecifyChange(question.id, option.id, e.target.value)}
-                                                className={`h-8 flex-grow ${specifyError ? 'border-destructive' : ''}`}
-                                                aria-describedby={specifyError ? `${specifyKey}-error` : undefined}
-                                            />
-                                             {specifyError && <p id={`${specifyKey}-error`} className="text-sm text-destructive mt-1">{specifyError}</p>}
+                        <div className="space-y-2">
+                            {question.type === 'radio' && question.options && (
+                                <RadioGroup
+                                    id={question.id}
+                                    value={answers[question.id] as string || ''}
+                                    onValueChange={(value) => handleRadioChange(question.id, value)}
+                                    className="space-y-2"
+                                >
+                                {question.options.map((option) => {
+                                   const specifyKey = `${question.id}_${option.id}`;
+                                   const specifyError = validationErrors[specifyKey];
+                                    return (
+                                        <div key={option.id} className="flex flex-wrap items-center space-x-2">
+                                            <div className="flex items-center space-x-2 flex-shrink-0">
+                                                <RadioGroupItem value={option.id} id={`${question.id}-${option.id}`} />
+                                                <Label htmlFor={`${question.id}-${option.id}`} className="font-normal">
+                                                    {option.label}
+                                                </Label>
+                                            </div>
+                                            {option.specify && answers[question.id] === option.id && (
+                                                <div className="flex-grow pl-6 sm:pl-0 sm:ml-4 mt-1 sm:mt-0 w-full sm:w-auto">
+                                                    <Input
+                                                        type="text"
+                                                        placeholder="Please specify"
+                                                        value={specifyValues[specifyKey] || ''}
+                                                        onChange={(e) => handleSpecifyChange(question.id, option.id, e.target.value)}
+                                                        className={`h-8 flex-grow ${specifyError ? 'border-destructive' : ''}`}
+                                                        aria-describedby={specifyError ? `${specifyKey}-error` : undefined}
+                                                    />
+                                                     {specifyError && <p id={`${specifyKey}-error`} className="text-sm text-destructive mt-1">{specifyError}</p>}
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
-                                </div>
-                            );
-                        })}
-                        </RadioGroup>
-                    )}
+                                    );
+                                })}
+                                </RadioGroup>
+                            )}
 
-                    {/* Checkbox Group */}
-                    {question.type === 'checkbox' && question.options && (
-                        <div id={question.id} className="space-y-2">
-                        {question.options.map((option) => {
-                            const currentAnswers = answers[question.id] as string[] | undefined ?? [];
-                            const isChecked = currentAnswers.includes(option.id);
-                            let isDisabled = false;
-                            if (!isChecked && typeof question.selectMax === 'number' && question.selectMax > 0) {
-                                isDisabled = currentAnswers.length >= question.selectMax;
-                            }
-                            const specifyKey = `${question.id}_${option.id}`;
-                            const specifyError = validationErrors[specifyKey];
-                            return (
-                                <div key={option.id} className="flex flex-wrap items-center space-x-2">
-                                     <div className="flex items-center space-x-2 flex-shrink-0">
-                                        <Checkbox
-                                            id={`${question.id}-${option.id}`}
-                                            checked={isChecked}
-                                            onCheckedChange={(checked) => handleCheckboxChange(question.id, option.id, checked as boolean | 'indeterminate', question.selectMax)}
-                                            disabled={isDisabled}
-                                        />
-                                        <Label htmlFor={`${question.id}-${option.id}`} className={`font-normal ${isDisabled ? 'text-muted-foreground' : ''}`}>
-                                            {option.label}
-                                        </Label>
-                                    </div>
-                                    {option.specify && isChecked && (
-                                        <div className="flex-grow pl-6 sm:pl-0 sm:ml-4 mt-1 sm:mt-0 w-full sm:w-auto">
-                                            <Input
-                                                type="text"
-                                                placeholder="Please specify"
-                                                value={specifyValues[specifyKey] || ''}
-                                                onChange={(e) => handleSpecifyChange(question.id, option.id, e.target.value)}
-                                                className={`h-8 flex-grow ${specifyError ? 'border-destructive' : ''}`}
-                                                 aria-describedby={specifyError ? `${specifyKey}-error` : undefined}
-                                            />
-                                            {specifyError && <p id={`${specifyKey}-error`} className="text-sm text-destructive mt-1">{specifyError}</p>}
+                            {question.type === 'checkbox' && question.options && (
+                                <div id={question.id} className="space-y-2">
+                                {question.options.map((option) => {
+                                    const currentAnswers = answers[question.id] as string[] | undefined ?? [];
+                                    const isChecked = currentAnswers.includes(option.id);
+                                    let isDisabled = false;
+                                    if (!isChecked && typeof question.selectMax === 'number' && question.selectMax > 0) {
+                                        isDisabled = currentAnswers.length >= question.selectMax;
+                                    }
+                                    const specifyKey = `${question.id}_${option.id}`;
+                                    const specifyError = validationErrors[specifyKey];
+                                    return (
+                                        <div key={option.id} className="flex flex-wrap items-center space-x-2">
+                                             <div className="flex items-center space-x-2 flex-shrink-0">
+                                                <Checkbox
+                                                    id={`${question.id}-${option.id}`}
+                                                    checked={isChecked}
+                                                    onCheckedChange={(checked) => handleCheckboxChange(question.id, option.id, checked as boolean | 'indeterminate', question.selectMax)}
+                                                    disabled={isDisabled}
+                                                />
+                                                <Label htmlFor={`${question.id}-${option.id}`} className={`font-normal ${isDisabled ? 'text-muted-foreground' : ''}`}>
+                                                    {option.label}
+                                                </Label>
+                                            </div>
+                                            {option.specify && isChecked && (
+                                                <div className="flex-grow pl-6 sm:pl-0 sm:ml-4 mt-1 sm:mt-0 w-full sm:w-auto">
+                                                    <Input
+                                                        type="text"
+                                                        placeholder="Please specify"
+                                                        value={specifyValues[specifyKey] || ''}
+                                                        onChange={(e) => handleSpecifyChange(question.id, option.id, e.target.value)}
+                                                        className={`h-8 flex-grow ${specifyError ? 'border-destructive' : ''}`}
+                                                         aria-describedby={specifyError ? `${specifyKey}-error` : undefined}
+                                                    />
+                                                    {specifyError && <p id={`${specifyKey}-error`} className="text-sm text-destructive mt-1">{specifyError}</p>}
+                                                </div>
+                                            )}
                                         </div>
-                                    )}
+                                    );
+                                })}
                                 </div>
-                            );
-                        })}
+                            )}
+
+                            {question.type === 'text' && (
+                                <Input
+                                id={question.id}
+                                type="text"
+                                placeholder={question.placeholder}
+                                value={answers[question.id] as string || ''}
+                                onChange={(e) => handleTextChange(question.id, e.target.value)}
+                                required={question.required}
+                                className={questionError ? 'border-destructive' : ''}
+                                 aria-describedby={questionError ? `${question.id}-error` : undefined}
+                                />
+                            )}
+
+                            {question.type === 'textarea' && (
+                                <Textarea
+                                id={question.id}
+                                placeholder={question.placeholder}
+                                value={answers[question.id] as string || ''}
+                                onChange={(e) => handleTextChange(question.id, e.target.value)}
+                                required={question.required}
+                                rows={4}
+                                 className={questionError ? 'border-destructive' : ''}
+                                 aria-describedby={questionError ? `${question.id}-error` : undefined}
+                                />
+                            )}
+
+                            {question.type === 'email' && (
+                                <Input
+                                id={question.id}
+                                type="email"
+                                placeholder={question.placeholder}
+                                value={answers[question.id] as string || ''}
+                                onChange={(e) => handleTextChange(question.id, e.target.value)}
+                                required={question.required}
+                                className={questionError ? 'border-destructive' : ''}
+                                aria-describedby={questionError ? `${question.id}-error` : undefined}
+                                // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                />
+                            )}
                         </div>
-                    )}
 
-                    {/* Text Input */}
-                    {question.type === 'text' && (
-                        <Input
-                        id={question.id}
-                        type="text"
-                        placeholder={question.placeholder}
-                        value={answers[question.id] as string || ''}
-                        onChange={(e) => handleTextChange(question.id, e.target.value)}
-                        required={question.required}
-                        className={questionError ? 'border-destructive' : ''}
-                         aria-describedby={questionError ? `${question.id}-error` : undefined}
-                        />
-                    )}
-
-                    {/* Textarea Input */}
-                    {question.type === 'textarea' && (
-                        <Textarea
-                        id={question.id}
-                        placeholder={question.placeholder}
-                        value={answers[question.id] as string || ''}
-                        onChange={(e) => handleTextChange(question.id, e.target.value)}
-                        required={question.required}
-                        rows={4}
-                         className={questionError ? 'border-destructive' : ''}
-                         aria-describedby={questionError ? `${question.id}-error` : undefined}
-                        />
-                    )}
-
-                    {/* Email Input */}
-                    {question.type === 'email' && (
-                        <Input
-                        id={question.id}
-                        type="email"
-                        placeholder={question.placeholder}
-                        value={answers[question.id] as string || ''}
-                        onChange={(e) => handleTextChange(question.id, e.target.value)}
-                        required={question.required}
-                        className={questionError ? 'border-destructive' : ''}
-                        aria-describedby={questionError ? `${question.id}-error` : undefined}
-                        // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                        />
-                    )}
-
-                    {/* Validation Error Message */} 
-                    {questionError && <p id={`${question.id}-error`} className="text-sm text-destructive mt-1">{questionError}</p>}
-                </div>
+                         {questionError && <p id={`${question.id}-error`} className="text-sm text-destructive mt-1">{questionError}</p>}
+                    </CardContent>
+                </Card>
              );
           })}
         </section>
