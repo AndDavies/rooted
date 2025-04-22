@@ -178,6 +178,13 @@ export function SurveyForm() {
     }
   };
 
+  // Handler for the "Let's begin" button
+  const handleBeginClick = () => {
+    const sectionElement = document.getElementById(currentSection.id);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
 
   // --- Rendering ---
 
@@ -194,10 +201,16 @@ export function SurveyForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-8 w-full">
-        {/* Introduction Text (Shown only before first section?) Or maybe always visible? Let's keep it visible */}
+        {/* Introduction Block */}
          <div className="mb-8 p-6 border rounded-lg shadow-sm bg-card text-card-foreground">
-            <h1 className="text-3xl font-bold mb-4">{surveyData.title}</h1>
-            <p className="text-muted-foreground">{surveyData.introduction}</p>
+            <h1 className="text-3xl font-bold mb-4 text-center">{surveyData.title}</h1>
+            <p className="text-muted-foreground whitespace-pre-line">{surveyData.introduction}</p>
+            {/* Add centered "Let's begin" button */} 
+            <div className="flex justify-center mt-6">
+                <Button type="button" onClick={handleBeginClick} size="lg">
+                    Let's begin
+                </Button>
+            </div>
         </div>
 
         {/* Progress Bar */}
@@ -207,15 +220,15 @@ export function SurveyForm() {
         </div>
 
         {/* Render ONLY the Current Section */}
-        <section key={currentSection.id} id={currentSection.id} className="space-y-8 p-6 border rounded-lg shadow-sm bg-card text-card-foreground">
-          <div>
-            <h2 className="text-2xl font-bold mb-2">{currentSection.title}</h2>
-            {currentSection.introduction && (
-              <p className="text-muted-foreground mb-6">{currentSection.introduction}</p>
-            )}
-          </div>
+        <section key={currentSection.id} id={currentSection.id} className="space-y-6 scroll-mt-20"> {/* Added scroll-mt for offset */}
+            <div>
+                <h2 className="text-2xl font-bold mb-2">{currentSection.title}</h2>
+                {currentSection.introduction && (
+                    <p className="text-muted-foreground mb-6">{currentSection.introduction}</p>
+                )}
+            </div>
 
-          {currentSection.questions.filter(shouldShowQuestion).map((question) => {
+            {currentSection.questions.filter(shouldShowQuestion).map((question) => {
              const questionError = validationErrors[question.id];
              return (
                 <Card key={question.id} className="overflow-hidden">
@@ -352,7 +365,7 @@ export function SurveyForm() {
                     </CardContent>
                 </Card>
              );
-          })}
+            })}
         </section>
 
       {/* Navigation Buttons */}

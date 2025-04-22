@@ -3,7 +3,7 @@ import { SurveyData } from '@/types/survey';
 export const surveyData: SurveyData = {
   title: 'Rooted™ Executive Reset Survey',
   introduction:
-    'Thank you for participating in our survey to shape a transformative wellness experience for visionary leaders. Your insights will help us design a premium, science-backed program to reset your energy, focus, and resilience, addressing the hidden toll of high performance. This survey takes approximately 10-12 minutes to complete. All responses are confidential.',
+    'Thank you for taking the time to complete this survey, designed to shape a transformative, science-backed wellness experience for visionary leaders like you. \nIn the relentless pace of high-performance life, it’s easy to overlook the toll on your physical, mental, and emotional well-being. \n\nThis questionnaire invites you to pause and reflect on your habits, challenges, and aspirations around nutrition, energy, sleep, and overall health. \n\nYour honest and detailed responses will help us understand the obstacles you face and tailor a program to support sustainable changes, empowering you to lead with clarity, resilience, and vitality. \n\nThe survey is anonymous, and all data will be treated confidentially, used solely to refine the Rooted™ program, and deleted afterward. The survey takes approximately 10-12 minutes. \n\nThere are no wrong answers—your insights are invaluable in helping us help leaders thrive.',
   thankYouMessage: 'Thank you for completing the survey! We appreciate your valuable insights.',
   sections: [
     // Section 1: About You
