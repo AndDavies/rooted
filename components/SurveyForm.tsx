@@ -208,7 +208,7 @@ export function SurveyForm() {
             {/* Add centered "Let's begin" button */} 
             <div className="flex justify-center mt-6">
                 <Button type="button" onClick={handleBeginClick} size="lg">
-                    Let's begin
+                    Let&apos;s begin
                 </Button>
             </div>
         </div>
