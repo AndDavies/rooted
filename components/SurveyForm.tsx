@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { surveyData } from '@/data/surveyQuestions';
 import type { Section, Question } from '@/types/survey';
 import { Button } from '@/components/ui/button';
@@ -32,6 +32,19 @@ export function SurveyForm() {
 
   const totalSections = surveyData.sections.length;
   const currentSection = useMemo(() => surveyData.sections[currentSectionIndex], [currentSectionIndex]);
+
+  // Effect to scroll to the top of the section when index changes
+  useEffect(() => {
+    // Skip scrolling on initial load (index 0)
+    if (currentSectionIndex > 0) {
+        const sectionElement = document.getElementById(currentSection.id);
+        if (sectionElement) {
+            console.log(`Scrolling to section: ${currentSection.id}`);
+            sectionElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    // Depend on the section ID as well to ensure it runs after the correct section is determined
+  }, [currentSectionIndex, currentSection.id]);
 
   // --- Handler Functions ---
 
@@ -130,6 +143,12 @@ export function SurveyForm() {
     if (!validateSection(currentSection)) {
         console.log("Validation errors:", validationErrors);
         // Optionally scroll to the first error
+        const firstErrorKey = Object.keys(validationErrors)[0];
+        if (firstErrorKey) {
+            // Attempt to find the element related to the error
+            const errorElement = document.getElementById(firstErrorKey) || document.querySelector(`[aria-describedby*="${firstErrorKey}"]`);
+            errorElement?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
         return;
     }
     setValidationErrors({}); // Clear errors before moving
