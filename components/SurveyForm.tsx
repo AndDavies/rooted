@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback, useMemo } from 'react';
 import { surveyData } from '@/data/surveyQuestions';
-import type { SurveyData, Section, Question, Option } from '@/types/survey';
+import type { Section, Question } from '@/types/survey';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
