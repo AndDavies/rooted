@@ -1,0 +1,618 @@
+{
+  "title": "Rooted™ Executive Reset Survey",
+  "introduction": "First of all, thank you for your time and willingness to complete this questionnaire. In the busyness of everyday life, we often forget to pause and reflect on how we care for ourselves — physically, mentally, and emotionally.\n\nThis questionnaire is designed not only to help you reflect on your habits and challenges around nutrition, energy, and overall well-being, but also to gather valuable insights to better support leaders like you.\n\nWe aim to gain an understanding of your lifestyle habits, the obstacles you face in achieving the life you want, and how we can support leaders in making sustainable changes.\n\nPlease take a moment to answer the questions thoroughly and honestly. The more detailed and open your responses, the better we can understand what helps you perform at your best — both at work and in your personal life.\n\nThere are no wrong answers. This is about your personal experiences, habits, and challenges. The survey is completely anonymous, and all data will be treated confidentially. Your input will only be used for shaping the academy program and will be deleted afterward.\n\nThank you again for your openness and valuable time. Let’s explore where you currently stand and how you can live and work with more balance and energy.",
+  "thankYouMessage": "Thank you for completing the survey! We appreciate your valuable insights.",
+  "sections": [
+    {
+      "id": "personal-info",
+      "title": "Personal Information",
+      "introduction": "Please provide your email address to receive updates about the Rooted™ program. Your information will be kept confidential.",
+      "questions": [
+        {
+          "id": "email",
+          "text": "Email Address:",
+          "type": "email",
+          "required": false,
+          "placeholder": "your.email@example.com"
+        }
+      ]
+    },
+    {
+      "id": "about-you",
+      "title": "About You",
+      "questions": [
+        {
+          "id": "age-range",
+          "text": "What is your age range?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "age-under-30", "label": "Under 30" },
+            { "id": "age-30-39", "label": "30-39" },
+            { "id": "age-40-49", "label": "40-49" },
+            { "id": "age-50-59", "label": "50-59" },
+            { "id": "age-60-plus", "label": "60+" }
+          ]
+        },
+        {
+          "id": "gender",
+          "text": "What is your gender?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "gender-male", "label": "Male" },
+            { "id": "gender-female", "label": "Female" },
+            { "id": "gender-non-binary", "label": "Non-binary" },
+            { "id": "gender-prefer-not-say", "label": "Prefer not to say" }
+          ]
+        },
+        {
+          "id": "income",
+          "text": "What is your annual household income (in USD)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "income-under-150k", "label": "Under $150,000" },
+            { "id": "income-150k-249k", "label": "$150,000-$249,999" },
+            { "id": "income-250k-499k", "label": "$250,000-$499,999" },
+            { "id": "income-500k-999k", "label": "$500,000-$999,999" },
+            { "id": "income-1m-plus", "label": "$1,000,000+" },
+            { "id": "income-prefer-not-say", "label": "Prefer not to say" }
+          ]
+        },
+        {
+          "id": "professional-role",
+          "text": "What is your professional role? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "role-c-suite", "label": "C-suite Executive (CEO, CFO, etc.)" },
+            { "id": "role-founder", "label": "Founder/Entrepreneur" },
+            { "id": "role-senior-manager", "label": "Senior Manager/Director" },
+            { "id": "role-consultant", "label": "Consultant" },
+            { "id": "role-other", "label": "Other (please specify)", "specify": true }
+          ]
+        },
+        {
+          "id": "company-size",
+          "text": "If you are an entrepreneur or founder, what is the size of your company?",
+          "type": "radio",
+          "required": false,
+          "conditionalOn": "professional-role",
+          "conditionalValue": "role-founder",
+          "options": [
+            { "id": "size-na", "label": "N/A (Not an entrepreneur)" },
+            { "id": "size-1-10", "label": "1-10 employees" },
+            { "id": "size-11-50", "label": "11-50 employees" },
+            { "id": "size-51-200", "label": "51-200 employees" },
+            { "id": "size-201-plus", "label": "201+ employees" }
+          ]
+        },
+        {
+          "id": "education",
+          "text": "What is your highest level of education?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "edu-high-school", "label": "High school or equivalent" },
+            { "id": "edu-bachelors", "label": "Bachelor's degree" },
+            { "id": "edu-masters", "label": "Master's degree" },
+            { "id": "edu-doctorate", "label": "Doctorate or professional degree (e.g., JD, MD)" },
+            { "id": "edu-other", "label": "Other (please specify)", "specify": true }
+          ]
+        },
+        {
+          "id": "industry",
+          "text": "In which industry do you primarily work?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "ind-tech", "label": "Technology" },
+            { "id": "ind-finance", "label": "Finance" },
+            { "id": "ind-healthcare", "label": "Healthcare" },
+            { "id": "ind-consulting", "label": "Consulting" },
+            { "id": "ind-manufacturing", "label": "Manufacturing" },
+            { "id": "ind-other", "label": "Other (please specify)", "specify": true }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "burnout-coping",
+      "title": "Burnout and Coping Mechanisms",
+      "questions": [
+        {
+          "id": "burnout-frequency",
+          "text": "How often do you experience symptoms of burnout (e.g., fatigue, reduced focus, irritability, or feeling disconnected)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "freq-daily", "label": "Daily" },
+            { "id": "freq-weekly", "label": "Weekly" },
+            { "id": "freq-monthly", "label": "Monthly" },
+            { "id": "freq-rarely", "label": "Rarely" },
+            { "id": "freq-never", "label": "Never" }
+          ]
+        },
+        {
+          "id": "burnout-challenges",
+          "text": "Which of the following burnout-related challenges have you faced in the past year? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "chal-stress", "label": "Chronic stress or anxiety" },
+            { "id": "chal-sleep", "label": "Poor sleep quality" },
+            { "id": "chal-decision", "label": "Difficulty making decisions" },
+            { "id": "chal-physical", "label": "Physical health issues (e.g., weight gain, fatigue)" },
+            { "id": "chal-misaligned", "label": "Feeling misaligned with personal or professional goals" },
+            { "id": "chal-other", "label": "Other (please specify)", "specify": true },
+            { "id": "chal-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "coping-mechanisms",
+          "text": "What coping mechanisms do you currently use to manage stress or burnout? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "cope-exercise", "label": "Exercise" },
+            { "id": "cope-mindfulness", "label": "Mindfulness practices (e.g., meditation, breathwork)" },
+            { "id": "cope-social", "label": "Socializing with friends or family" },
+            { "id": "cope-alcohol", "label": "Alcohol consumption" },
+            { "id": "cope-smoking", "label": "Smoking or vaping (e.g., cigarettes, e-cigarettes)" },
+            { "id": "cope-drugs", "label": "Recreational drug use" },
+            { "id": "cope-other", "label": "Other (please specify)", "specify": true },
+            { "id": "cope-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "substance-frequency",
+          "text": "How often do you use substances like alcohol, cigarettes, or recreational drugs to cope with stress or unwind?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "sub-freq-daily", "label": "Daily" },
+            { "id": "sub-freq-weekly", "label": "Weekly" },
+            { "id": "sub-freq-monthly", "label": "Monthly" },
+            { "id": "sub-freq-rarely", "label": "Rarely" },
+            { "id": "sub-freq-never", "label": "Never" }
+          ]
+        },
+        {
+          "id": "interest-reduce-substance",
+          "text": "How interested are you in reducing your reliance on substances (e.g., alcohol, cigarettes, drugs) as a coping mechanism?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "reduce-very", "label": "Very interested" },
+            { "id": "reduce-somewhat", "label": "Somewhat interested" },
+            { "id": "reduce-neutral", "label": "Neutral" },
+            { "id": "reduce-not", "label": "Not interested" }
+          ]
+        },
+        {
+          "id": "substance-free-appeal",
+          "text": "Rooted™ offers a substance-free 6-day reset to recalibrate your nervous system, restore energy, and enhance clarity through science-backed practices and nature immersion. How appealing is a substance-free retreat to you?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "appeal-extreme", "label": "Extremely appealing" },
+            { "id": "appeal-moderate", "label": "Moderately appealing" },
+            { "id": "appeal-neutral", "label": "Neutral" },
+            { "id": "appeal-not", "label": "Not appealing" }
+          ]
+        },
+        {
+          "id": "reset-outcomes",
+          "text": "What outcomes would you most value from a reset experience? (Select up to 3)",
+          "type": "checkbox",
+          "required": true,
+          "selectMax": 3,
+          "options": [
+            { "id": "outcome-stress", "label": "Reduced stress and cortisol levels" },
+            { "id": "outcome-clarity", "label": "Improved mental clarity and decision-making" },
+            { "id": "outcome-energy", "label": "Enhanced physical energy and vitality" },
+            { "id": "outcome-alignment", "label": "Stronger alignment with personal purpose" },
+            { "id": "outcome-community", "label": "Connection with a community of like-minded leaders" },
+            { "id": "outcome-other", "label": "Other (please specify)", "specify": true }
+          ]
+        },
+        {
+          "id": "importance-burnout-recovery",
+          "text": "How important is it for you to address burnout and prioritize recovery to sustain your performance as a leader?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "importance-extreme", "label": "Extremely important" },
+            { "id": "importance-moderate", "label": "Moderately important" },
+            { "id": "importance-neutral", "label": "Neutral" },
+            { "id": "importance-not", "label": "Not important" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wellness-performance",
+      "title": "Wellness and Performance",
+      "questions": [
+        {
+          "id": "sleep-hours",
+          "text": "How many hours of sleep do you typically get per night?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "sleep-lt-5", "label": "Less than 5 hours" },
+            { "id": "sleep-5-6", "label": "5-6 hours" },
+            { "id": "sleep-6-7", "label": "6-7 hours" },
+            { "id": "sleep-7-8", "label": "7-8 hours" },
+            { "id": "sleep-gt-8", "label": "More than 8 hours" }
+          ]
+        },
+        {
+          "id": "sleep-quality",
+          "text": "How would you rate the quality of your sleep?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "quality-excellent", "label": "Excellent" },
+            { "id": "quality-good", "label": "Good" },
+            { "id": "quality-fair", "label": "Fair" },
+            { "id": "quality-poor", "label": "Poor" }
+          ]
+        },
+        {
+          "id": "sleep-challenges",
+          "text": "What challenges do you face in achieving restful sleep? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "sleep-chal-falling", "label": "Difficulty falling asleep" },
+            { "id": "sleep-chal-waking", "label": "Waking up during the night" },
+            { "id": "sleep-chal-stress", "label": "Stress or racing thoughts" },
+            { "id": "sleep-chal-schedule", "label": "Irregular schedule" },
+            { "id": "sleep-chal-other", "label": "Other (please specify)", "specify": true },
+            { "id": "sleep-chal-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "nutrition-habits",
+          "text": "How would you describe your current nutrition habits?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "nutri-very-healthy", "label": "Very healthy (e.g., balanced, whole foods, anti-inflammatory)" },
+            { "id": "nutri-moderate", "label": "Moderately healthy (e.g., mostly balanced but occasional processed foods)" },
+            { "id": "nutri-unhealthy", "label": "Unhealthy (e.g., frequent processed foods, irregular meals)" },
+            { "id": "nutri-inconsistent", "label": "Inconsistent (e.g., varies widely day to day)" }
+          ]
+        },
+        {
+          "id": "nutrition-barriers",
+          "text": "What are the biggest barriers to maintaining a healthy diet? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "nutri-bar-time", "label": "Time constraints" },
+            { "id": "nutri-bar-travel", "label": "Travel or work demands" },
+            { "id": "nutri-bar-knowledge", "label": "Lack of knowledge about nutrition" },
+            { "id": "nutri-bar-cost", "label": "Cost of healthy foods" },
+            { "id": "nutri-bar-other", "label": "Other (please specify)", "specify": true },
+            { "id": "nutri-bar-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "exercise-frequency",
+          "text": "How often do you engage in physical exercise?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "ex-freq-daily", "label": "Daily" },
+            { "id": "ex-freq-4-6", "label": "4-6 times per week" },
+            { "id": "ex-freq-1-3", "label": "1-3 times per week" },
+            { "id": "ex-freq-rarely", "label": "Rarely" },
+            { "id": "ex-freq-never", "label": "Never" }
+          ]
+        },
+        {
+          "id": "exercise-types",
+          "text": "What types of physical activities do you currently participate in? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "ex-type-strength", "label": "Strength training" },
+            { "id": "ex-type-running", "label": "Running/Trail running" },
+            { "id": "ex-type-yoga", "label": "Yoga/Tai-chi" },
+            { "id": "ex-type-martial", "label": "Martial arts" },
+            { "id": "ex-type-hiit", "label": "HIIT" },
+            { "id": "ex-type-other", "label": "Other (please specify)", "specify": true },
+            { "id": "ex-type-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "mindfulness-practice",
+          "text": "Do you practice any mindfulness or stress-reduction techniques? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "mind-meditation", "label": "Meditation" },
+            { "id": "mind-breathwork", "label": "Breathwork" },
+            { "id": "mind-journaling", "label": "Journaling" },
+            { "id": "mind-other", "label": "Other (please specify)", "specify": true },
+            { "id": "mind-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "routine-consistency",
+          "text": "Do you have a consistent wellness routine (e.g., exercise, nutrition, sleep)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "routine-yes-consistent", "label": "Yes, very consistent and effective" },
+            { "id": "routine-yes-improve", "label": "Yes, but it could be improved" },
+            { "id": "routine-no-want", "label": "No, but I want to establish one" },
+            { "id": "routine-no-interest", "label": "No, and I'm not interested" }
+          ]
+        },
+        {
+          "id": "routine-discipline",
+          "text": "If you have a wellness routine, how do you maintain discipline? (Open-ended)",
+          "type": "textarea",
+          "required": false,
+          "conditionalOn": "routine-consistency",
+          "conditionalValue": ["routine-yes-consistent", "routine-yes-improve"],
+          "placeholder": "Please describe your strategies or tools (e.g., scheduling, apps, coaching)"
+        },
+        {
+          "id": "routine-barriers",
+          "text": "What are the biggest barriers preventing you from maintaining or establishing a wellness routine? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "routine-bar-time", "label": "Time constraints" },
+            { "id": "routine-bar-stress", "label": "Work stress/pressure" },
+            { "id": "routine-bar-motivation", "label": "Lack of motivation" },
+            { "id": "routine-bar-knowledge", "label": "Insufficient knowledge" },
+            { "id": "routine-bar-other", "label": "Other (please specify)", "specify": true },
+            { "id": "routine-bar-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "routine-enhancement",
+          "text": "If you have a wellness routine, what do you feel is missing or could be enhanced? (Open-ended)",
+          "type": "textarea",
+          "required": false,
+          "conditionalOn": "routine-consistency",
+          "conditionalValue": ["routine-yes-consistent", "routine-yes-improve"],
+          "placeholder": "E.g., better results, variety, accountability"
+        }
+      ]
+    },
+    {
+      "id": "health-knowledge",
+      "title": "Health and Wellness Knowledge",
+      "questions": [
+        {
+          "id": "hrv-familiarity",
+          "text": "How familiar are you with Heart Rate Variability (HRV)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "hrv-very", "label": "Very familiar (I understand its role in stress and recovery and have tracked it)" },
+            { "id": "hrv-somewhat", "label": "Somewhat familiar (I've heard of it but don't fully understand it)" },
+            { "id": "hrv-not", "label": "Not familiar (I don't know what it is)" }
+          ]
+        },
+        {
+          "id": "metabolic-familiarity",
+          "text": "How familiar are you with metabolic panels (e.g., blood tests assessing glucose, cholesterol, or hormone levels)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "meta-very", "label": "Very familiar (I've had one and understand the results)" },
+            { "id": "meta-somewhat", "label": "Somewhat familiar (I've heard of them but haven't used them)" },
+            { "id": "meta-not", "label": "Not familiar (I don't know what they are)" }
+          ]
+        },
+        {
+          "id": "concept-familiarity",
+          "text": "Which of the following health and wellness concepts are you familiar with? (Select all that apply)",
+          "type": "checkbox",
+          "required": true,
+          "options": [
+            { "id": "concept-rhr", "label": "Resting Heart Rate (RHR)" },
+            { "id": "concept-gut", "label": "Gut health" },
+            { "id": "concept-metabolic", "label": "Metabolic health" },
+            { "id": "concept-cortisol", "label": "Cortisol management" },
+            { "id": "concept-biometric", "label": "Biometric tracking (e.g., wearables)" },
+            { "id": "concept-none", "label": "None" }
+          ]
+        },
+        {
+          "id": "biometric-use",
+          "text": "Have you ever used biometric tracking (e.g., wearables like Oura Ring, Whoop, or lab tests) to monitor your health?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "bio-use-regularly", "label": "Yes, regularly" },
+            { "id": "bio-use-occasionally", "label": "Yes, occasionally" },
+            { "id": "bio-use-no-interested", "label": "No, but interested" },
+            { "id": "bio-use-no-not-interested", "label": "No, not interested" }
+          ]
+        },
+        {
+          "id": "interest-biometric-program",
+          "text": "How interested are you in a program that includes personalized biometric tracking (e.g., HRV, sleep, metabolic panel)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "interest-bio-very", "label": "Very interested" },
+            { "id": "interest-bio-somewhat", "label": "Somewhat interested" },
+            { "id": "interest-bio-neutral", "label": "Neutral" },
+            { "id": "interest-bio-not", "label": "Not interested" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rooted-concept",
+      "title": "The Rooted™ Concept",
+      "introduction": "Rooted™ is a 6-day, luxury retreat for executives in Madeira, Portugal, designed to reset your body and mind through high-performance training, nature immersion, and science-backed wellness (e.g., anti-inflammatory meals, biometrics, coaching).",
+      "questions": [
+        {
+          "id": "concept-appeal",
+          "text": "How appealing is this concept to you?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "concept-appeal-extreme", "label": "Extremely appealing" },
+            { "id": "concept-appeal-moderate", "label": "Moderately appealing" },
+            { "id": "concept-appeal-neutral", "label": "Neutral" },
+            { "id": "concept-appeal-not", "label": "Not appealing" }
+          ]
+        },
+        {
+          "id": "retreat-elements-appeal",
+          "text": "Which elements of the Rooted™ retreat are most appealing to you? (Select up to 3)",
+          "type": "checkbox",
+          "required": true,
+          "selectMax": 3,
+          "options": [
+            { "id": "elem-biometric", "label": "Personalized biometric tracking" },
+            { "id": "elem-meals", "label": "Anti-inflammatory, chef-designed meals" },
+            { "id": "elem-training", "label": "High-performance training (e.g., HIIT, trail running)" },
+            { "id": "elem-nervous", "label": "Nervous system reset (e.g., yoga, breathwork)" },
+            { "id": "elem-nature", "label": "Nature immersion (e.g., hikes, ocean)" },
+            { "id": "elem-coaching", "label": "1:1 coaching" },
+            { "id": "elem-community", "label": "Small-group community" }
+          ]
+        },
+        {
+          "id": "follow-on-value",
+          "text": "Rooted™ includes a year-long follow-on program with performance coaching, biometric tracking, and a global community (Rooted Tribe™). How valuable would this ongoing support be to you?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "follow-on-val-extreme", "label": "Extremely valuable" },
+            { "id": "follow-on-val-moderate", "label": "Moderately valuable" },
+            { "id": "follow-on-val-neutral", "label": "Neutral" },
+            { "id": "follow-on-val-not", "label": "Not valuable" }
+          ]
+        },
+        {
+          "id": "follow-on-support-type",
+          "text": "What type of follow-on support would be most important to you? (Select up to 3)",
+          "type": "checkbox",
+          "required": true,
+          "selectMax": 3,
+          "options": [
+            { "id": "support-coach", "label": "Dedicated performance coach" },
+            { "id": "support-biometric", "label": "Biometric tracking and feedback" },
+            { "id": "support-community", "label": "Access to a community of like-minded leaders" },
+            { "id": "support-expeditions", "label": "Exclusive global expeditions (e.g., alpine treks)" },
+            { "id": "support-content", "label": "Online content and resources" },
+            { "id": "support-other", "label": "Other (please specify)", "specify": true }
+          ]
+        },
+        {
+          "id": "location-preference",
+          "text": "Which location(s) would you prefer for a luxury wellness retreat? (Select up to 3)",
+          "type": "checkbox",
+          "required": true,
+          "selectMax": 3,
+          "options": [
+            { "id": "loc-madeira", "label": "Madeira, Portugal" },
+            { "id": "loc-mexico", "label": "Mexico" },
+            { "id": "loc-thailand", "label": "Thailand" },
+            { "id": "loc-kenya", "label": "Kenya" },
+            { "id": "loc-norway", "label": "Norway" },
+            { "id": "loc-other", "label": "Other (please specify)", "specify": true }
+          ]
+        },
+        {
+          "id": "retreat-price-willingness",
+          "text": "What is the maximum amount you would be willing to pay for a 6-day luxury retreat, including accommodations, meals, and programming (excluding travel)?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "price-retreat-lt-5k", "label": "Under $5,000" },
+            { "id": "price-retreat-5k-10k", "label": "$5,000-$9,999" },
+            { "id": "price-retreat-10k-15k", "label": "$10,000-$14,999" },
+            { "id": "price-retreat-15k-20k", "label": "$15,000-$19,999" },
+            { "id": "price-retreat-20k-plus", "label": "$20,000+" },
+            { "id": "price-retreat-prefer-not-say", "label": "Prefer not to say" }
+          ]
+        },
+        {
+          "id": "follow-on-price-willingness",
+          "text": "What is the maximum amount you would be willing to pay annually for a follow-on program with coaching, biometrics, and community access?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "price-follow-lt-1k", "label": "Under $1,000" },
+            { "id": "price-follow-1k-3k", "label": "$1,000-$2,999" },
+            { "id": "price-follow-3k-5k", "label": "$3,000-$4,999" },
+            { "id": "price-follow-5k-10k", "label": "$5,000-$9,999" },
+            { "id": "price-follow-10k-plus", "label": "$10,000+" },
+            { "id": "price-follow-prefer-not-say", "label": "Prefer not to say" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "your-vision",
+      "title": "Your Vision",
+      "questions": [
+        {
+          "id": "primary-goals",
+          "text": "What are your primary goals for participating in a wellness retreat like Rooted™? (Select up to 3)",
+          "type": "checkbox",
+          "required": true,
+          "selectMax": 3,
+          "options": [
+            { "id": "goal-stress", "label": "Reduce stress and burnout" },
+            { "id": "goal-physical", "label": "Improve physical health" },
+            { "id": "goal-clarity", "label": "Enhance mental clarity and focus" },
+            { "id": "goal-resilience", "label": "Build resilience for leadership" },
+            { "id": "goal-community", "label": "Connect with a community of leaders" },
+            { "id": "goal-other", "label": "Other (please specify)", "specify": true }
+          ]
+        },
+        {
+          "id": "transformative-elements",
+          "text": "What would make a wellness reset truly transformative for you? (Open-ended)",
+          "type": "textarea",
+          "required": false,
+          "placeholder": "Please share your thoughts on programming, outcomes, or experiences that would help you reset and thrive"
+        },
+        {
+          "id": "updates-opt-in",
+          "text": "Would you like to receive updates about Rooted™ and an opportunity to join our pilot program?",
+          "type": "radio",
+          "required": true,
+          "options": [
+            { "id": "opt-in-yes", "label": "Yes (please provide email)" },
+            { "id": "opt-in-no", "label": "No" }
+          ]
+        },
+        {
+          "id": "contact-email",
+          "text": "Please provide your email address for Rooted™ updates:",
+          "type": "email",
+          "required": true,
+          "conditionalOn": "updates-opt-in",
+          "conditionalValue": "opt-in-yes",
+          "placeholder": "your.email@example.com"
+        },
+        {
+          "id": "confirm-email",
+          "text": "Confirm your email address:",
+          "type": "email",
+          "required": true,
+          "conditionalOn": "updates-opt-in",
+          "conditionalValue": "opt-in-yes",
+          "placeholder": "your.email@example.com"
+        }
+      ]
+    }
+  ]
+}

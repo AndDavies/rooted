@@ -9,7 +9,6 @@
 }
 
 @layer base {
-  /* Apply Holy Cannoli Theme Directly */
   :root {
     --background: 27 67% 96%; /* Silver Bird */
     --foreground: 160 40% 13%; /* Guerrilla Forest */
@@ -65,5 +64,16 @@
     @apply tracking-tight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+  /* Ensure tooltips are visible above other elements */
+  [data-radix-tooltip-content] {
+    z-index: 50;
+  }
+  /* Hover effect for question cards */
+  .question-card {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  .question-card:hover {
+    @apply bg-secondary/50;
   }
 }

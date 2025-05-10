@@ -1,9 +1,6 @@
-import { SurveyForm } from '@/components/SurveyForm';
+import { redirect, RedirectType } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-8 max-w-3xl mx-auto">
-      <SurveyForm />
-    </main>
-  );
+export default function Page() {
+  // Perform the redirect server-side
+  redirect('https://form.typeform.com/to/Jr3Vzzwi', RedirectType.push);
 }
