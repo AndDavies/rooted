@@ -26,12 +26,13 @@ export function Section1() {
         <p className="mt-4 text-sm text-gray-700 font-body italic">
           “Nature does not hurry, yet everything is accomplished.” — Lao Tzu
         </p>
-        <a
-          href="/executive-reset"
-          className="mt-6 inline-block bg-gray-800 text-white px-3 py-2 rounded-full hover:bg-gray-700"
-        >
-          Learn More
-        </a>
+        <div className="mt-8 flex justify-center">
+          <button 
+            className="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+          >
+            Stay Connected
+          </button>
+        </div>
       </div>
 
       {/* Right Column: Image */}
