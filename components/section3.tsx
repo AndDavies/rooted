@@ -11,33 +11,33 @@ export function Section3() {
         <Image
           src="/6.jpg"
           alt="Person with arms raised"
-          width={760}
-          height={760}
+          width={500}
+          height={500}
           className="object-cover"
         />
-        <div className="absolute inset-0 flex flex-col items-center justify-start pt-8">
-          <div className="bg-black/30 px-6 py-4 rounded-md">
-            <blockquote className="text-xl md:text-2xl font-serif italic text-white text-center">
-              "When I let go of what I am, I become what I might be"
-            </blockquote>
-            <cite className="mt-4 text-sm text-gray-200 font-body block text-center">
-              - Lao Tzu
-            </cite>
-          </div>
-        </div>
       </div>
 
       {/* Right Column: Wu Wei Content */}
-      <div className="p-8 md:p-12 flex flex-col justify-center">
-        <h2 className="text-xl md:text-2xl font-medium text-gray-800">Wu Wei</h2>
-        <p className="text-lg font-light mt-2 text-gray-700">
-          The art of
-          <br />
-          effortless living
+      <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
+        <h3 className="text-lg font-medium text-gray-800 font-serif">
+          What to Expect
+        </h3>
+        <ul className="mt-4 text-sm text-gray-600 font-body list-disc list-inside">
+          <li>Lower cortisol and recalibrate your nervous system</li>
+          <li>Reset metabolism with expert-led training and precision nutrition</li>
+          <li>Boost sleep quality, focus, and recovery with bio-behavioral protocols</li>
+          <li>Optimize energy, body composition, and mental clarity</li>
+          <li>Train with performance coaches and wellness experts</li>
+          <li>Enjoy chef-designed, anti-inflammatory meals tailored to your goals</li>
+        </ul>
+        <h3 className="text-lg font-medium text-gray-800 font-serif mt-6">
+          Beyond the Retreat
+        </h3>
+        <p className="mt-2 text-sm text-gray-600 font-body">
+          Join the Rooted™ Tribe—a private community with a dedicated performance coach, customized training plan, biometric tracking, and optional challenge-based experiences like alpine expeditions and endurance hikes.
         </p>
-        <p className="mt-4 text-sm text-gray-600 max-w-md font-body">
-          Wu Wei teaches us to align with the natural flow of life. When we stop forcing and start flowing, we
-          discover a profound sense of peace and purpose.
+        <p className="mt-4 text-sm text-gray-700 font-body italic">
+          “Nature does not hurry, yet everything is accomplished.” — Lao Tzu
         </p>
       </div>
     </section>

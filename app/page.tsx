@@ -4,8 +4,11 @@ import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { Section1 } from "@/components/section1"
 import { Section2 } from "@/components/section2"
-import { Section3 } from "@/components/section3"
-
+// import { Section3 } from "@/components/section3"
+import { Section4 } from "@/components/section4"
+import { Section6 } from "@/components/section6"
+import { Section7 } from "@/components/section7"
+import { Section10 } from "@/components/section10"
 
 export default function Home() {
   return (
@@ -22,10 +25,19 @@ export default function Home() {
         <Section2 />
 
         {/* Section 03 */}
-        <Section3 />
+        {/* <Section3 /> */}
 
         {/* Section 04 */}
-        
+        {/* <Section4 /> */}
+
+        {/* Section 06 */}
+        <Section6 />
+
+        {/* Section 07 */}
+        <Section7 />
+
+        {/* Section 10 */}
+        <Section10 />
 
         <footer className="py-8 bg-[#f5f5f0] border-t border-[#e6e6dc]">
           <div className="px-8 md:px-12">
