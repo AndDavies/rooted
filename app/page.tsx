@@ -2,15 +2,12 @@ import Image from "next/image"
 import Link from "next/link"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
-import { Section1 } from "@/components/section1"
+// import { Section1 } from "@/components/section1"
 import { Section2 } from "@/components/section2"
 import { Section3 } from "@/components/section3"
 import { Section4 } from "@/components/section4"
-import { Section8 } from "@/components/section8"
 import { Section5 } from "@/components/section5"
 import { Section6 } from "@/components/section6"
-import { Section7 } from "@/components/section7"
-import { Section10 } from "@/components/section10"
 
 export default function Home() {
   return (
@@ -21,28 +18,22 @@ export default function Home() {
         <Hero />
 
         {/* Section 01: The Foundation */}
-        <Section1 />
+        {/* <Section1 /> */}
 
-        {/* Section 02: The Method */}
+        {/* Section 02: The Problem (Current Section 2) */}
         <Section2 />
 
-        {/* Section 03: Meet Our Organizers */}
-        <Section3 />
+        {/* Section 03: The Method (Formerly Section 3, now correctly placed) */}
+        <Section3 id="solution" />
 
-        {/* Section 04: Rooted Tribe */}
-        <Section4 />
+        {/* Section 04: The Retreat (Formerly Section 4, now correctly placed) */}
+        <Section4 id="experience" />
 
-        {/* Section 05: Pricing */}
-        <Section8 /> 
+        {/* Section 05: The Tribe (Formerly Section 5, now correctly placed) */}
+        <Section5 id="impact" />
 
-        {/* Section 06: Retreat Experience */}
-        <Section6 />
-
-        {/* Section 07: Testimonials */}
-        <Section7 />
-
-        {/* Section 10: Contact */}
-        <Section10 />
+        {/* Section 06: Secure Your Spot (Booking) */}
+        <Section6 id="booking" />
 
         <footer className="py-8 bg-[#f5f5f0] border-t border-[#e6e6dc]">
           <div className="px-8 md:px-12">
@@ -53,17 +44,17 @@ export default function Home() {
                 </h1>
               </div>
               <div className="flex space-x-8">
-                <Link href="#foundation" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
-                  The Foundation
-                </Link>
-                <Link href="#method" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
+                <Link href="#solution" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
                   The Method
                 </Link>
-                <Link href="#who" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
-                  Who Are We
+                <Link href="#experience" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
+                  The Retreat
                 </Link>
-                <Link href="#reflect" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
-                  Reflect
+                <Link href="#impact" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
+                  The Tribe
+                </Link>
+                <Link href="#booking" className="text-xs tracking-wider text-[#c0c0b0] hover:text-gray-800 transition-colors">
+                  Book Now
                 </Link>
               </div>
             </div>

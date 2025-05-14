@@ -77,6 +77,9 @@ const config: Config = {
         serif: ["var(--font-geist)", "ui-serif", "Georgia", "serif"],
         body: ["var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
         heading: ["var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
+        bebas: ["var(--font-bebas-neue)"],
+        "hk-grotesk": ["var(--font-hk-grotesk)"],
+        rufina: ["var(--font-rufina)"],
       },
       keyframes: {
         "accordion-down": {

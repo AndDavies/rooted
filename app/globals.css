@@ -12,6 +12,7 @@ body {
   background: rgb(var(--background-rgb));
   letter-spacing: -0.025em;
   font-family: var(--font-geist);
+  @apply text-gray-800;
 }
 
 @layer utilities {
@@ -64,6 +65,16 @@ body {
   .scrollbar-hide {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Custom text shadow for Bebas Neue logo text */
+  .text-shadow-gold {
+    text-shadow: 0 2px 4px rgba(212, 175, 55, 0.3);
+  }
+
+  /* Custom box shadow for CTA glow */
+  .shadow-gold-glow {
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
   }
 }
 

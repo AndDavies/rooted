@@ -10,21 +10,21 @@ export function Section1() {
       <div className="bg-gradient-to-b from-[#f5f5f0] to-[#e5e5e0] p-8 md:p-12 flex flex-col justify-center">
         <span className="text-[#c0c0b0] text-lg font-light luxury-type">01</span>
         <h2 className="text-xl md:text-2xl font-medium mt-4 text-gray-800 elegant-heading">
-          A Science-Backed Reset for Visionary Leaders
+        Ignite Your Leadership Potential
         </h2>
         <p className="text-lg font-light mt-2 text-gray-700">
-          Rooted™: Beyond a Retreat, a Holistic Transformation
+        Rooted™: A Journey Beyond the Ordinary
         </p>
         <p className="mt-4 text-sm text-gray-600 max-w-md font-body">
-          Rooted™ is a 6-day executive reset on Madeira, Portugal, designed for high-performing leaders battling burnout or seeking alignment. Combining science-backed biometrics, nervous-system recalibration, and nature immersion, it’s the start of a lifelong journey. Our digital platform and Rooted Tribe™ community ensure sustained growth, with elite coaches guiding you every step.
+        Escape to Madeira for a 6-day reset crafted for leaders like you—driven visionaries craving clarity amidst burnout. Rooted™ fuses cutting-edge biometrics, nervous-system renewal, and nature’s embrace to spark a lifelong transformation. With our digital platform and Rooted Tribe™, elite coaches empower your growth every step of the way.
         </p>
         <ul className="mt-4 text-sm text-gray-600 font-body list-disc list-inside">
-          <li>12% average HRV increase in 6 days</li>
-          <li>97% report enhanced clarity and decision-making</li>
+          <li>Boost HRV by 12% in just 6 days</li>
+          <li>97% unlock sharper clarity and decisions</li>
           <li>90%+ stay engaged with Tribe coaching</li>
         </ul>
         <p className="mt-4 text-sm text-gray-700 font-body italic">
-          “The greatest leaders thrive not by pushing harder, but by rooting deeper.” — Rooted Philosophy
+          "True leadership blooms from deep roots, not endless hustle." — Rooted Philosophy
         </p>
         <div className="mt-8 flex justify-center">
           <button 
