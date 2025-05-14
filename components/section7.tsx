@@ -1,95 +1,37 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 
 export function Section7() {
-  const [physical, setPhysical] = useState(50);
-  const [emotional, setEmotional] = useState(50);
-  const [mental, setMental] = useState(50);
-
-  const getEnergySuggestion = () => {
-    const avgEnergy = (physical + emotional + mental) / 3;
-    if (avgEnergy < 40) {
-      return "Your energy levels seem low. Consider grounding yourself with a nature walk or a few minutes of conscious breathing.";
-    } else if (avgEnergy < 70) {
-      return "Your energy could use a boost. Try a short meditation or reflect on what brings you joy.";
-    } else {
-      return "Your energy levels are strong! Keep nurturing yourself with mindful practices.";
-    }
-  };
-
   return (
-    <section id="energy-checkin" className="bg-white py-12 px-8 md:px-12">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-xl md:text-2xl font-medium text-gray-800 font-serif text-center">
-          Energy Check-In
+    <section id="testimonials" className="py-16 bg-[#f5f5f0] max-w-[1440px] mx-auto">
+      <div className="container mx-auto px-8 text-center">
+        <span className="text-[#c0c0b0] text-lg font-light luxury-type">07</span>
+        <h2 className="text-2xl md:text-3xl font-medium mt-4 text-gray-800 elegant-heading">
+          What Leaders Say
         </h2>
-        <p className="mt-4 text-sm text-gray-600 font-body text-center">
-          Take a moment to assess your current state. How are you feeling physically, emotionally, and mentally?
+        <p className="text-lg font-light mt-2 text-gray-700">
+          Real Stories of Transformation
         </p>
-
-        {/* Sliders */}
-        <div className="mt-8 space-y-6">
-          <div>
-            <label className="block text-sm text-gray-700 font-body">Physical Energy: {physical}%</label>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={physical}
-              onChange={(e) => setPhysical(Number(e.target.value))}
-              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, #a3c1ad ${physical}%, #e5e5e0 ${physical}%)`,
-              }}
-            />
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-white rounded-lg shadow-lg">
+            <p className="text-sm text-gray-600 italic">
+              “Rooted™ gave me tools to manage my energy and lead with clarity. The Tribe keeps me accountable.”
+            </p>
+            <p className="text-sm text-gray-800 mt-4 font-semibold">— Sarah, CEO</p>
           </div>
-          <div>
-            <label className="block text-sm text-gray-700 font-body">Emotional Energy: {emotional}%</label>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={emotional}
-              onChange={(e) => setEmotional(Number(e.target.value))}
-              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, #a3c1ad ${emotional}%, #e5e5e0 ${emotional}%)`,
-              }}
-            />
+          <div className="p-6 bg-white rounded-lg shadow-lg">
+            <p className="text-sm text-gray-600 italic">
+              “The retreat was a game-changer. I reclaimed two hours of peak energy daily.”
+            </p>
+            <p className="text-sm text-gray-800 mt-4 font-semibold">— Michael, Founder</p>
           </div>
-          <div>
-            <label className="block text-sm text-gray-700 font-body">Mental Energy: {mental}%</label>
-            <input
-              type="range"
-              min="0"
-              max="100"
-              value={mental}
-              onChange={(e) => setMental(Number(e.target.value))}
-              className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
-              style={{
-                background: `linear-gradient(to right, #a3c1ad ${mental}%, #e5e5e0 ${mental}%)`,
-              }}
-            />
+          <div className="p-6 bg-white rounded-lg shadow-lg">
+            <p className="text-sm text-gray-600 italic">
+              “The science and community make Rooted™ unique. I'm sharper and more aligned.”
+            </p>
+            <p className="text-sm text-gray-800 mt-4 font-semibold">— Priya, Director</p>
           </div>
-        </div>
-
-        {/* Result */}
-        <div className="mt-8 p-4 bg-[#f5f5f0] rounded-md">
-          <p className="text-sm text-gray-600 font-body text-center">{getEnergySuggestion()}</p>
-        </div>
-
-        <p className="mt-6 text-sm text-gray-700 font-body italic text-center">
-          "Peace comes from within. Do not seek it without." — Buddha
-        </p>
-
-        {/* Pill Button */}
-        <div className="mt-8 flex justify-center">
-          <button 
-            className="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-          >
-            Save Your Reflection
-          </button>
         </div>
       </div>
     </section>

@@ -8,29 +8,29 @@ export function Section1() {
     <section id="foundation" className="grid grid-cols-1 md:grid-cols-[auto_600px] max-w-[1440px] mx-auto">
       {/* Left Column: Introduction */}
       <div className="bg-gradient-to-b from-[#f5f5f0] to-[#e5e5e0] p-8 md:p-12 flex flex-col justify-center">
-        <span className="text-[#c0c0b0] text-lg font-light">01</span>
-        <h2 className="text-xl md:text-2xl font-medium mt-4 text-gray-800 font-serif">
-          A Playground of Wellbeing
+        <span className="text-[#c0c0b0] text-lg font-light luxury-type">01</span>
+        <h2 className="text-xl md:text-2xl font-medium mt-4 text-gray-800 elegant-heading">
+          A Science-Backed Reset for Visionary Leaders
         </h2>
         <p className="text-lg font-light mt-2 text-gray-700">
-          The Rooted™ Executive Reset
+          Rooted™: Beyond a Retreat, a Holistic Transformation
         </p>
         <p className="mt-4 text-sm text-gray-600 max-w-md font-body">
-          Join us on the island of Madeira for a 6-day retreat designed to nurture your wellbeing and recalibrate your energy. Whether you’re a high-performing leader facing burnout or seeking mindful growth, Rooted combines ancient wisdom with modern practices to help you reclaim your focus, health, and inner peace.
+          Rooted™ is a 6-day executive reset on Madeira, Portugal, designed for high-performing leaders battling burnout or seeking alignment. Combining science-backed biometrics, nervous-system recalibration, and nature immersion, it’s the start of a lifelong journey. Our digital platform and Rooted Tribe™ community ensure sustained growth, with elite coaches guiding you every step.
         </p>
         <ul className="mt-4 text-sm text-gray-600 font-body list-disc list-inside">
-          <li>Lower cortisol and recalibrate your nervous system</li>
-          <li>Boost sleep quality, focus, and recovery</li>
-          <li>Optimize energy and mental clarity</li>
+          <li>12% average HRV increase in 6 days</li>
+          <li>97% report enhanced clarity and decision-making</li>
+          <li>90%+ stay engaged with Tribe coaching</li>
         </ul>
         <p className="mt-4 text-sm text-gray-700 font-body italic">
-          “Nature does not hurry, yet everything is accomplished.” — Lao Tzu
+          “The greatest leaders thrive not by pushing harder, but by rooting deeper.” — Rooted Philosophy
         </p>
         <div className="mt-8 flex justify-center">
           <button 
             className="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
-            Stay Connected
+            Join the Waitlist
           </button>
         </div>
       </div>

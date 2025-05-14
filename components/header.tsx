@@ -37,13 +37,14 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-6 py-7">
+        
         <nav className="flex justify-center">
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden md:flex items-center space-x-10 tracking-widest">
             <Link 
               href="#foundation" 
               onClick={(e) => handleNavClick(e, "foundation")}
               className={cn(
-                "transition-colors px-4 font-light tracking-[0.03em] text-xs uppercase font-heading",
+                "transition-colors px-4 font-light tracking-widest text-xs uppercase font-heading",
                 scrolled ? "text-gray-700" : "text-white"
               )}
             >
@@ -93,4 +94,4 @@ export function Header() {
       </div>
     </header>
   );
-} 
+}

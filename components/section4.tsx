@@ -4,42 +4,45 @@ import React from "react";
 
 export function Section4() {
   return (
-    <section id="executive-reset" className="grid grid-cols-1 md:grid-cols-2 bg-[#f5f5f0]">
-      {/* Left Column: Program Overview */}
-      <div className="p-8 md:p-12 flex flex-col justify-center">
-        <h2 className="text-xl md:text-2xl font-medium text-gray-800 font-serif">
-          The Rooted™ Executive Reset
+    <section id="tribe" className="py-16 bg-white max-w-[1440px] mx-auto">
+      <div className="container mx-auto px-8 text-center">
+        <span className="text-[#c0c0b0] text-lg font-light luxury-type">04</span>
+        <h2 className="text-2xl md:text-3xl font-medium mt-4 text-gray-800 elegant-heading">
+          The Rooted Tribe™
         </h2>
         <p className="text-lg font-light mt-2 text-gray-700">
-          A 6-Day Retreat for High-Performing Leaders
+          A Lifelong Community for Sustained Growth
         </p>
-        <p className="mt-4 text-sm text-gray-600 max-w-md font-body">
-          Reclaim your energy, sharpen your focus, and reset your operating system. Designed for executives facing burnout, this retreat on the island of Madeira helps you take back control of your health and longevity—without stepping away from ambition. Because at your level, health isn’t a luxury; it’s your most powerful business asset.
+        <p className="mt-4 text-sm text-gray-600 max-w-2xl mx-auto font-body">
+          Your transformation doesn't end on day six. The Rooted Tribe™ offers a digital platform with performance coaching, biometric tracking, and a global community of like-minded leaders. Stay connected, accountable, and inspired with scalable support tailored to your needs.
         </p>
-      </div>
-
-      {/* Right Column: Program Features */}
-      <div className="bg-white p-8 md:p-12 flex flex-col justify-center">
-        <h3 className="text-lg font-medium text-gray-800 font-serif">
-          What to Expect
-        </h3>
-        <ul className="mt-4 text-sm text-gray-600 font-body list-disc list-inside">
-          <li>Lower cortisol and recalibrate your nervous system</li>
-          <li>Reset metabolism with expert-led training and precision nutrition</li>
-          <li>Boost sleep quality, focus, and recovery with bio-behavioral protocols</li>
-          <li>Optimize energy, body composition, and mental clarity</li>
-          <li>Train with performance coaches and wellness experts</li>
-          <li>Enjoy chef-designed, anti-inflammatory meals tailored to your goals</li>
-        </ul>
-        <h3 className="text-lg font-medium text-gray-800 font-serif mt-6">
-          Beyond the Retreat
-        </h3>
-        <p className="mt-2 text-sm text-gray-600 font-body">
-          Join the Rooted™ Tribe—a private community with a dedicated performance coach, customized training plan, biometric tracking, and optional challenge-based experiences like alpine expeditions and endurance hikes.
-        </p>
-        <p className="mt-4 text-sm text-gray-700 font-body italic">
-          “Nature does not hurry, yet everything is accomplished.” — Lao Tzu
-        </p>
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="p-6 bg-[#f5f5f0] rounded-lg">
+            <h3 className="text-xl font-semibold text-gray-800">Performance Coaching</h3>
+            <p className="text-sm text-gray-600 mt-4">
+              Weekly group sessions and personalized feedback to maintain your progress and achieve long-term goals.
+            </p>
+          </div>
+          <div className="p-6 bg-[#f5f5f0] rounded-lg">
+            <h3 className="text-xl font-semibold text-gray-800">Biometric Tracking</h3>
+            <p className="text-sm text-gray-600 mt-4">
+              Monitor HRV, sleep, and metabolic health via our app, with data-driven insights to optimize performance.
+            </p>
+          </div>
+          <div className="p-6 bg-[#f5f5f0] rounded-lg">
+            <h3 className="text-xl font-semibold text-gray-800">Global Community</h3>
+            <p className="text-sm text-gray-600 mt-4">
+              Join exclusive expeditions, mentorship programs, and events to connect with visionary leaders worldwide.
+            </p>
+          </div>
+        </div>
+        <div className="mt-8 flex justify-center">
+          <button 
+            className="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+          >
+            Learn More
+          </button>
+        </div>
       </div>
     </section>
   );

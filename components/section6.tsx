@@ -4,36 +4,42 @@ import React from "react";
 
 export function Section6() {
   return (
-    <section id="location" className="grid grid-cols-1 md:grid-cols-2 bg-[#f5f5f0]">
-      {/* Left Column: Image Placeholder */}
-      <div className="relative h-[500px] md:h-[600px] group">
-        <div className="w-full h-full bg-gray-200 flex items-center justify-center transition-all duration-300 group-hover:bg-gray-300">
-          <span className="text-gray-500 text-lg">Image Placeholder (Madeira Landscape)</span>
-        </div>
-        <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all duration-300" />
-      </div>
-
-      {/* Right Column: Location Description */}
-      <div className="p-8 md:p-12 flex flex-col justify-center">
-        <h2 className="text-xl md:text-2xl font-medium text-gray-800 font-serif">
-          Discover Madeira
+    <section id="experience" className="py-16 bg-white max-w-[1440px] mx-auto">
+      <div className="container mx-auto px-8 text-center">
+        <span className="text-[#c0c0b0] text-lg font-light luxury-type">06</span>
+        <h2 className="text-2xl md:text-3xl font-medium mt-4 text-gray-800 elegant-heading">
+          The Retreat Experience
         </h2>
         <p className="text-lg font-light mt-2 text-gray-700">
-          Your Sanctuary for Renewal
+          A 6-Day Journey in Madeira, Portugal
         </p>
-        <p className="mt-4 text-sm text-gray-600 max-w-md font-body">
-          Nestled off the grid on the island of Madeira, Rooted offers a serene escape surrounded by lush forests, dramatic cliffs, and the calming Atlantic. This natural haven is the perfect backdrop for your 6-day journey of self-discovery and recalibration, where you can reconnect with nature and find inner peace.
+        <p className="mt-4 text-sm text-gray-600 max-w-2xl mx-auto font-body">
+          Immerse yourself in a high-impact reset designed to restore energy, clarity, and resilience. From breathwork and HIIT to chef-designed meals and nature immersion, every moment is crafted to align body, mind, and purpose.
         </p>
-        <p className="mt-4 text-sm text-gray-700 font-body italic">
-          "Nature does not hurry, yet everything is accomplished." — Lao Tzu
-        </p>
-        <div className="mt-6">
-          <a
-            href="/book"
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-6 bg-[#f5f5f0] rounded-lg">
+            <h3 className="text-xl font-semibold text-gray-800">Daily Flow</h3>
+            <ul className="text-sm text-gray-600 mt-4 text-left list-disc list-inside">
+              <li>AM: Breathwork, mobility, and high-performance training</li>
+              <li>Mid-Day: Anti-inflammatory meals and siesta</li>
+              <li>PM: Skill sessions, nature hikes, and evening rituals</li>
+            </ul>
+          </div>
+          <div className="p-6 bg-[#f5f5f0] rounded-lg">
+            <h3 className="text-xl font-semibold text-gray-800">Key Outcomes</h3>
+            <ul className="text-sm text-gray-600 mt-4 text-left list-disc list-inside">
+              <li>Lower cortisol and improved sleep quality</li>
+              <li>Enhanced mental clarity and decision-making</li>
+              <li>Personalized "Monday-morning playbook" for lasting habits</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 flex justify-center">
+          <button 
             className="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
-            Book Your Journey
-          </a>
+            Explore the Retreat
+          </button>
         </div>
       </div>
     </section>

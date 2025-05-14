@@ -48,7 +48,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${rufina.className} ${rufina.variable} ${hkGrotesk.variable}`}>{children}</body>
+      <body className={`${rufina.variable} ${hkGrotesk.variable} font-body`}>{children}</body>
     </html>
   )
 }

@@ -2,6 +2,14 @@
 
 import React from "react";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+// Register MoonDance font
+const moonDance = localFont({
+  src: "../public/fonts/MoonDance-Regular.ttf",
+  display: "swap",
+  variable: "--font-moondance",
+});
 
 export function Hero() {
   return (
@@ -33,13 +41,15 @@ export function Hero() {
                 className="object-contain"
               />
             </div>
-            <h1 className="font-serif text-6xl md:text-8xl font-bold text-white italic text-shadow-lg">
+            <h1
+              className={`${moonDance.className} text-6xl md:text-8xl font-bold text-white italic tracking-widest text-shadow-lg`}
+            >
               Rooted
             </h1>
           </div>
           <div className="text-white text-left mt-8">
-            <p className="font-body text-base md:text-xl leading-relaxed tracking-tight">
-              A 6-day retreat and guidebook for self-discovery, mindful living, and authentic growth. 
+            <p className="font-body text-sm antialiased md:text-xl leading-relaxed tracking-tight">
+              A 6-day retreat for self-discovery, mindful living, and authentic growth. 
               This journey draws inspiration from the timeless principles teaching you how to live with 
               more flow, presence, and balance.
             </p>
@@ -48,4 +58,4 @@ export function Hero() {
       </div>
     </div>
   );
-} 
+}
