@@ -1,38 +1,14 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Rufina } from "next/font/google"
 import localFont from "next/font/local"
 
-// Rufina font for body text
-const rufina = Rufina({ 
-  subsets: ["latin"],
-  weight: ['400', '700'],
-  display: 'swap',
-  variable: '--font-rufina',
-})
-
-// HK Grotesk for headers (needs to be added to /public/fonts/)
-const hkGrotesk = localFont({
-  src: [
-    {
-      path: '../public/fonts/HKGrotesk-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/HKGrotesk-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/HKGrotesk-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
-  display: 'swap',
-  variable: '--font-hk-grotesk',
+// Geist font setup
+const geist = localFont({
+  src: "../public/fonts/Geist-VariableFont_wght.ttf",
+  display: "swap",
+  variable: "--font-geist",
+  weight: "100 900", // For variable font
 })
 
 export const metadata: Metadata = {
@@ -47,8 +23,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${rufina.variable} ${hkGrotesk.variable} font-body`}>{children}</body>
+    <html lang="en" className={`${geist.variable}`}>
+      <body className="font-sans">{/* font-sans will be mapped to Geist in tailwind.config.ts */}
+        {children}
+      </body>
     </html>
   )
 }

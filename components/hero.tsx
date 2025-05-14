@@ -2,14 +2,10 @@
 
 import React from "react";
 import Image from "next/image";
-import localFont from "next/font/local";
+// localFont import is no longer needed here if Geist is globally defined
+// import localFont from "next/font/local"; 
 
-// Register MoonDance font
-const moonDance = localFont({
-  src: "../public/fonts/MoonDance-Regular.ttf",
-  display: "swap",
-  variable: "--font-moondance",
-});
+// Geist font definition removed as it's now global
 
 export function Hero() {
   return (
@@ -17,7 +13,7 @@ export function Hero() {
       {/* Background video */}
       <div className="absolute inset-0 z-0">
         <video
-          src="/madeira_hero_bg.mp4"
+          src="/madeira_hero.mp4"
           autoPlay
           muted
           loop
@@ -36,19 +32,21 @@ export function Hero() {
               <Image
                 src="/rooted_logo_circle.png"
                 alt="Rooted logo"
-                width={60}
-                height={60}
+                width={100}
+                height={100}
                 className="object-contain"
               />
             </div>
+            {/* Apply font-sans (which is Geist) and specific styling for Hero H1 */}
             <h1
-              className={`${moonDance.className} text-6xl md:text-8xl font-bold text-white italic tracking-widest text-shadow-lg`}
+              className="font-sans text-6xl md:text-8xl font-bold text-white tracking-[-0.06em] text-shadow-hero-h1"
             >
               Rooted
             </h1>
           </div>
+          {/* Ensure paragraph also uses a globally available font, like font-sans (Geist) or font-body if it were different */}
           <div className="text-white text-left mt-8">
-            <p className="font-body text-sm antialiased md:text-xl leading-relaxed tracking-tight">
+            <p className="font-sans text-sm antialiased md:text-xl leading-relaxed tracking-tight">
               A 6-day retreat for self-discovery, mindful living, and authentic growth. 
               This journey draws inspiration from the timeless principles teaching you how to live with 
               more flow, presence, and balance.

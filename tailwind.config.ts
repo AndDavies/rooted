@@ -73,10 +73,10 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ["var(--font-hk-grotesk)", "sans-serif"],
-        serif: ["var(--font-rufina)", "serif"],
-        body: ["var(--font-rufina)", "serif"],
-        heading: ["var(--font-hk-grotesk)", "sans-serif"],
+        sans: ["var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ["var(--font-geist)", "ui-serif", "Georgia", "serif"],
+        body: ["var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
