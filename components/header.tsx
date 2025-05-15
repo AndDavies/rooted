@@ -97,7 +97,7 @@ export function Header() {
           <span 
             className={`font-sans text-2xl font-bold text-shadow-gold hidden sm:block 
                         ${isScrolled ? 'text-[#1A1A1A]' : 'text-white'}`}>
-            Rooted™
+            Rooted
           </span>
         </Link>
 

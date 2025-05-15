@@ -140,10 +140,10 @@ export function Section6({ id }: Section6Props) {
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 text-shadow-md">
             Take Control—Book Your Spot
-          </h2>
+        </h2>
           <p className="text-md md:text-lg text-gray-700 leading-relaxed">
             Ready to reset? Join our exclusive pilot program and reclaim your energy. Limited spots available for this transformative experience.
-          </p>
+        </p>
         </div>
 
         <div className="max-w-xl mx-auto bg-white/70 backdrop-blur-md p-6 md:p-10 rounded-xl shadow-2xl">

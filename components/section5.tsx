@@ -64,14 +64,14 @@ const VideoLightbox: React.FC<{ videoSrc: string; onClose: () => void }> = ({ vi
       <div className="bg-black rounded-lg shadow-2xl max-w-3xl w-full aspect-video overflow-hidden" onClick={(e) => e.stopPropagation()}>
         <video ref={videoRef} src={videoSrc} controls autoPlay className="w-full h-full" />
       </div>
-       <button 
+            <button 
           onClick={onClose} 
           className="absolute top-4 right-4 text-white text-3xl hover:text-gray-300 transition-colors"
           aria-label="Close video"
-        >
+            >
           &times;
-        </button>
-    </div>
+            </button>
+          </div>
   );
 };
 
@@ -159,13 +159,13 @@ export function Section5({ id }: Section5Props) { // Destructure id here
                     <p className="text-sm text-gray-600 font-sans">{testimonial.title}</p>
                   </div>
                   {testimonial.videoSrc && (
-                    <button 
+            <button 
                       onClick={() => setCurrentVideo(testimonial.videoSrc)}
                       className="ml-auto p-2 text-gray-600 hover:text-gray-900 transition-colors rounded-full hover:bg-gray-200/50"
                       aria-label={`Play video testimonial from ${testimonial.author}`}
-                    >
+            >
                       <PlayIcon />
-                    </button>
+            </button>
                   )}
                 </div>
               </div>
@@ -207,6 +207,6 @@ export function Section5({ id }: Section5Props) { // Destructure id here
           animation: fadeInUpBounce 0.8s ease-out forwards;
         }
       `}</style>
-    </section>
-  );
+      </section>
+    );
 }

@@ -30,10 +30,10 @@ export default function Home() {
         <Section4 id="experience" />
 
         {/* Section 05: The Tribe (Formerly Section 5, now correctly placed) */}
-        <Section5 id="impact" />
+        {/* <Section5 id="impact" /> */}
 
         {/* Section 06: Secure Your Spot (Booking) */}
-        <Section6 id="booking" />
+        {/* <Section6 id="booking" /> */}
 
         <footer className="py-8 bg-[#f5f5f0] border-t border-[#e6e6dc]">
           <div className="px-8 md:px-12">

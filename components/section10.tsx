@@ -17,16 +17,16 @@ export function Section10() {
           Sign up for updates and secure your spot in our pilot program. Be part of a community redefining leadership through wellness and purpose.
         </p>
         <div className="mt-12 max-w-md mx-auto">
-          <input 
+            <input
             type="email" 
             placeholder="Enter your email" 
             className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
           />
-          <button 
+            <button
             className="inline-flex items-center justify-center bg-gray-800 text-white text-sm font-medium px-8 py-3 rounded-full hover:bg-gray-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-          >
+            >
             Submit
-          </button>
+            </button>
         </div>
       </div>
     </section>

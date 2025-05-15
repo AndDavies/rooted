@@ -42,7 +42,7 @@ const hkGrotesk = localFont({
 export const metadata: Metadata = {
   title: "ROOTED | A Playground of Wellbeing",
   description: "A new way of life that brings you back to your roots.",
-  generator: 'v0.dev'
+    generator: 'v0.dev'
 }
 
 export default function RootLayout({
