@@ -47,9 +47,7 @@ export function Hero() {
           {/* Ensure paragraph also uses a globally available font, like font-sans (Geist) or font-body if it were different */}
           <div className="text-white text-left mt-8">
             <p className="font-sans text-sm antialiased md:text-xl leading-relaxed tracking-tight">
-              A 6-day retreat for self-discovery, mindful living, and authentic growth. 
-              This journey draws inspiration from the timeless principles teaching you how to live with 
-              more flow, presence, and balance.
+            Embark on a 6-day odyssey in Madeira to rediscover your core. Rooted blends ancient wisdom with modern science, guiding you to lead with unshakable presence, boundless energy, and profound balance.
             </p>
           </div>
         </div>
