@@ -11,7 +11,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
   letter-spacing: -0.025em;
-  font-family: var(--font-geist);
+  font-family: var(--font-glacial);
   @apply text-gray-800;
 }
 
@@ -41,7 +41,7 @@ body {
   }
   
   .luxury-type {
-    font-family: var(--font-geist);
+    font-family: var(--font-glacial);
     font-weight: 300;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -50,7 +50,7 @@ body {
   }
   
   .elegant-heading {
-    font-family: var(--font-geist);
+    font-family: var(--font-glacial);
     font-style: italic;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -160,16 +160,16 @@ body {
 
   h1 {
     @apply font-bold tracking-tighter text-shadow-md;
-    font-family: var(--font-geist);
+    font-family: var(--font-glacial);
   }
   
   h2, h3 {
     @apply font-semibold tracking-tight text-shadow-sm;
-    font-family: var(--font-geist);
+    font-family: var(--font-glacial);
   }
 
   h4, h5, h6 {
     @apply font-medium tracking-tight;
-    font-family: var(--font-geist);
+    font-family: var(--font-glacial);
   }
 }

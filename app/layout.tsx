@@ -12,6 +12,29 @@ const geist = localFont({
   weight: "100 900", // For variable font
 })
 
+// Glacial Indifference font setup
+const glacial = localFont({
+  src: [
+    {
+      path: "../public/fonts/GlacialIndifference-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/GlacialIndifference-Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/GlacialIndifference-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  display: "swap",
+  variable: "--font-glacial",
+})
+
 // Bebas Neue font setup
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
@@ -51,7 +74,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable}`}>
+    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable}`}>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         {children}
       </body>

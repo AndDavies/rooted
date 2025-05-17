@@ -6,8 +6,10 @@ import { Hero } from "@/components/hero"
 import { Section2 } from "@/components/section2"
 import { Section3 } from "@/components/section3"
 import { Section4 } from "@/components/section4"
+import { WhyRooted } from "@/components/whyRooted"
 import { Section5 } from "@/components/section5"
 import { Section6 } from "@/components/section6"
+import { AboutUs } from "@/components/AboutUs"
 
 export default function Home() {
   return (
@@ -16,21 +18,23 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <Hero />
-
+        
         {/* Section 01: The Foundation */}
         {/* <Section1 /> */}
 
         {/* Section 02: The Problem (Current Section 2) */}
-        <Section2 />
+        <AboutUs />
+
 
         {/* Section 03: The Method (Formerly Section 3, now correctly placed) */}
-        <Section3 id="solution" />
+        {/* <Section3 id="solution" /> */}
 
+        <WhyRooted />
+        <Section2 />
         {/* Section 04: The Retreat (Formerly Section 4, now correctly placed) */}
-        <Section4 id="experience" />
+        {/* <Section4 id="experience" /> */}
 
-        {/* Section 05: The Tribe (Formerly Section 5, now correctly placed) */}
-        {/* <Section5 id="impact" /> */}
+
 
         {/* Section 06: Secure Your Spot (Booking) */}
         {/* <Section6 id="booking" /> */}

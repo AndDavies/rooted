@@ -39,9 +39,9 @@ export function Hero() {
             </div>
             {/* Apply font-sans (which is Geist) and specific styling for Hero H1 */}
             <h1
-              className="font-sans text-6xl md:text-8xl font-bold text-white tracking-[-0.06em] text-shadow-hero-h1"
+              className="font-sans text-6xl md:text-8xl font-bold text-white tracking-widest text-shadow-hero-h1"
             >
-              Rooted
+              ROOTED
             </h1>
           </div>
           {/* Ensure paragraph also uses a globally available font, like font-sans (Geist) or font-body if it were different */}
