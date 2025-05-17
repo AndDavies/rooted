@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <div className="relative h-screen w-full">
+    <div id="hero" className="relative h-screen w-full">
       {/* Background video */}
       <div className="absolute inset-0 z-0">
         <video

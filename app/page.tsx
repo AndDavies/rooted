@@ -10,6 +10,7 @@ import { WhyRooted } from "@/components/whyRooted"
 import { Section5 } from "@/components/section5"
 import { Section6 } from "@/components/section6"
 import { AboutUs } from "@/components/AboutUs"
+import { Program } from "@/components/program"
 
 export default function Home() {
   return (
@@ -24,7 +25,7 @@ export default function Home() {
 
         {/* Section 02: The Problem (Current Section 2) */}
         <AboutUs />
-
+        <Program />
 
         {/* Section 03: The Method (Formerly Section 3, now correctly placed) */}
         {/* <Section3 id="solution" /> */}

@@ -22,7 +22,7 @@ export function AboutUs() {
     {
       icon: <Users />,
       title: "Rooted Tribe Platform",
-      description: "Gain lifelong access to our exclusive digital platform for ongoing coaching, resources, and a global community of like-minded leaders.",
+      description: "Gain access to our exclusive digital platform for ongoing coaching, resources, and a global community of like-minded leaders.",
       initialIconColor: "text-neutral-800",
       hoverIconColorClass: "group-hover:text-[#FFF8EB]",
     },

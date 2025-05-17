@@ -19,9 +19,9 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const navigationLinks = [
-  { label: "The Method", href: "#solution" },   // Maps to Section 3 (Formerly Section 2 in nav)
-  { label: "The Retreat", href: "#experience" }, // Maps to Section 4 (Formerly Section 1 in nav)
-  { label: "The Tribe", href: "#impact" },     // Maps to Section 5 (Formerly Section 3 in nav)
+  { label: "The Method", href: "#about" },      // Points to AboutUs component
+  { label: "The Pillars", href: "#why-rooted" }, // Points to WhyRooted component
+  { label: "The Tribe", href: "#problem" },    // Points to Section2 component (which uses id="problem")
 ];
 
 export function Header() {

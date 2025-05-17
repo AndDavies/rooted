@@ -65,7 +65,7 @@ export function WhyRooted() {
   }
 
   return (
-    <section className="relative bg-gray-900 min-h-screen flex items-center py-16">
+    <section id="why-rooted" className="relative bg-gray-900 min-h-screen flex items-center py-16">
       {/* Background Image Overlay */}
       <div className="absolute top-0 right-0 h-full w-full pointer-events-none">
         <Image
