@@ -34,14 +34,10 @@ export function AboutUs() {
         <div className="container mx-auto px-4 md:px-8 max-w-4xl">
           <div className="flex flex-col items-center">
             {/* Logo */}
-            <div className="mb-6 relative w-[864px] h-[200px] overflow-visible">
-              <Image 
-                src="/rooted_about_logo.png" 
-                alt="Rooted Logo" 
-                width={864} 
-                height={450} 
-                className="absolute top-0 left-0" 
-              />
+            <div className="mb-6 relative overflow-visible">
+            <h1 className="text-4xl tracking-widest font-semibold mb-3 text-neutral-900">
+                REST. RECHARGE. RECOVER.
+            </h1>
             </div>
 
             {/* About Text */}
