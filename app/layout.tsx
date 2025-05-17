@@ -3,6 +3,7 @@ import "./globals.css"
 import type { Metadata } from "next"
 import { Bebas_Neue, Rufina } from "next/font/google"
 import localFont from "next/font/local"
+import Script from 'next/script'
 
 // Geist font setup
 const geist = localFont({
@@ -77,6 +78,16 @@ export default function RootLayout({
     <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable}`}>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         {children}
+        {/* MailerLite Universal Script */}
+        <Script id="mailerlite-universal" strategy="afterInteractive">
+          {`
+            (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+            .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+            n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+            (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+            ml('account', '1529443');
+          `}
+        </Script>
       </body>
     </html>
   )

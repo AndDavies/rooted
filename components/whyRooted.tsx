@@ -78,7 +78,7 @@ export function WhyRooted() {
         />
       </div>
 
-      <div className="relative z-10 container mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-2">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Interactive Circle */}
           <div className="flex justify-center order-2 lg:order-1">

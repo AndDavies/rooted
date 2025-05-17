@@ -90,7 +90,7 @@ export function Program() {
                                   ? 'opacity-0 scale-90 pointer-events-none' 
                                   : 'opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-90 group-hover:pointer-events-none'}`}
                   >
-                    <div className="w-20 h-20 relative bg-transparent">
+                    <div className="w-40 h-40 relative bg-transparent">
                       <Image src={stage.iconSrc} alt={`${stage.title} icon`} layout="fill" className="bg-transparent" objectFit="contain" />
                     </div>
                   </div>
