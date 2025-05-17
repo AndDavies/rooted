@@ -28,7 +28,7 @@ const programStagesData: ProgramStage[] = [
     id: 'reset',
     title: "The Reset",
     iconSrc: "/icons/icon_reset.png",
-    description: "Immerse yourself in a science-backed reset amidst Madeira's stunning landscapes. Experience nature immersion through guided hikes, walks, and ocean activities like free diving and surfing. Reconnect with your body through breathwork (Wim Hof Method), movement in nature (trail running, HIIT, yoga), and nourishing meals prepared by world-renowned chefs using local, anti-inflammatory ingredients tailored to your biometrics. Daily coaching and evening rituals ensure deep rest and clarity.",
+    description: "Immerse yourself in a science-backed reset amidst Madeira's stunning landscapes. Experience nature immersion through guided hikes, walks, and ocean activities like free diving and surfing. Reconnect with your body through breathwork, movement in nature (trail running, HIIT, yoga), and nourishing meals prepared by world-renowned chefs using local, anti-inflammatory ingredients tailored to your biometrics. Daily coaching and evening rituals ensure deep rest and clarity.",
     bgColor: "bg-[#FFF8EB]", // Cosmic Latte
     textColor: "text-neutral-800",
     pinButtonColor: "text-neutral-500 hover:text-neutral-700",
