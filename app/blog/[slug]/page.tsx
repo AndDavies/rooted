@@ -191,17 +191,17 @@ export default async function BlogPostPage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-[#FFF8EB]">
       {/* Top-of-Page Title Block */}
-      <header className="bg-[#FFF1D4] py-12 md:py-16 lg:py-20">
+      <header className="bg-[#4A4A4A] py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-[#4A4A4A] mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-[#FFF8EB] mb-4">
             {post.title}
           </h1>
           {post.excerpt && (
-            <p className="text-lg md:text-xl text-[#4A4A4A]/80 font-body mb-6">
+            <p className="text-lg md:text-xl text-[#FFF8EB]/90 font-body mb-6">
               {post.excerpt}
             </p>
           )}
-          <div className="flex justify-center items-center gap-x-6 gap-y-2 flex-wrap text-sm font-body text-[#4A4A4A]/70 uppercase tracking-wider">
+          <div className="flex justify-center items-center gap-x-6 gap-y-2 flex-wrap text-sm font-body text-[#FFF8EB]/80 uppercase tracking-wider">
             {post.published_at && (
               <div className="flex items-center">
                 <Calendar className="h-4 w-4 mr-1.5" />
@@ -226,7 +226,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="lg:flex lg:gap-12">
           {/* Floating Table of Contents (Desktop Sidebar / Mobile Collapsible) */}
           {tocItems.length > 0 && (
-            <aside className="lg:w-1/4 mb-8 lg:mb-0 lg:sticky lg:top-28 self-start hidden lg:block">
+            <aside className="lg:w-2/5 mb-8 lg:mb-0 lg:sticky lg:top-28 self-start hidden lg:block ">
               <h3 className="text-lg font-semibold font-heading text-[#317039] mb-4">Contents</h3>
               <nav>
                 <ul>
@@ -243,7 +243,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           )}
 
           {/* Article Content */}
-          <article className={`prose prose-lg max-w-none lg:w-${tocItems.length > 0 ? '3/4' : 'full'} text-[#4A4A4A] font-body prose-headings:font-heading prose-headings:text-[#317039] prose-h2:border-b-2 prose-h2:border-[#F1BE49] prose-h2:pb-2 prose-h2:mb-6 prose-strong:text-[#CC4824] prose-a:text-[#CC4824] hover:prose-a:text-[#317039]`}
+          <article className={`prose prose-lg max-w-none lg:w-${tocItems.length > 0 ? '3/5' : 'full'} text-[#4A4A4A] font-body prose-headings:font-heading prose-headings:text-[#317039] prose-h2:border-b-2 prose-h2:border-[#F1BE49] prose-h2:pb-2 prose-h2:mb-6 prose-strong:text-[#CC4824] prose-a:text-[#CC4824] hover:prose-a:text-[#317039]`}
             dangerouslySetInnerHTML={{ __html: post.content }}
           >
             {/* 

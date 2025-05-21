@@ -80,6 +80,7 @@ export default function RootLayout({
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         <Header />
         {children}
+        
         {/* MailerLite Universal Script */}
         <Script id="mailerlite-universal" strategy="afterInteractive">
           {`
