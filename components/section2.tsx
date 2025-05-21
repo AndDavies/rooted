@@ -54,12 +54,12 @@ export function Section2() {
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="text-center mb-12 md:mb-16">
-          <span className="block text-gray-500 text-sm font-medium tracking-wider uppercase mb-2 text-shadow-sm">
-            The Unseen Toll
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-shadow-md">
-            The High Cost of Always-On Leadership
-          </h2>
+            <span className="block text-gray-500 text-sm font-medium tracking-wider uppercase mb-2 text-shadow-sm">
+              The Unseen Toll
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-shadow-md">
+              The High Cost of Always-On Leadership
+            </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -90,8 +90,8 @@ export function Section2() {
                       {smallText}
                     </p>
                   </div>
-                </div>
-              </div>
+            </div>
+          </div>
             );
           })}
         </div>

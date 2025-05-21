@@ -8,6 +8,9 @@ import { ArrowRight, Calendar, TrendingUp, Bookmark } from "lucide-react"
 import { format } from "date-fns"
 //import { BlogSubscribeForm } from "@/components/BlogSubscribeForm"
 
+export const revalidate = 60; // Revalidate at most every 60 seconds
+// export const dynamic = 'force-dynamic'; // You can try this if revalidate doesn't solve it
+
 /**
  * Blog Index Page Component
  * 
