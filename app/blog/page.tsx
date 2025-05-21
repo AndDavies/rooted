@@ -26,6 +26,7 @@ interface BlogPost {
   excerpt: string | null
   published_at: string | null
   featured_image?: string | null
+  card_icon?: string | null
   tags?: string[] | null
   is_featured?: boolean | null
 }
@@ -43,7 +44,7 @@ export default async function BlogIndexPage() {
     const [{ data: postsData, error: postsError }, { data: allTagsData, error: tagsError }] = await Promise.all([
       supabase
         .from("blog_posts")
-        .select("id, title, slug, excerpt, published_at, featured_image, tags") // Removed is_featured
+        .select("id, title, slug, excerpt, published_at, featured_image, card_icon, tags")
         .order("published_at", { ascending: false })
         .limit(12), // Fetch a few more for a fuller grid, e.g., 12
       supabase.from("blog_posts").select("tags").returns<TagPost[]>(),
@@ -92,21 +93,18 @@ export default async function BlogIndexPage() {
                     key={post.id}
                     className="overflow-hidden hover:shadow-lg transition-all duration-300 border-gray-100 h-full flex flex-col bg-[#FFF1D4]"
                   >
-                    {post.featured_image && (
-                      <div className="relative h-48 overflow-hidden">
+                    {post.card_icon && (
+                      <div className="relative h-32 w-full flex items-center justify-center p-4 bg-[#FFF8EB]">
                         <Image
-                          src={post.featured_image || "/placeholder.svg"}
-                          alt={post.title}
-                          fill
-                          className="object-cover transition-transform duration-500 hover:scale-105"
+                          src={post.card_icon}
+                          alt={`${post.title} icon`}
+                          width={80}
+                          height={80}
+                          className="object-contain"
                         />
-                        {post.tags && post.tags.length > 0 && (
-                          <div className="absolute top-3 left-3">
-                            <Badge className="bg-white/80 backdrop-blur-sm text-[#317039]">{post.tags[0]}</Badge>
-                          </div>
-                        )}
                       </div>
                     )}
+                    
                     <CardContent className="p-6 flex-grow">
                       <div className="flex items-center gap-4 text-xs text-[#4A4A4A]/70 mb-3">
                         <div className="flex items-center gap-1">
