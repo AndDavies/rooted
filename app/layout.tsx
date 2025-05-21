@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Bebas_Neue, Rufina } from "next/font/google"
 import localFont from "next/font/local"
 import Script from 'next/script'
+import { Header } from "@/components/header"
 
 // Geist font setup
 const geist = localFont({
@@ -77,6 +78,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable}`}>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
+        <Header />
         {children}
         {/* MailerLite Universal Script */}
         <Script id="mailerlite-universal" strategy="afterInteractive">

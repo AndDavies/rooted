@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
@@ -49,6 +49,7 @@ export function WhyRooted() {
 
   // Get current pillar data or default
   const currentPillar = hoveredPillar !== null ? pillars[hoveredPillar] : null
+  const defaultPillarColor = "#317039"; // Default color if no pillar is hovered/selected
 
   // Determine text color based on background color brightness
   const getTextColor = (bgColor: string) => {
@@ -83,17 +84,20 @@ export function WhyRooted() {
           {/* Left side - Interactive Circle */}
           <div className="flex justify-center order-2 lg:order-1">
             <motion.div
-              className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full flex flex-col items-center justify-center p-8 md:p-16 text-center transition-all duration-500"
+              className="relative w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full flex flex-col items-center justify-center p-8 md:p-16 text-center"
               style={{
-                backgroundColor: currentPillar ? currentPillar.color : "#317039",
-                color: currentPillar ? getTextColor(currentPillar.color) : "#FFFFFF",
+                // Let Framer Motion handle backgroundColor for animation consistency
+                color: currentPillar ? getTextColor(currentPillar.color) : getTextColor(defaultPillarColor),
               }}
-              initial={{ scale: 0.9 }}
+              initial={{ 
+                scale: 0.9,
+                backgroundColor: defaultPillarColor 
+              }}
               animate={{
                 scale: 1,
-                backgroundColor: currentPillar ? currentPillar.color : "#317039",
+                backgroundColor: currentPillar ? currentPillar.color : defaultPillarColor,
               }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5 }} // This duration applies to Framer Motion animations (scale, backgroundColor)
             >
               {currentPillar ? (
                 <>
@@ -114,13 +118,14 @@ export function WhyRooted() {
               {pillars.map((pillar, index) => (
                 <motion.div
                   key={index}
+                  // Note: transition-all duration-500 in className applies to CSS transitions (like borderColor here)
                   className="border-l-2 border-dotted pl-4 py-2 cursor-pointer transition-all duration-500"
                   style={{
-                    borderColor: hoveredPillar === index ? pillar.color : "#FFF8EB", // Cosmic Latte for non-hovered
+                    borderColor: hoveredPillar === index ? pillar.color : "#FFF8EB", 
                   }}
                   onMouseEnter={() => setHoveredPillar(index)}
                   onMouseLeave={() => setHoveredPillar(null)}
-                  whileHover={{ x: 5 }}
+                  whileHover={{ x: 5 }} // Framer Motion hover animation
                 >
                   <h3
                     className="font-medium text-lg md:text-xl mb-1 transition-colors duration-500 text-shadow-hero-h1 tracking-tight"

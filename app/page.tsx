@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Header } from "@/components/header"
+
 import { Hero } from "@/components/hero"
 // import { Section1 } from "@/components/section1"
 import { Section2 } from "@/components/section2"
@@ -15,7 +15,7 @@ import { Program } from "@/components/program"
 export default function Home() {
   return (
     <>
-      <Header />
+      
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <Hero />

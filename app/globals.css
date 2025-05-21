@@ -7,14 +7,6 @@
   --background-rgb: 255, 255, 255;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-  letter-spacing: -0.025em;
-  font-family: var(--font-glacial);
-  @apply text-gray-800;
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -148,14 +140,13 @@ body {
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground font-sans;
+    letter-spacing: -0.025em;
   }
 
   h1 {
@@ -171,5 +162,61 @@ body {
   h4, h5, h6 {
     @apply font-medium tracking-tight;
     font-family: var(--font-glacial);
+  }
+
+  .prose p {
+    margin-bottom: 1rem;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1rem 0;
+  }
+
+  .prose h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    border: 1px solid #e5e7eb;
+  }
+
+  .prose th,
+  .prose td {
+    border: 1px solid #e5e7eb;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  .prose th {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .prose td {
+    vertical-align: top;
   }
 }
