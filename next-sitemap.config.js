@@ -31,7 +31,7 @@ module.exports = {
     try {
       const { data: posts, error: postsError } = await supabase
         .from("blog_posts") // Assuming your blog posts table is named 'posts'
-        .select("slug, updated_at"); // Select slug and updated_at for lastmod
+        .select("slug"); // Select slug and updated_at for lastmod
 
       if (postsError) {
         console.error("Error fetching blog posts for sitemap:", postsError.message);
