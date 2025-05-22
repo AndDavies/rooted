@@ -1,4 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
+const path = require('path');
+
 module.exports = {
   siteUrl: 'https://www.rootedexecutiveretreats.com',
   generateRobotsTxt: true, // Option to generate a robots.txt file
@@ -47,11 +49,18 @@ module.exports = {
   // This function is used to fetch additional paths from remote sources (like your Supabase DB)
   // It's more robust for App Router as it doesn't rely on crawling generated pages
   additionalPaths: async (config) => {
-    // Lazily import the Supabase client to ensure env vars are loaded
-    // Attempt to import the .ts file directly. 
-    // If this fails, we may need a .js bridge or ensure next-sitemap can transpile it.
-    const { createClient } = await import('./lib/supabase-server.ts'); 
-    const supabase = await createClient();
+    let createClientSupabase;
+    try {
+      // Require from the explicitly compiled location
+      // The path will be lib_compiled/lib/supabase-server.js relative to project root
+      createClientSupabase = require(path.join(process.cwd(), 'lib_compiled', 'lib', 'supabase-server.js')).createClient;
+      console.log('[next-sitemap] Successfully required supabase client from ./lib_compiled/lib/supabase-server.js');
+    } catch (e) {
+      console.error('[next-sitemap] Failed to require supabase client from ./lib_compiled/lib/supabase-server.js:', e);
+      return []; // Return empty if client cannot be loaded
+    }
+
+    const supabase = createClientSupabase(); 
     let results = [];
 
     if (supabase) {
@@ -64,7 +73,10 @@ module.exports = {
 
         if (error) {
           console.error('[next-sitemap] Error fetching blog posts from Supabase:', error.message);
-          throw error; // Throw error to potentially fail sitemap generation or handle it
+          // Log the underlying error object if it exists and has more details
+          if (error.details) console.error('[next-sitemap] Supabase error details:', error.details);
+          if (error.hint) console.error('[next-sitemap] Supabase error hint:', error.hint);
+          throw error; 
         }
 
         if (posts) {
@@ -78,7 +90,6 @@ module.exports = {
         }
       } catch (e) {
         console.error('[next-sitemap] Exception during Supabase query for blog posts:', e);
-        // Decide if you want to proceed with a partial sitemap or fail
       }
     } else {
       console.error('[next-sitemap] Supabase client was not available for fetching posts.');

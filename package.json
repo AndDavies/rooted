@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "compile:supabase-server": "tsc --project tsconfig.json --outDir lib_compiled --module commonjs lib/supabase-server.ts",
+    "build": "pnpm run compile:supabase-server && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
