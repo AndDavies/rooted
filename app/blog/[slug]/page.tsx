@@ -3,6 +3,7 @@ import { createClient } from "@/lib/supabase-server";
 // Image import might not be needed if no featured_image is displayed directly
 // import Image from "next/image"; 
 import Link from "next/link";
+import Script from 'next/script'; // Added import for next/script
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { ChevronLeft, ChevronRight, Calendar, Clock } from "lucide-react"; 
@@ -76,12 +77,12 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (error || !post) {
     return {
-      title: "Blog Post Not Found | Rooted Survey",
+      title: "Blog Post Not Found | Rooted Executive Retreats",
       description: "The blog post you are looking for does not exist.",
     };
   }
 
-  const description = post.meta_description || post.excerpt || "Read the latest insights from Rooted Survey.";
+  const description = post.meta_description || post.excerpt || "Read the latest insights from Rooted Executive Retreats.";
 
   return {
     title: `${post.title} | Rooted Survey`,
@@ -91,13 +92,13 @@ export async function generateMetadata({ params }: PageProps) {
       title: `${post.title} | Rooted Survey`,
       description: description,
       url: `/blog/${slug}`,
-      siteName: "Rooted Survey",
+      siteName: "Rooted Executive Retreats",
       locale: "en_US",
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Rooted Survey`,
+      title: `${post.title} | Rooted Executive Retreats`,
       description: description,
       creator: "@RootedSurvey", // Replace with actual Twitter handle
     },
@@ -270,23 +271,20 @@ export default async function BlogPostPage({ params }: PageProps) {
         </div>
       </div>
       
-      {/* End-of-Post Call-to-Action */}
-      <section className="bg-[#CC4824] py-12 md:py-16 text-center">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl md:text-4xl font-bold font-heading text-white mb-6">
-            Ready to Take the Next Step?
-          </h2>
-          <p className="text-lg text-white/90 font-body mb-8">
-            Download our comprehensive report, subscribe for more insights, or explore our executive retreat programs.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button size="lg" className="bg-white text-[#CC4824] hover:bg-[#FFF1D4]">
-              Download PDF
-            </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-[#CC4824]">
-              Explore Retreats
-            </Button>
-          </div>
+      {/* MailerLite Universal Embed */}
+      <section className=" bg-[#FFF8EB]"> {/* Added a section wrapper for consistent spacing */}
+        <div className="container mx-auto px-4 border-2"> {/* Removed flex justify-center */}
+          <Script id="mailerlite-universal-script" strategy="afterInteractive">
+            {`
+              (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+              .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+              n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+              (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+              ml('account', '1529443');
+            `}
+          </Script>
+          {/* MailerLite Embedded Form Div - Universal script will load form rNp9Dl here */}
+          <div className="ml-embedded w-full" data-form="rNp9Dl"></div>
         </div>
       </section>
 
