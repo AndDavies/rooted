@@ -30,7 +30,7 @@ module.exports = {
 
     try {
       const { data: posts, error: postsError } = await supabase
-        .from("posts") // Assuming your blog posts table is named 'posts'
+        .from("blog_posts") // Assuming your blog posts table is named 'posts'
         .select("slug, updated_at"); // Select slug and updated_at for lastmod
 
       if (postsError) {
