@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "compile:supabase-server": "tsc lib/supabase-server.ts --outDir lib_compiled --module commonjs --esModuleInterop true --target es6 --skipLibCheck true",
-    "build": "pnpm run compile:supabase-server && next build",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint"
