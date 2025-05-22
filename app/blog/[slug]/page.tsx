@@ -273,7 +273,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       
       {/* MailerLite Universal Embed */}
       <section className=" bg-[#FFF8EB]"> {/* Added a section wrapper for consistent spacing */}
-        <div className="container mx-auto px-4 border-2"> {/* Removed flex justify-center */}
+        <div className="container mx-auto"> {/* Removed flex justify-center */}
           <Script id="mailerlite-universal-script" strategy="afterInteractive">
             {`
               (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
