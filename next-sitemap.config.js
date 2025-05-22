@@ -48,7 +48,9 @@ module.exports = {
   // It's more robust for App Router as it doesn't rely on crawling generated pages
   additionalPaths: async (config) => {
     // Lazily import the Supabase client to ensure env vars are loaded
-    const { createClient } = await import('@/lib/supabase-server.js'); // Use .js if your server file is .ts but compiles to .js in build
+    // Attempt to import the .ts file directly. 
+    // If this fails, we may need a .js bridge or ensure next-sitemap can transpile it.
+    const { createClient } = await import('./lib/supabase-server.ts'); 
     const supabase = await createClient();
     let results = [];
 
