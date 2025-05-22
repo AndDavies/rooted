@@ -86,20 +86,12 @@ export async function generateMetadata({ params }: PageProps) {
   return {
     title: `${post.title} | Rooted Survey`,
     description: description,
-    keywords: post.tags ? [...post.tags, "wellbeing", "Rooted Survey"] : ["wellbeing", "Rooted Survey"],
+    keywords: post.tags ? [...post.tags, "wellbeing", "Rooted Survey", "blog"] : ["wellbeing", "Rooted Survey", "blog", "article"],
     openGraph: {
       title: `${post.title} | Rooted Survey`,
       description: description,
-      url: `https://www.rootedsurvey.com/blog/${slug}`,
+      url: `/blog/${slug}`,
       siteName: "Rooted Survey",
-      images: [
-        {
-          url: post.featured_image || "/images/og-image.jpg", // Default OG image
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
       locale: "en_US",
       type: "article",
     },
@@ -107,7 +99,6 @@ export async function generateMetadata({ params }: PageProps) {
       card: "summary_large_image",
       title: `${post.title} | Rooted Survey`,
       description: description,
-      images: [post.featured_image || "/images/og-image.jpg"], // Corrected stray backslash
       creator: "@RootedSurvey", // Replace with actual Twitter handle
     },
   };

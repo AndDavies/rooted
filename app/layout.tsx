@@ -65,9 +65,46 @@ const hkGrotesk = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "ROOTED | A Playground of Wellbeing",
-  description: "A new way of life that brings you back to your roots.",
-    generator: 'v0.dev'
+  metadataBase: new URL('https://www.yourdomain.com'), // IMPORTANT: Replace with your actual domain
+  title: {
+    default: "ROOTED | A Playground of Wellbeing",
+    template: `%s | Rooted Survey`, // Allows individual pages to set their title part
+  },
+  description: "Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Survey.",
+  generator: 'Next.js', // Updated generator
+  openGraph: {
+    title: 'ROOTED | A Playground of Wellbeing',
+    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Survey.',
+    url: 'https://www.yourdomain.com', // IMPORTANT: Replace with your actual domain
+    siteName: 'Rooted Survey',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'ROOTED | A Playground of Wellbeing',
+    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Survey.',
+    // siteId: '@YourTwitterID', // IMPORTANT: Replace with your Twitter ID if available
+    creator: '@YourTwitterHandle', // IMPORTANT: Replace with your Twitter handle
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  // Consider adding icons and manifest if you have them:
+  // icons: {
+  //   icon: '/favicon.ico',
+  //   shortcut: '/icons/favicon-16x16.png', // Example path
+  //   apple: '/icons/apple-touch-icon.png',    // Example path
+  // },
+  // manifest: '/site.webmanifest', // Ensure this file exists in /public
 }
 
 export default function RootLayout({

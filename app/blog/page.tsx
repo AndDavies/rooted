@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase-server"
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from 'next'
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -35,6 +36,21 @@ interface BlogPost {
 interface TagPost {
   tags: string[] | null;
 }
+
+// Added metadata for the blog index page
+export const metadata: Metadata = {
+  title: "Blog | Rooted Survey",
+  description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Survey.",
+  openGraph: {
+    title: "Blog | Rooted Survey",
+    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Survey.",
+    url: '/blog',
+  },
+  twitter: {
+    title: "Blog | Rooted Survey",
+    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Survey.",
+  },
+};
 
 export default async function BlogIndexPage() {
   try {
