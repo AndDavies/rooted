@@ -128,6 +128,20 @@ export default function RootLayout({
             ml('account', '1529443');
           `}
         </Script>
+
+        {/* Google Analytics Tag */}
+        <Script 
+          strategy="afterInteractive" 
+          src="https://www.googletagmanager.com/gtag/js?id=G-VRPBKPHGK7"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-VRPBKPHGK7');
+          `}
+        </Script>
       </body>
     </html>
   )
