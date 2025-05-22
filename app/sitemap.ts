@@ -6,7 +6,7 @@ const SITE_URL = 'https://www.rootedexecutiveretreats.com';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const supabase = await createClient();
-  let blogPosts: { slug: string; updated_at?: string | null, published_at?: string | null }[] = [];
+  let blogPosts: { slug: string; published_at?: string | null, updated_at?: string | null }[] = [];
 
   if (supabase) {
     try {
