@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Home | Rooted Survey",
-    description: "Welcome to Rooted Survey. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
+    description: "WWWWelcome to Rooted Survey. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
   },
 };
 
