@@ -283,8 +283,203 @@ export default async function BlogPostPage({ params }: PageProps) {
               ml('account', '1529443');
             `}
           </Script>
-          {/* MailerLite Embedded Form Div - Universal script will load form rNp9Dl here */}
-          <div className="ml-embedded w-full" data-form="rNp9Dl"></div>
+
+          {/* New MailerLite Embed Code */}
+          <div className="ml-embedded" data-form="rNp9Dl" />
+
+          <div dangerouslySetInnerHTML={{ __html: `
+            <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1747910");</style>
+            <style type="text/css">
+
+              .ml-mobileButton-horizontal { display: none; }
+
+              #mlb2-26320157 .ml-mobileButton-horizontal button {
+
+                background-color: #000000 !important;
+                border-color: #000000 !important;
+                border-style: solid !important;
+                border-width: 1px !important;
+                border-radius: 25px !important;
+                box-shadow: none !important;
+                color: #fff8ea !important;
+                cursor: pointer;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+                font-size: 14px !important;
+                font-weight: 700 !important;
+                line-height: 20px !important;
+                padding: 10px !important;
+                width: 100% !important;
+
+              }
+
+              @media only screen and (max-width: 400px) {
+                #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+                  padding: 0 0 10px 0 !important;
+                }
+                .ml-hide-horizontal { display: none !important; }
+                .ml-form-formContent.horozintalForm .ml-button-horizontal { display: none!important; }
+                .ml-mobileButton-horizontal { display: inline-block !important; margin-bottom: 20px;width:100%; }
+                .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-bottom: 0px !important; }
+              }
+
+            </style>
+            <style type="text/css">
+              @media only screen and (max-width: 400px) {
+                .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields {
+                  margin-bottom: 10px !important;
+                  width: 100% !important;
+                }
+              }
+            </style>
+            <style type="text/css">
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions { text-align: left; float: left; width: 100%; }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent {
+                margin: 0 0 15px 0;
+                text-align: left;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.horizontal {
+                margin: 0 0 15px 0;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent h4 {
+                color: #000000;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 18px;
+                margin: 0 0 10px 0;
+                word-break: break-word;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p {
+                color: #000000;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                line-height: 18px;
+                margin: 0 0 10px 0;
+              }
+
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p {
+                color: #000000;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                line-height: 22px;
+                margin: 0 0 10px 0;
+              }
+
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p a {
+                color: #000000;
+              }
+
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p:last-child {
+                margin: 0;
+              }
+
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p a {
+                color: #000000;
+                text-decoration: underline;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p:last-child { margin: 0 0 15px 0; }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptions {
+                margin: 0;
+                padding: 0;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox {
+                margin: 0 0 10px 0;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox:last-child {
+                margin: 0;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox label {
+                font-weight: normal;
+                margin: 0;
+                padding: 0;
+                position: relative;
+                display: block;
+                min-height: 24px;
+                padding-left: 24px;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description {
+                color: #000000;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                line-height: 18px;
+                text-align: left;
+                margin-bottom: 0;
+                position: relative;
+                vertical-align: top;
+                font-style: normal;
+                font-weight: 700;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .description {
+                color: #000000;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-style: italic;
+                font-weight: 400;
+                line-height: 18px;
+                margin: 5px 0 0 0;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type="checkbox"] {
+                box-sizing: border-box;
+                padding: 0;
+                position: absolute;
+                z-index: -1;
+                opacity: 0;
+                margin-top: 5px;
+                margin-left: -1.5rem;
+                overflow: visible;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR {
+                padding-bottom: 20px;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR p {
+                color: #000000;
+                font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                font-size: 10px;
+                line-height: 14px;
+                margin: 0;
+                padding: 0;
+              }
+              #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR p a {
+                color: #000000;
+                text-decoration: underline;
+
+              }
+              @media (max-width: 768px) {
+                #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent p {
+                  font-size: 12px !important;
+                  line-height: 18px !important;
+                }
+                #mlb2-26320157.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedMailerLite-GDPR p {
+                  font-size: 10px !important;
+                  line-height: 14px !important;
+                }
+              }
+            </style>
+          `}} />
+
+          <Script id="ml-webform-success-26320157" strategy="afterInteractive">
+            {`
+              function ml_webform_success_26320157() {
+                var $ = (typeof ml_jQuery !== 'undefined' ? ml_jQuery : (typeof jQuery !== 'undefined' ? jQuery : null));
+                if ($) {
+                  $('.ml-subscribe-form-26320157 .row-success').show();
+                  $('.ml-subscribe-form-26320157 .row-form').hide();
+                }
+              }
+            `}
+          </Script>
+          <Script 
+            id="ml-webforms-js"
+            src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" 
+            strategy="afterInteractive" 
+          />
+          <Script id="ml-fetch-takel-26320157" strategy="afterInteractive">
+            {`
+              fetch("https://assets.mailerlite.com/jsonp/1529443/forms/155139218442552547/takel")
+                .catch(error => console.error('MailerLite fetch takel error:', error));
+            `}
+          </Script>
+          
         </div>
       </section>
 
