@@ -2,8 +2,13 @@
 
 import React from "react";
 import Image from "next/image";
-// localFont import is no longer needed here if Geist is globally defined
-// import localFont from "next/font/local"; 
+import localFont from "next/font/local"; // Import localFont
+
+// Define the Popsies font
+const popsiesFont = localFont({
+  src: "../public/fonts/LovtonyRegular-YzV5O.ttf",
+  display: "swap", // Good practice for font loading
+});
 
 // Geist font definition removed as it's now global
 
@@ -37,11 +42,11 @@ export function Hero() {
                 className="object-contain"
               />
             </div>
-            {/* Apply font-sans (which is Geist) and specific styling for Hero H1 */}
+            {/* Apply Popsies font and specific styling for Hero H1 */}
             <h1
-              className="font-sans text-6xl md:text-8xl font-bold text-white tracking-widest text-shadow-hero-h1"
+              className={`${popsiesFont.className} text-9xl md:text-8xl font-bold text-white tracking-widest text-shadow-hero-h1`}
             >
-              ROOTED
+              <strong>Rooted</strong>
             </h1>
           </div>
           {/* Ensure paragraph also uses a globally available font, like font-sans (Geist) or font-body if it were different */}

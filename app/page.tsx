@@ -15,15 +15,15 @@ import { Program } from "@/components/program"
 
 // Added metadata for the homepage
 export const metadata: Metadata = {
-  title: "Home | Rooted Survey",
+  title: "Home | Rooted Executive Retreats",
   description: "Welcome to Rooted Survey. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
   openGraph: {
-    title: "Home | Rooted Survey",
+    title: "Home | Rooted Executive Retreats",
     description: "Welcome to Rooted Survey. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
     url: '/',
   },
   twitter: {
-    title: "Home | Rooted Survey",
+    title: "Home | Rooted Executive Retreats",
     description: "WWWWelcome to Rooted Survey. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
   },
 };
