@@ -103,7 +103,7 @@ export function Header() {
             priority
           />
           <span 
-            className={`${popsiesFont.className} text-2xl font-bold text-shadow-gold hidden sm:block 
+            className={`font-sans text-2xl font-bold text-shadow-gold hidden sm:block 
                         ${isScrolled ? 'text-[#1A1A1A]' : 'text-white'}`}>
             Rooted
           </span>

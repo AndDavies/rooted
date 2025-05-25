@@ -46,13 +46,13 @@ export function Hero() {
             <h1
               className={`${popsiesFont.className} text-9xl md:text-8xl font-bold text-white tracking-widest text-shadow-hero-h1`}
             >
-              <strong>Rooted</strong>
+              Rooted
             </h1>
           </div>
           {/* Ensure paragraph also uses a globally available font, like font-sans (Geist) or font-body if it were different */}
           <div className="text-white text-left mt-8">
             <p className="font-sans text-sm antialiased md:text-xl leading-relaxed tracking-tight">
-            Embark on a 6-day odyssey in Madeira to rediscover your core. Rooted blends ancient wisdom with modern science, guiding you to lead with unshakable presence, boundless energy, and profound balance.
+            Embark on a in Madeira to rediscover your core. Rooted blends ancient wisdom with modern science, guiding you to lead with unshakable presence, boundless energy, and profound balance.
             </p>
           </div>
         </div>

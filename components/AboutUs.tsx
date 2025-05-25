@@ -30,44 +30,50 @@ export function AboutUs() {
 
   return (
     <>
-      <section className="bg-white py-24" id="about">
-        <div className="container mx-auto px-4 md:px-8 max-w-4xl">
-          <div className="flex flex-col items-center">
-            {/* Logo */}
-            <div className="mb-6 relative overflow-visible">
-            <h1 className="text-4xl tracking-widest font-semibold mb-3 text-neutral-900">
-                REST. RECHARGE. RECOVER.
-            </h1>
+      <section className="bg-white py-16 md:py-24" id="about">
+        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
+            <div className="md:w-3/5 text-center md:text-left">
+              <div className="mb-6">
+                <h1 className="text-4xl tracking-widest font-semibold mb-3 text-neutral-900">
+                  REST. RECHARGE. RECOVER.
+                </h1>
+              </div>
+              <div className="space-y-6">
+                <p className="text-gray-700 text-sm leading-relaxed font-light tracking-tight antialiased">
+                  At <span className="font-medium">Rooted</span>, we empower visionary leaders to thrive through a
+                  science-backed, nature-driven reset. Built on six pillars—
+                  <span className="font-medium">Breathing</span>,
+                  <span className="font-medium"> Sleep Optimization</span>,
+                  <span className="font-medium"> Nutrition</span>,
+                  <span className="font-medium"> Movement and Training</span>,
+                  <span className="font-medium"> Mindset and Focus</span>, and
+                  <span className="font-medium"> Relaxation and Joy</span>
+                  —our 6-day retreats in Madeira, Portugal, recalibrate your nervous system, restore metabolic health, and
+                  reconnect you to your core.
+                </p>
+                <p className="text-gray-700 text-sm leading-relaxed font-light tracking-tight antialiased">
+                  We bridge high-performance activation with deep rest, guiding you to lead from the inside out with
+                  clarity, resilience, and purpose.
+                </p>
+              </div>
+              <div className="mt-10 md:mt-12 w-24 h-[2px] bg-[#c0c0b0] mx-auto md:mx-0"></div>
             </div>
 
-            {/* About Text */}
-            <div className="text-center">
-              <p className="text-gray-700 text-sm leading-relaxed font-light max-w-3xl mx-auto tracking-tight antialiased">
-                At <span className="font-medium">Rooted</span>, we empower visionary leaders to thrive through a
-                science-backed, nature-driven reset. Built on six pillars—
-                <span className="font-medium">Breathing</span>,
-                <span className="font-medium"> Sleep Optimization</span>,
-                <span className="font-medium"> Nutrition</span>,
-                <span className="font-medium"> Movement and Training</span>,
-                <span className="font-medium"> Mindset and Focus</span>, and
-                <span className="font-medium"> Relaxation and Joy</span>
-                —our 6-day retreats in Madeira, Portugal, recalibrate your nervous system, restore metabolic health, and
-                reconnect you to your core.
-              </p>
-
-              <p className="text-gray-700 text-sm leading-relaxed font-light mt-6 max-w-3xl mx-auto tracking-tight antialiased">
-                We bridge high-performance activation with deep rest, guiding you to lead from the inside out with
-                clarity, resilience, and purpose.
-              </p>
+            <div className="md:w-2/5 w-full">
+              <div className="w-full h-80 md:h-[400px] border-2 border-neutral-700 rounded-3xl shadow-md overflow-hidden relative">
+                <Image
+                  src="/rooted_site_600_600.jpg"
+                  alt="Serene natural environment at Rooted Executive Retreats"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
             </div>
-
-            {/* Decorative element */}
-            <div className="mt-12 w-24 h-[2px] bg-[#c0c0b0]"></div>
           </div>
         </div>
       </section>
 
-      {/* New Yellow Strip Section */}
       <section style={{ backgroundColor: "#F1BE49" }} className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
