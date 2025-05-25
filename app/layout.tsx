@@ -68,22 +68,22 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.yourdomain.com'), // IMPORTANT: Replace with your actual domain
   title: {
     default: "ROOTED | A Playground of Wellbeing",
-    template: `%s | Rooted Survey`, // Allows individual pages to set their title part
+    template: `%s | Rooted Executive Retreats`, // Allows individual pages to set their title part
   },
-  description: "Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Survey.",
+  description: "Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.",
   generator: 'Next.js', // Updated generator
   openGraph: {
     title: 'ROOTED | A Playground of Wellbeing',
-    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Survey.',
+    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
     url: 'https://www.yourdomain.com', // IMPORTANT: Replace with your actual domain
-    siteName: 'Rooted Survey',
+    siteName: 'Rooted Executive Retreats',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ROOTED | A Playground of Wellbeing',
-    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Survey.',
+    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
     // siteId: '@YourTwitterID', // IMPORTANT: Replace with your Twitter ID if available
     creator: '@YourTwitterHandle', // IMPORTANT: Replace with your Twitter handle
   },

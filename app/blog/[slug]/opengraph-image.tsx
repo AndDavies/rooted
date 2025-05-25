@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase-server'; // To fetch post title
 
 export const runtime = 'edge';
 
-export const alt = 'Rooted Survey Blog Post'; // Default alt, can be improved if title is accessible here easily
+export const alt = 'Rooted Executive Retreats Blog Post'; // Default alt, can be improved if title is accessible here easily
 export const size = {
   width: 1200,
   height: 630,
@@ -77,7 +77,7 @@ export default async function Image({ params }: ImageProps) {
             marginBottom: '20px'
           }}
         >
-          ROOTED SURVEY BLOG
+          ROOTED EXECUTIVE RETREATS BLOG
         </div>
         <div
           style={{
@@ -109,7 +109,7 @@ export default async function Image({ params }: ImageProps) {
                 color: '#4A4A4A'
             }}
         >
-            rootedsurvey.com/blog/{slug}
+            https://www.rootedexecutiveretreats.com/blog/{slug}
         </div>
       </div>
     ),

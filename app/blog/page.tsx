@@ -39,16 +39,16 @@ interface TagPost {
 
 // Added metadata for the blog index page
 export const metadata: Metadata = {
-  title: "Blog | Rooted Survey",
-  description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Survey.",
+  title: "Blog | Rooted Executive Retreats",
+  description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
   openGraph: {
-    title: "Blog | Rooted Survey",
-    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Survey.",
+    title: "Blog | Rooted Executive Retreats",
+    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
     url: '/blog',
   },
   twitter: {
-    title: "Blog | Rooted Survey",
-    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Survey.",
+    title: "Blog | Rooted Executive Retreats",
+    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
   },
 };
 

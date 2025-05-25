@@ -85,11 +85,11 @@ export async function generateMetadata({ params }: PageProps) {
   const description = post.meta_description || post.excerpt || "Read the latest insights from Rooted Executive Retreats.";
 
   return {
-    title: `${post.title} | Rooted Survey`,
+    title: `${post.title} | Rooted Executive Retreats`,
     description: description,
-    keywords: post.tags ? [...post.tags, "wellbeing", "Rooted Survey", "blog"] : ["wellbeing", "Rooted Survey", "blog", "article"],
+    keywords: post.tags ? [...post.tags, "wellbeing", "Rooted Executive Retreats", "blog"] : ["wellbeing", "Rooted Executive Retreats", "blog", "article"],
     openGraph: {
-      title: `${post.title} | Rooted Survey`,
+      title: `${post.title} | Rooted Executive Retreats`,
       description: description,
       url: `/blog/${slug}`,
       siteName: "Rooted Executive Retreats",
@@ -498,7 +498,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               </Link> */}
           </div>
           <p>Published on: {post.published_at ? format(new Date(post.published_at), "MMMM d, yyyy") : "N/A"}</p>
-          <p className="mt-1">© {new Date().getFullYear()} Rooted Survey. All rights reserved.</p>
+          <p className="mt-1">© {new Date().getFullYear()} Rooted Executive Retreats. All rights reserved.</p>
         </div>
       </footer>
     </div>

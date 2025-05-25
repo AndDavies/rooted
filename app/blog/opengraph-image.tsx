@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'Blog | Rooted Survey';
+export const alt = 'Blog | Rooted Executive Retreats';
 export const size = {
   width: 1200,
   height: 630,
@@ -79,7 +79,7 @@ export default async function Image() {
             color: '#F1BE49', // Maximum Yellow for call to action/site name
           }}
         >
-          rootedsurvey.com
+          https://www.rootedexecutiveretreats.com/
         </p>
       </div>
     ),

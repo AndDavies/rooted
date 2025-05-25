@@ -4,6 +4,13 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; // Use next/link for client-side navigation
 import { scrollToElement } from '@/lib/scroll'; // Assuming this path is correct
+import localFont from "next/font/local"; // Import localFont
+
+// Define the Popsies font
+const popsiesFont = localFont({
+  src: "../public/fonts/LovtonyRegular-YzV5O.ttf",
+  display: "swap", // Good practice for font loading
+});
 
 // Icons (using Heroicons as placeholders - install @heroicons/react if not already)
 const MenuIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -96,7 +103,7 @@ export function Header() {
             priority
           />
           <span 
-            className={`font-sans text-2xl font-bold text-shadow-gold hidden sm:block 
+            className={`${popsiesFont.className} text-2xl font-bold text-shadow-gold hidden sm:block 
                         ${isScrolled ? 'text-[#1A1A1A]' : 'text-white'}`}>
             Rooted
           </span>
