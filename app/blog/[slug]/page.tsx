@@ -149,30 +149,32 @@ export default async function BlogPostPage({ params }: PageProps) {
   
   // Table of Contents Generation
   const tocItems: TocItem[] = [];
+  let processedContent = post.content; // Initialize with original content
+
   if (post.content) {
-    const $ = cheerio.load(post.content);
+    const $ = cheerio.load(post.content); // Load content once for processing
     $('h2, h3').each((i, el) => {
       const element = $(el);
       const title = element.text();
       let id = element.attr('id');
       if (!id) {
         id = slugify(title);
-        // Optionally, you could modify the actual HTML content here to add the id
-        // element.attr('id', id); 
-        // For now, we just use it for the ToC link
+        element.attr('id', id); // Add id to the element in the parsed HTML
       }
       tocItems.push({
-        id: id || `section-${i}`, // Fallback id
+        id: id || `section-${i}`, // Fallback id if slugify returned empty
         title,
         level: parseInt(el.tagName.substring(1), 10), // h2 -> 2, h3 -> 3
       });
     });
+    processedContent = $.html(); // Get the modified HTML content with new IDs
   }
 
   // Reading Time Calculation
   let readingTimeMinutes = 0;
-  if (post.content) {
-    const $ = cheerio.load(post.content);
+  // Use processedContent for reading time calculation, only if post.content was originally present
+  if (post.content && processedContent) { 
+    const $ = cheerio.load(processedContent);
     const textContent = $.text(); // Get text content, strips HTML tags
     const words = textContent.trim().split(/\s+/).length;
     const wordsPerMinute = 225; // Average reading speed
@@ -255,7 +257,7 @@ export default async function BlogPostPage({ params }: PageProps) {
 
           {/* Article Content */}
           <article className={`prose prose-lg max-w-none lg:w-${tocItems.length > 0 ? '3/5' : 'full'} text-[#4A4A4A] font-body prose-headings:font-heading prose-headings:text-[#317039] prose-h2:border-b-2 prose-h2:border-[#F1BE49] prose-h2:pb-2 prose-h2:mb-6 prose-strong:text-[#CC4824] prose-a:text-[#CC4824] hover:prose-a:text-[#317039]`}
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: processedContent }}
           >
             {/* 
               To implement sectioned content with callouts, stat tiles, inline data visuals:
