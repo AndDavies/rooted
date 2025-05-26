@@ -72,7 +72,7 @@ const sageFont = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.yourdomain.com'), // IMPORTANT: Replace with your actual domain
+  metadataBase: new URL('https://www.rootedexecutiveretreats.com'), // IMPORTANT: Replace with your actual domain
   title: {
     default: "ROOTED | A Playground of Wellbeing",
     template: `%s | Rooted Executive Retreats`, // Allows individual pages to set their title part
@@ -105,12 +105,11 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  // Consider adding icons and manifest if you have them:
-  // icons: {
-  //   icon: '/favicon.ico',
+  icons: {
+    icon: '/favicon.ico', // Link to your favicon in the public folder
   //   shortcut: '/icons/favicon-16x16.png', // Example path
   //   apple: '/icons/apple-touch-icon.png',    // Example path
-  // },
+  },
   // manifest: '/site.webmanifest', // Ensure this file exists in /public
 }
 
