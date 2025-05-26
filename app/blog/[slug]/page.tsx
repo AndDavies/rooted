@@ -1,7 +1,6 @@
 // app/blog/[slug]/page.tsx
 import { createClient } from "@/lib/supabase-server";
-// Image import might not be needed if no featured_image is displayed directly
-// import Image from "next/image"; 
+import Image from "next/image"; // Ensured Image is imported
 import Link from "next/link";
 import Script from 'next/script'; // Added import for next/script
 import { notFound } from "next/navigation";
@@ -182,35 +181,54 @@ export default async function BlogPostPage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen bg-[#FFF8EB]">
-      {/* Top-of-Page Title Block */}
-      <header className="bg-[#4A4A4A] py-12 md:py-16 lg:py-20">
-        <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading text-[#FFF8EB] mb-4">
-            {post.title}
-          </h1>
-          {post.excerpt && (
-            <p className="text-lg md:text-xl text-[#FFF8EB]/90 font-body mb-6">
-              {post.excerpt}
-            </p>
-          )}
-          <div className="flex justify-center items-center gap-x-6 gap-y-2 flex-wrap text-sm font-body text-[#FFF8EB]/80 uppercase tracking-wider">
-            {post.published_at && (
-              <div className="flex items-center">
-                <Calendar className="h-4 w-4 mr-1.5" />
-                <span>{format(new Date(post.published_at), "MMMM d, yyyy")}</span>
-              </div>
+      {/* Top-of-Page Title Block - Updated Structure */}
+      <header className="relative min-h-screen flex flex-col md:flex-row bg-[#4A4A4A]">
+        {/* Text Content - Left Column (Order 2 on mobile, Order 1 on md screens) */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-6 sm:p-8 md:p-12 lg:p-16 order-2 md:order-1">
+          <div className="max-w-2xl">
+            {/* Removed font-heading, global style will apply */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-[#FFF8EB] mb-4">
+              {post.title}
+            </h1>
+            {post.excerpt && (
+              <p className="text-lg sm:text-xl text-[#FFF8EB]/90 font-body mb-6">
+                {post.excerpt}
+              </p>
             )}
-            {author && (
-              <span>By {author.name}</span>
-            )}
-            {readingTimeMinutes > 0 && (
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-1.5" />
-                <span>{readingTimeMinutes} min read</span>
-              </div>
-            )}
+            <div className="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-3 text-sm font-body text-[#FFF8EB]/80 uppercase tracking-wider">
+              {post.published_at && (
+                <div className="flex items-center">
+                  <Calendar className="h-4 w-4 mr-1.5" />
+                  <span>{format(new Date(post.published_at), "MMMM d, yyyy")}</span>
+                </div>
+              )}
+              {author && (
+                <span className="mt-2 sm:mt-0">By {author.name}</span>
+              )}
+              {readingTimeMinutes > 0 && (
+                <div className="flex items-center mt-2 sm:mt-0">
+                  <Clock className="h-4 w-4 mr-1.5" />
+                  <span>{readingTimeMinutes} min read</span>
+                </div>
+              )}
+            </div>
           </div>
         </div>
+
+        {/* Image - Right Column (Order 1 on mobile, Order 2 on md screens) */}
+        {post.featured_image && (
+          <div className="w-full md:w-1/2 h-64 sm:h-80 md:h-auto order-1 md:order-2 relative">
+            <Image
+              src={post.featured_image}
+              alt={post.title || "Blog post featured image"}
+              fill
+              style={{ objectFit: "cover" }}
+              priority // Good to add for LCP images
+            />
+            {/* Optional: Add a subtle overlay if needed, e.g., for text contrast if text was over image */}
+            {/* <div className="absolute inset-0 bg-black/10"></div> */}
+          </div>
+        )}
       </header>
 
       {/* Main Content Area with Optional ToC */}
@@ -219,7 +237,8 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Floating Table of Contents (Desktop Sidebar / Mobile Collapsible) */}
           {tocItems.length > 0 && (
             <aside className="lg:w-2/5 mb-8 lg:mb-0 lg:sticky lg:top-28 self-start hidden lg:block ">
-              <h3 className="text-lg font-heading text-[#317039] mb-4">Contents</h3>
+              {/* Removed font-heading, global style will apply */}
+              <h3 className="text-lg text-[#317039] mb-4">Contents</h3>
               <nav>
                 <ul>
                   {tocItems.map((item) => (
