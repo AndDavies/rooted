@@ -35,8 +35,8 @@ export function AboutUs() {
           <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
             <div className="md:w-3/5 text-center md:text-left">
               <div className="mb-6">
-                <h1 className="text-4xl tracking-widest font-semibold mb-3 text-neutral-900">
-                  REST. RECHARGE. RECOVER.
+                <h1 className="text-4xl tracking-tighter italic mb-3 text-neutral-900">
+                  Rest. Recharge. Recover.
                 </h1>
               </div>
               <div className="space-y-6">
@@ -84,7 +84,7 @@ export function AboutUs() {
                     className: `w-10 h-10 ${feature.initialIconColor} ${feature.hoverIconColorClass} transition-colors duration-300`,
                   })}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-neutral-900">
+                <h3 className="text-xl mb-3 text-neutral-900">
                   {feature.title}
                 </h3>
                 <p className="text-sm text-neutral-700">

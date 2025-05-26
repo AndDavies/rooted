@@ -2,13 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import localFont from "next/font/local"; // Import localFont
-
-// Define the Popsies font
-const popsiesFont = localFont({
-  src: "../public/fonts/LovtonyRegular-YzV5O.ttf",
-  display: "swap", // Good practice for font loading
-});
+// localFont import and popsiesFont definition are no longer needed here
+// import localFont from "next/font/local"; 
+// const popsiesFont = localFont(...);
 
 // Geist font definition removed as it's now global
 
@@ -42,9 +38,9 @@ export function Hero() {
                 className="object-contain"
               />
             </div>
-            {/* Apply Popsies font and specific styling for Hero H1 */}
+            {/* Removed popsiesFont.className and font-bold, font applied globally */}
             <h1
-              className={`${popsiesFont.className} text-9xl md:text-8xl font-bold text-white tracking-widest text-shadow-hero-h1`}
+              className={`text-9xl md:text-8xl text-white tracking-widest text-shadow-hero-h1`}
             >
               Rooted
             </h1>

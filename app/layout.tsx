@@ -64,6 +64,13 @@ const hkGrotesk = localFont({
   variable: "--font-hk-grotesk",
 })
 
+// Sage font setup
+const sageFont = localFont({
+  src: "../public/fonts/sage-webfont.ttf",
+  display: "swap",
+  variable: "--font-sage",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.yourdomain.com'), // IMPORTANT: Replace with your actual domain
   title: {
@@ -113,7 +120,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable}`}>
+    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${sageFont.variable}`}>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         <Header />
         {children}

@@ -2,11 +2,11 @@ import { createClient } from "@/lib/supabase-server"
 import Link from "next/link"
 import Image from "next/image"
 import type { Metadata } from 'next'
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
+// Card components are no longer used
+// import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Calendar, TrendingUp, Bookmark } from "lucide-react"
-import { format } from "date-fns"
+import { ArrowRight, TrendingUp } from "lucide-react"
+// import { format } from "date-fns" // Not used in the new card design
 //import { BlogSubscribeForm } from "@/components/BlogSubscribeForm"
 
 export const revalidate = 60; // Revalidate at most every 60 seconds
@@ -27,8 +27,8 @@ interface BlogPost {
   excerpt: string | null
   published_at: string | null
   featured_image?: string | null
-  card_icon?: string | null
-  tags?: string[] | null
+  // card_icon?: string | null // Removed
+  tags?: string[] | null // Kept for uniqueTags generation
   is_featured?: boolean | null
 }
 
@@ -60,7 +60,7 @@ export default async function BlogIndexPage() {
     const [{ data: postsData, error: postsError }, { data: allTagsData, error: tagsError }] = await Promise.all([
       supabase
         .from("blog_posts")
-        .select("id, title, slug, excerpt, published_at, featured_image, card_icon, tags")
+        .select("id, title, slug, excerpt, published_at, featured_image, tags") // Removed card_icon
         .order("published_at", { ascending: false })
         .limit(12), // Fetch a few more for a fuller grid, e.g., 12
       supabase.from("blog_posts").select("tags").returns<TagPost[]>(),
@@ -89,67 +89,68 @@ export default async function BlogIndexPage() {
     ).slice(0, 8) as string[]
 
     return (
-      <div className="min-h-screen bg-[#4A4A4A]">
+      <div className="min-h-screen bg-[#fff0d4]"> {/* Updated page background color */}
         {/* Featured Article Hero Banner REMOVED */}
 
-        <div className="container mx-auto px-4 py-12"> {/* Added py-12 for overall padding */}
+        <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20"> {/* Added py-12 for overall padding */}
           {/* Topics/Tags Filter Bar REMOVED */}
 
           {/* Simplified Posts Grid Section */}
           {posts.length > 0 ? (
-            <section className="mb-20">
-              <div className="flex items-center gap-3 mb-8">
+            <section className="mb-12 md:mb-20">
+              <div className="flex items-center gap-3 mb-8 md:mb-10">
                 <TrendingUp className="h-5 w-5 text-[#CC4824]" />
-                <h2 className="text-2xl font-bold text-[#FFF8EB]">All Articles</h2>
+                {/* Updated heading text color */}
+                <h2 className="text-2xl md:text-3xl text-[#4A4A4A]">All Articles</h2>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Updated grid for 4 columns on lg screens */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8 md:gap-x-7 md:gap-y-10">
                 {posts.map((post) => (
-                  <Card
-                    key={post.id}
-                    className="overflow-hidden hover:shadow-lg transition-all duration-300 border-gray-100 h-full flex flex-col bg-[#FFF1D4]"
-                  >
-                    {post.card_icon && (
-                      <div className="relative h-32 w-full flex items-center justify-center p-4 bg-[#FFF8EB]">
-                        <Image
-                          src={post.card_icon}
-                          alt={`${post.title} icon`}
-                          width={80}
-                          height={80}
-                          className="object-contain"
-                        />
+                  <div key={post.id} className="flex flex-col group">
+                    {post.featured_image && (
+                      <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-80 xl:h-80 rounded-xl overflow-hidden shadow-lg mb-4">
+                        <Link href={`/blog/${post.slug}`} className="block w-full h-full">
+                          <Image
+                            src={post.featured_image}
+                            alt={post.title || "Blog post image"}
+                            layout="fill"
+                            objectFit="cover"
+                            className="transform transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </Link>
                       </div>
                     )}
                     
-                    <CardContent className="p-6 flex-grow">
-                      <div className="flex items-center gap-4 text-xs text-[#4A4A4A]/70 mb-3">
-                        <div className="flex items-center gap-1">
-                          <Calendar className="h-3 w-3" />
-                          <span>{post.published_at ? format(new Date(post.published_at), "MMM d, yyyy") : "N/A"}</span>
-                        </div>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 text-[#4A4A4A] line-clamp-2">{post.title}</h3>
-                      <p className="text-[#4A4A4A]/80 text-sm line-clamp-3 mb-4">
+                    <div className="flex flex-col flex-grow p-1">
+                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1.5">5 MIN READ</p>
+                      <h3 className={`text-xl mb-2 text-neutral-800 transition-colors group-hover:text-[#CC4824]`}>
+                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                      </h3>
+                      <p className="text-neutral-700 text-sm line-clamp-3 mb-3 flex-grow">
                         {post.excerpt || "No excerpt available"}
                       </p>
-                    </CardContent>
-                    <CardFooter className="px-6 pb-6 pt-0">
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="text-[#317039] border-[#317039] hover:bg-[#CC4824]/10 hover:text-[#CC4824] w-full"
-                      >
-                        <Link href={`/blog/${post.slug}`}>Read More</Link>
-                      </Button>
-                    </CardFooter>
-                  </Card>
+                      <div className="mt-auto">
+                        <Button
+                          asChild
+                          variant="link"
+                          className="text-[#CC4824] hover:text-[#e05c3a] p-0 h-auto font-medium group/link"
+                        >
+                          <Link href={`/blog/${post.slug}`} className="flex items-center">
+                            Read article
+                            <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                          </Link>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
                 ))}
               </div>
             </section>
           ) : (
             <div className="text-center py-12">
-              <h2 className="text-2xl font-semibold text-[#FFF8EB] mb-4">No articles yet!</h2>
-              <p className="text-[#FFF8EB]/80">Check back soon for updates.</p>
+              <h2 className="text-2xl text-[#4A4A4A] mb-4">No articles yet!</h2>
+              <p className="text-[#4A4A4A]/80">Check back soon for updates.</p>
             </div>
           )}
         </div>

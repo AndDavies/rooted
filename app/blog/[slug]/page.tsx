@@ -185,7 +185,7 @@ export default async function BlogPostPage({ params }: PageProps) {
       {/* Top-of-Page Title Block */}
       <header className="bg-[#4A4A4A] py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 text-center max-w-3xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-[#FFF8EB] mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading text-[#FFF8EB] mb-4">
             {post.title}
           </h1>
           {post.excerpt && (
@@ -219,7 +219,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {/* Floating Table of Contents (Desktop Sidebar / Mobile Collapsible) */}
           {tocItems.length > 0 && (
             <aside className="lg:w-2/5 mb-8 lg:mb-0 lg:sticky lg:top-28 self-start hidden lg:block ">
-              <h3 className="text-lg font-semibold font-heading text-[#317039] mb-4">Contents</h3>
+              <h3 className="text-lg font-heading text-[#317039] mb-4">Contents</h3>
               <nav>
                 <ul>
                   {tocItems.map((item) => (

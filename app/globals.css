@@ -149,16 +149,13 @@
     letter-spacing: -0.025em;
   }
 
-  h1 {
-    @apply font-bold tracking-tighter text-shadow-md;
-    font-family: var(--font-glacial);
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-sage), var(--font-geist), sans-serif;
+    font-weight: bold !important;
   }
   
-  h2, h3 {
-    @apply font-semibold tracking-tight text-shadow-sm;
-    font-family: var(--font-glacial);
-  }
-
   h4, h5, h6 {
     @apply font-medium tracking-tight;
     font-family: var(--font-glacial);
@@ -177,21 +174,18 @@
 
   .prose h1 {
     font-size: 2rem;
-    font-weight: bold;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
 
   .prose h2 {
     font-size: 1.75rem;
-    font-weight: bold;
     margin-top: 1.25rem;
     margin-bottom: 0.75rem;
   }
 
   .prose h3 {
     font-size: 1.5rem;
-    font-weight: 600;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
