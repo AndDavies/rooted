@@ -40,7 +40,7 @@ export function Hero() {
             </div>
             {/* Removed popsiesFont.className and font-bold, font applied globally */}
             <h1
-              className={`text-9xl md:text-8xl text-white tracking-tighter text-shadow-hero-h1`}
+              className={`text-7xl sm:text-8xl md:text-9xl text-white tracking-tighter text-shadow-hero-h1`}
             >
               Rooted
             </h1>

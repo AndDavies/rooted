@@ -60,14 +60,18 @@ export function Header() {
   }, [handleScroll]);
 
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // Always close mobile menu on any link click within it
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+
     if (href.startsWith('#')) {
       e.preventDefault();
       scrollToElement(href.substring(1));
-      if (isMobileMenuOpen) {
-        setIsMobileMenuOpen(false);
-      }
+      // No need to set isMobileMenuOpen here again, it's handled above
     }
-    // If it's an external link or different page, NextLink will handle it
+    // If it's a normal page link (e.g., /blog), NextLink handles navigation,
+    // and the menu is now closed by the initial check.
   };
   
   const toggleMobileMenu = () => {
@@ -166,12 +170,12 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-8 animate-fadeInUp" style={{ animationDelay: `${navigationLinks.length * 100 + 100}ms`}}>
-              {ctaButton}
+              {React.cloneElement(ctaButton, { onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleNavLinkClick(e, '#booking') })}
             </div>
           </nav>
            {/* Fixed CTA at bottom of mobile menu for easier access */}
           <div className="absolute bottom-0 left-0 right-0 p-5 bg-[#f5f5f0] border-t border-gray-200">
-             {ctaButton}
+             {React.cloneElement(ctaButton, { onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleNavLinkClick(e, '#booking') })}
           </div>
         </div>
       )}

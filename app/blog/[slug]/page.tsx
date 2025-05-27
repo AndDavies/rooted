@@ -70,7 +70,7 @@ export async function generateMetadata({ params }: PageProps) {
   }
   const { data: post, error } = await supabase
     .from("blog_posts")
-    .select("title, excerpt, tags, featured_image, meta_description") // Changed 'description' to 'excerpt' for consistency
+    .select("title, excerpt, tags, featured_image, meta_description, meta_keywords") // Changed 'description' to 'excerpt' for consistency
     .eq("slug", slug)
     .single();
 
@@ -83,10 +83,30 @@ export async function generateMetadata({ params }: PageProps) {
 
   const description = post.meta_description || post.excerpt || "Read the latest insights from Rooted Executive Retreats.";
 
+  let finalKeywords: string[] = [];
+  const defaultKeywords = ["wellbeing", "Rooted Executive Retreats", "blog", "article"];
+
+  if (post.meta_keywords && typeof post.meta_keywords === 'string' && post.meta_keywords.trim() !== '') {
+    finalKeywords = post.meta_keywords.split(',').map(k => k.trim()).filter(k => k !== '');
+  } else if (post.tags && post.tags.length > 0) {
+    finalKeywords = [...post.tags]; // Assuming tags is already an array of strings
+    // Optionally, add default keywords if tags are present but you still want them
+    // finalKeywords.push(...defaultKeywords.filter(dk => !finalKeywords.includes(dk))); 
+  } else {
+    finalKeywords = defaultKeywords;
+  }
+  // Ensure some base keywords are always present if not already included
+  if (!finalKeywords.includes("Rooted Executive Retreats")) {
+    finalKeywords.push("Rooted Executive Retreats");
+  }
+  if (!finalKeywords.includes("blog")) {
+    finalKeywords.push("blog");
+  }
+
   return {
     title: `${post.title} | Rooted Executive Retreats`,
     description: description,
-    keywords: post.tags ? [...post.tags, "wellbeing", "Rooted Executive Retreats", "blog"] : ["wellbeing", "Rooted Executive Retreats", "blog", "article"],
+    keywords: finalKeywords,
     openGraph: {
       title: `${post.title} | Rooted Executive Retreats`,
       description: description,
