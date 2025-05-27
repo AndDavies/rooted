@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ROOTED | A Playground of Wellbeing',
     description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
-    url: 'https://www.yourdomain.com', // IMPORTANT: Replace with your actual domain
+    url: 'https://www.rootedexecutiveretreats.com', // IMPORTANT: Replace with your actual domain
     siteName: 'Rooted Executive Retreats',
     locale: 'en_US',
     type: 'website',
