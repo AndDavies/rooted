@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, TrendingUp } from "lucide-react"
 // import { format } from "date-fns" // Not used in the new card design
 //import { BlogSubscribeForm } from "@/components/BlogSubscribeForm"
+import React from 'react'; // Import React for JSX namespace
 
 export const revalidate = 60; // Revalidate at most every 60 seconds
 // export const dynamic = 'force-dynamic'; // You can try this if revalidate doesn't solve it
@@ -36,6 +37,58 @@ interface BlogPost {
 interface TagPost {
   tags: string[] | null;
 }
+
+interface BentoLayout {
+  containerClasses: string;
+  itemClasses: string[];
+  articleProperties: Array<{ isTall?: boolean }>;
+}
+
+// Helper function to determine grid layout based on article count (1-5 articles)
+const getBentoGridLayout = (count: number): BentoLayout => {
+  let containerClasses = "grid grid-cols-1 md:gap-6"; // Mobile: single column, md and up use gap
+  let itemClasses: string[] = Array(count).fill("");
+  let articleProperties: Array<{ isTall?: boolean }> = Array(count).fill({ isTall: false });
+
+  switch (count) {
+    case 1:
+      containerClasses += " md:grid-cols-1";
+      break;
+    case 2:
+      containerClasses += " md:grid-cols-2";
+      break;
+    case 3:
+      containerClasses += " md:grid-cols-3 md:grid-rows-2";
+      itemClasses[0] = "md:col-span-2 md:row-span-2";
+      articleProperties[0] = { isTall: true };
+      itemClasses[1] = "md:col-span-1 md:row-span-1";
+      itemClasses[2] = "md:col-span-1 md:row-span-1";
+      break;
+    case 4:
+      containerClasses += " md:grid-cols-3 md:grid-rows-2";
+      itemClasses[0] = "md:col-span-1 md:row-span-2";
+      articleProperties[0] = { isTall: true };
+      itemClasses[1] = "md:col-span-1 md:row-span-1"; // Top Middle
+      itemClasses[2] = "md:col-span-1 md:row-span-1"; // Top Right
+      itemClasses[3] = "md:col-span-1 md:row-span-1"; // Bottom Middle (leaving one cell empty - bottom right)
+      break;
+    case 5:
+      containerClasses += " md:grid-cols-3 md:grid-rows-2";
+      itemClasses[0] = "md:col-span-1 md:row-span-2";
+      articleProperties[0] = { isTall: true };
+      itemClasses[1] = "md:col-span-1 md:row-span-1"; // Top Middle
+      itemClasses[2] = "md:col-span-1 md:row-span-1"; // Top Right
+      itemClasses[3] = "md:col-span-1 md:row-span-1"; // Bottom Middle
+      itemClasses[4] = "md:col-span-1 md:row-span-1"; // Bottom Right
+      break;
+    default:
+      // Should not be reached if called with counts 1-5
+      // For safety, default to single column if count is 0 or > 5 (though main logic will handle chunking)
+      containerClasses += " md:grid-cols-1";
+      break;
+  }
+  return { containerClasses, itemClasses, articleProperties };
+};
 
 // Added metadata for the blog index page
 export const metadata: Metadata = {
@@ -104,47 +157,69 @@ export default async function BlogIndexPage() {
                 <h2 className="text-2xl md:text-3xl text-[#4A4A4A]">All Articles</h2>
               </div>
 
-              {/* Updated grid for 4 columns on lg screens */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-8 md:gap-x-7 md:gap-y-10">
-                {posts.map((post) => (
-                  <div key={post.id} className="flex flex-col group">
-                    {post.featured_image && (
-                      <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-80 xl:h-80 rounded-xl overflow-hidden shadow-lg mb-4">
-                        <Link href={`/blog/${post.slug}`} className="block w-full h-full">
-                          <Image
-                            src={post.featured_image}
-                            alt={post.title || "Blog post image"}
-                            layout="fill"
-                            objectFit="cover"
-                            className="transform transition-transform duration-300 group-hover:scale-105"
-                          />
-                        </Link>
+              {/* Wrapper for multiple bento groups */}
+              <div className="space-y-10 md:space-y-16">
+                {(() => {
+                  const bentoGroupsRender: React.JSX.Element[] = [];
+                  let currentOffset = 0;
+                  const MAX_CHUNK_SIZE = 5; // Max articles per bento pattern
+
+                  while (currentOffset < posts.length) {
+                    const chunk = posts.slice(currentOffset, currentOffset + MAX_CHUNK_SIZE);
+                    if (chunk.length === 0) break; 
+
+                    const layout = getBentoGridLayout(chunk.length); // Get layout for this chunk (1-5 articles)
+
+                    bentoGroupsRender.push(
+                      <div key={`bento-group-${currentOffset}`} className={`grid gap-4 sm:gap-5 md:gap-6 ${layout.containerClasses}`}>
+                        {chunk.map((post, indexInChunk) => {
+                          const cardProps = layout.articleProperties[indexInChunk] || { isTall: false };
+                          const itemSpecificClass = layout.itemClasses[indexInChunk] || '';
+                          return (
+                            <div key={post.id} className={`flex flex-col group bg-white rounded-xl shadow-lg overflow-hidden ${itemSpecificClass}`}>
+                              {post.featured_image && (
+                                <div className={`relative w-full ${cardProps.isTall ? 'h-80 md:h-[calc(100%-7rem)]' : 'h-60 md:h-64'} overflow-hidden`}>
+                                  <Link href={`/blog/${post.slug}`} className="block w-full h-full">
+                                    <Image
+                                      src={post.featured_image}
+                                      alt={post.title || "Blog post image"}
+                                      fill
+                                      objectFit="cover"
+                                      className="transform transition-transform duration-300 group-hover:scale-105"
+                                    />
+                                  </Link>
+                                </div>
+                              )}
+                              <div className="flex flex-col flex-grow p-4">
+                                <p className="text-xs text-gray-500 uppercase tracking-wider mb-1.5">5 MIN READ</p>
+                                <h3 className={`text-xl mb-2 text-neutral-800 transition-colors group-hover:text-[#CC4824]`}>
+                                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                                </h3>
+                                <p className="text-neutral-700 text-sm line-clamp-3 mb-3 flex-grow">
+                                  {post.excerpt || "No excerpt available"}
+                                </p>
+                                <div className="mt-auto">
+                                  <Button
+                                    asChild
+                                    variant="link"
+                                    className="text-[#CC4824] hover:text-[#e05c3a] p-0 h-auto font-medium group/link"
+                                  >
+                                    <Link href={`/blog/${post.slug}`} className="flex items-center">
+                                      Read article
+                                      <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
+                                    </Link>
+                                  </Button>
+                                </div>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
-                    )}
-                    
-                    <div className="flex flex-col flex-grow p-1">
-                      <p className="text-xs text-gray-500 uppercase tracking-wider mb-1.5">5 MIN READ</p>
-                      <h3 className={`text-xl mb-2 text-neutral-800 transition-colors group-hover:text-[#CC4824]`}>
-                        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
-                      </h3>
-                      <p className="text-neutral-700 text-sm line-clamp-3 mb-3 flex-grow">
-                        {post.excerpt || "No excerpt available"}
-                      </p>
-                      <div className="mt-auto">
-                        <Button
-                          asChild
-                          variant="link"
-                          className="text-[#CC4824] hover:text-[#e05c3a] p-0 h-auto font-medium group/link"
-                        >
-                          <Link href={`/blog/${post.slug}`} className="flex items-center">
-                            Read article
-                            <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
-                          </Link>
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+                    );
+                    currentOffset += chunk.length;
+                  }
+                  return bentoGroupsRender;
+                })()}
               </div>
             </section>
           ) : (
