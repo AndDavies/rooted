@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
             This privacy notice describes how we might use your information if you:
           </p>
           <ul>
-            <li>Visit our website at https://www.rootedexecutiveretreats.com</li>
+            <li>Visit our website at https://www.therootedway.co</li>
             <li>Sign up for our newsletter (e.g., via MailerLite)</li>
             <li>Choose to connect third-party services, such as the Garmin Health API, to your Rooted Executive Retreats account or experience.</li>
             <li>Engage with us in other related ways ― including any sales, marketing, or events</li>
