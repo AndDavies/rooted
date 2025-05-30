@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
             <li>To respond to user inquiries/offer support to users.</li>
             <li>To analyze usage trends and improve our Website and Services.</li>
             <li>For data backup and operational stability (e.g., through Supabase).</li>
-            <li><strong>To provide personalized insights and track progress (using Garmin Data):</strong> If you have connected your Garmin account, we use this data to help personalize your retreat experience, provide you with insights into your wellbeing, enable you to track your progress, and measure tangible improvements in areas like stress and energy levels. This data is integral to our science-driven approach.</li>
+            <li><strong>To provide personalized insights and track progress (using Garmin Data):</strong> If you have connected your Garmin account, we use this data to tailor your retreat experience, offer personalized feedback on your wellbeing metrics (such as stress patterns, sleep quality, and recovery levels), guide you in achieving your wellness goals, and demonstrate the tangible benefits of our programs. This data is integral to our science-driven approach and is used solely for the purpose of enhancing your experience and outcomes with Rooted Executive Retreats.</li>
             <li>For other business purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Website, products, marketing and your experience.</li>
           </ul>
 
@@ -90,7 +90,7 @@ export default function PrivacyPolicyPage() {
             More specifically, we may need to process your data or share your personal information in the following situations:
           </p>
           <ul>
-            <li><strong>Service Providers:</strong> We may share your data with third-party vendors, service providers, contractors or agents who perform services for us or on our behalf and require access to such information to do that work. Examples include: data analytics (Google Analytics), email delivery (MailerLite), and website hosting and backend services (Supabase for secure data storage). We make reasonable efforts to ensure these third parties have appropriate data protection and confidentiality measures, especially for sensitive health data. Your Garmin data is only shared with such providers to the extent necessary to provide and improve our services to you, and under strict confidentiality obligations.</li>
+            <li><strong>Service Providers:</strong> We may share your data with third-party vendors, service providers, contractors or agents who perform services for us or on our behalf and require access to such information to do that work. Examples include: data analytics (Google Analytics), email delivery (MailerLite), and website hosting and backend services (Supabase for secure data storage). We make reasonable efforts to ensure these third parties have appropriate data protection and confidentiality measures, especially for sensitive health data. Your Garmin data is only shared with such providers to the extent necessary to provide and improve our services to you, and under strict confidentiality obligations. We ensure that any third-party handling your Garmin data adheres to data protection standards at least as stringent as our own and those required by Garmin and applicable law (e.g., GDPR).</li>
             <li><strong>Business Transfers:</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
           </ul>
           <p>We do not sell your personal information, including any health data obtained from Garmin.</p>
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
 
           <h2>9. Compliance with Third-Party Terms</h2>
           <p>
-            Our use of data obtained from third-party services, including the Garmin Health API, is in compliance with the respective terms of service and developer policies of those third parties. 
+            Our use of data obtained from third-party services, including the Garmin Health API, is in strict compliance with all applicable terms of service, developer agreements, and privacy policies of those third parties, including Garmin. This includes, but is not limited to, requirements concerning user consent, data security, data use limitations, and user data rights. We are committed to being a good steward of your data when interacting with these platforms.
           </p>
 
           <h2>10. Changes to This Privacy Policy</h2>
@@ -142,7 +142,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <p>
             Rooted Executive Retreats<br />
-            info@therootedway.co
+            privacy@rootedexecutiveretreats.com
           </p>
         </div>
       </main>
