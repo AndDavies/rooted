@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Rooted Executive Retreats",
-  description: "Read the Privacy Policy for Rooted Executive Retreats to understand how we collect, use, and protect your personal information.",
+  description: "Read the Privacy Policy for Rooted Executive Retreats to understand how we collect, use, and protect your personal information, including data from connected health services like Garmin.",
   robots: { // Good practice to allow indexing of privacy policy
     index: true,
     follow: true,
@@ -35,6 +35,7 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>Visit our website at https://www.rootedexecutiveretreats.com</li>
             <li>Sign up for our newsletter (e.g., via MailerLite)</li>
+            <li>Choose to connect third-party services, such as the Garmin Health API, to your Rooted Executive Retreats account or experience.</li>
             <li>Engage with us in other related ways ― including any sales, marketing, or events</li>
           </ul>
           <p>
@@ -42,7 +43,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <ul>
             <li><strong>"Website"</strong>, we are referring to any website of ours that references or links to this policy</li>
-            <li><strong>"Services"</strong>, we are referring to our Website, and other related services, including any sales, marketing, or events</li>
+            <li><strong>"Services"</strong>, we are referring to our Website, our retreats, and other related services, including any sales, marketing, or events, and interactions with connected third-party services.</li>
           </ul>
           <p>
             The purpose of this privacy notice is to explain to you in the clearest way possible what information we collect, how we use it, and what rights you have in relation to it. If there are any terms in this privacy notice that you do not agree with, please discontinue use of our Services immediately.
@@ -58,16 +59,20 @@ export default function PrivacyPolicyPage() {
           <p>
             <strong>Information automatically collected:</strong> We automatically collect certain information when you visit, use or navigate the Website. This information does not reveal your specific identity (like your name or contact information) but may include device and usage information, such as your IP address, browser and device characteristics, operating system, language preferences, referring URLs, device name, country, location, information about how and when you use our Website and other technical information. This information is primarily needed to maintain the security and operation of our Website, and for our internal analytics and reporting purposes (e.g., via Google Analytics).
           </p>
+          <p>
+            <strong>Information from Connected Health Services (e.g., Garmin):</strong> If you choose to connect a third-party health service like Garmin to our Services, we will collect health-related data with your explicit consent provided through the Garmin authorization process. This data may include, but is not limited to, heart rate, sleep patterns, activity levels, stress scores, HRV (Heart Rate Variability), Body Battery™, and other physiological metrics provided by Garmin. We only collect the data types you specifically authorize us to access.
+          </p>
 
           <h2>2. How Do We Use Your Information?</h2>
           <p>
-            We use personal information collected via our Website for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.
+            We use personal information collected via our Website and connected services for a variety of business purposes described below. We process your personal information for these purposes in reliance on our legitimate business interests, in order to enter into or perform a contract with you, with your consent, and/or for compliance with our legal obligations.
           </p>
           <ul>
             <li>To send you marketing and promotional communications (e.g., our newsletter via MailerLite), if this is in accordance with your marketing preferences. You can opt-out of our marketing emails at any time.</li>
             <li>To respond to user inquiries/offer support to users.</li>
             <li>To analyze usage trends and improve our Website and Services.</li>
             <li>For data backup and operational stability (e.g., through Supabase).</li>
+            <li><strong>To provide personalized insights and track progress (using Garmin Data):</strong> If you have connected your Garmin account, we use this data to help personalize your retreat experience, provide you with insights into your wellbeing, enable you to track your progress, and measure tangible improvements in areas like stress and energy levels. This data is integral to our science-driven approach.</li>
             <li>For other business purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Website, products, marketing and your experience.</li>
           </ul>
 
@@ -76,7 +81,7 @@ export default function PrivacyPolicyPage() {
             We may process or share your data that we hold based on the following legal basis:
           </p>
           <ul>
-            <li><strong>Consent:</strong> We may process your data if you have given us specific consent to use your personal information for a specific purpose.</li>
+            <li><strong>Consent:</strong> We may process your data if you have given us specific consent to use your personal information for a specific purpose. This is particularly relevant for data from connected health services like Garmin.</li>
             <li><strong>Legitimate Interests:</strong> We may process your data when it is reasonably necessary to achieve our legitimate business interests.</li>
             <li><strong>Performance of a Contract:</strong> Where we have entered into a contract with you, we may process your personal information to fulfill the terms of our contract.</li>
             <li><strong>Legal Obligations:</strong> We may disclose your information where we are legally required to do so in order to comply with applicable law, governmental requests, a judicial proceeding, court order, or legal process.</li>
@@ -85,9 +90,10 @@ export default function PrivacyPolicyPage() {
             More specifically, we may need to process your data or share your personal information in the following situations:
           </p>
           <ul>
-            <li><strong>Service Providers:</strong> We may share your data with third-party vendors, service providers, contractors or agents who perform services for us or on our behalf and require access to such information to do that work. Examples include: data analytics (Google Analytics), email delivery (MailerLite), and website hosting and backend services (Supabase). We make reasonable efforts to ensure these third parties have appropriate data protection measures.</li>
+            <li><strong>Service Providers:</strong> We may share your data with third-party vendors, service providers, contractors or agents who perform services for us or on our behalf and require access to such information to do that work. Examples include: data analytics (Google Analytics), email delivery (MailerLite), and website hosting and backend services (Supabase for secure data storage). We make reasonable efforts to ensure these third parties have appropriate data protection and confidentiality measures, especially for sensitive health data. Your Garmin data is only shared with such providers to the extent necessary to provide and improve our services to you, and under strict confidentiality obligations.</li>
             <li><strong>Business Transfers:</strong> We may share or transfer your information in connection with, or during negotiations of, any merger, sale of company assets, financing, or acquisition of all or a portion of our business to another company.</li>
           </ul>
+          <p>We do not sell your personal information, including any health data obtained from Garmin.</p>
 
           <h2>4. Do We Use Cookies and Other Tracking Technologies?</h2>
           <p>
@@ -96,12 +102,15 @@ export default function PrivacyPolicyPage() {
           
           <h2>5. How Do We Keep Your Information Safe?</h2>
           <p>
-            We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security, and improperly collect, access, steal, or modify your information.
+            We have implemented appropriate technical and organizational security measures designed to protect the security of any personal information we process, with particular attention to sensitive health data obtained through services like Garmin. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure, so we cannot promise or guarantee that hackers, cybercriminals, or other unauthorized third parties will not be able to defeat our security, and improperly collect, access, steal, or modify your information.
           </p>
 
           <h2>6. What Are Your Privacy Rights?</h2>
           <p>
             In some regions (like the EEA, UK, and Canada), you have certain rights under applicable data protection laws. These may include the right (i) to request access and obtain a copy of your personal information, (ii) to request rectification or erasure; (iii) to restrict the processing of your personal information; and (iv) if applicable, to data portability. In certain circumstances, you may also have the right to object to the processing of your personal information.
+          </p>
+          <p>
+            Specifically for data collected from connected health services like Garmin, you can manage your connected services and revoke our access to your Garmin data typically through your Garmin Connect account settings or any interface we provide for managing such connections. Upon revocation, we will no longer collect new data from that service. You may also request the deletion of your historical Garmin data we have stored by contacting us.
           </p>
           <p>
             To make such a request, please use the contact details provided below. We will consider and act upon any request in accordance with applicable data protection laws.
@@ -117,19 +126,23 @@ export default function PrivacyPolicyPage() {
             Our Services are not directed to individuals under the age of 13 (or a higher age as required by applicable law in your jurisdiction). We do not knowingly collect personal information from children. If we become aware that a child has provided us with personal information, we will take steps to delete such information.
           </p>
 
-          <h2>9. Changes to This Privacy Policy</h2>
+          <h2>9. Compliance with Third-Party Terms</h2>
+          <p>
+            Our use of data obtained from third-party services, including the Garmin Health API, is in compliance with the respective terms of service and developer policies of those third parties. 
+          </p>
+
+          <h2>10. Changes to This Privacy Policy</h2>
           <p>
             We may update this privacy notice from time to time. The updated version will be indicated by an updated "Last Updated" date and the updated version will be effective as soon as it is accessible. We encourage you to review this privacy notice frequently to be informed of how we are protecting your information.
           </p>
 
-          <h2>10. How Can You Contact Us About This Notice?</h2>
+          <h2>11. How Can You Contact Us About This Notice?</h2>
           <p>
             If you have questions or comments about this notice, you may email us at privacy@rootedexecutiveretreats.com or by post to:
           </p>
           <p>
             Rooted Executive Retreats<br />
-            [Your Company's Physical Address - Placeholder, please update]<br />
-            [City, Postal Code, Country - Placeholder, please update]
+            info@therootedway.co
           </p>
         </div>
       </main>
