@@ -29,26 +29,18 @@ export function Hero() {
       <div className="relative z-20 container mx-auto h-full flex flex-col justify-center items-start px-4">
         <div className="max-w-xl">
           <div className="flex items-center mb-6">
-            <div className="mr-3">
-              <Image
-                src="/rooted_logo_circle.png"
-                alt="Rooted logo"
-                width={100}
-                height={100}
-                className="object-contain"
-              />
-            </div>
+
             {/* Removed popsiesFont.className and font-bold, font applied globally */}
             <h1
-              className={`text-7xl sm:text-8xl md:text-9xl text-white tracking-tighter text-shadow-hero-h1`}
+              className={`text-5xl sm:text-8xl md:text-5xl text-white tracking-tighter text-shadow-hero-h1`}
             >
-              Rooted
+              reclaim your energy
             </h1>
           </div>
           {/* Ensure paragraph also uses a globally available font, like font-sans (Geist) or font-body if it were different */}
           <div className="text-white text-left mt-8">
             <p className="font-sans text-sm antialiased md:text-xl leading-relaxed tracking-tight">
-            Embark on a in Madeira to rediscover your core. Rooted blends ancient wisdom with modern science, guiding you to lead with unshakable presence, boundless energy, and profound balance.
+            ROOTED is for leaders who are done pushing through the exhaustion, done chasing wealth at the cost of their health, and are ready to redefine success from the inside out.
             </p>
           </div>
         </div>

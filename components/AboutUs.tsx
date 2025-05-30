@@ -36,21 +36,12 @@ export function AboutUs() {
             <div className="md:w-3/5 text-center md:text-left">
               <div className="mb-6">
                 <h1 className="text-4xl tracking-tighter italic mb-3 text-neutral-900">
-                  Rest. Recharge. Recover.
+                The hidden cost of high performance
                 </h1>
               </div>
               <div className="space-y-6">
                 <p className="text-gray-700 text-sm leading-relaxed font-light tracking-tight antialiased">
-                  At <span className="font-medium">Rooted</span>, we empower visionary leaders to thrive through a
-                  science-backed, nature-driven reset. Built on six pillars—
-                  <span className="font-medium">Breathing</span>,
-                  <span className="font-medium"> Sleep Optimization</span>,
-                  <span className="font-medium"> Nutrition</span>,
-                  <span className="font-medium"> Movement and Training</span>,
-                  <span className="font-medium"> Mindset and Focus</span>, and
-                  <span className="font-medium"> Relaxation and Joy</span>
-                  —our 6-day retreats in Madeira, Portugal, recalibrate your nervous system, restore metabolic health, and
-                  reconnect you to your core.
+                Success often comes with a silent price. We are running full steam on adrenaline, digital overload, and a “push-through” mentality. Maybe outwardly thriving, but inwardly drained, afraid of what will happen if we step off the treadmill. At ROOTED we believe it doesn’t have to be this way.
                 </p>
                 <p className="text-gray-700 text-sm leading-relaxed font-light tracking-tight antialiased">
                   We bridge high-performance activation with deep rest, guiding you to lead from the inside out with

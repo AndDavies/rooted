@@ -98,18 +98,11 @@ export function Header() {
       <div className="container mx-auto max-w-[1440px] px-5 h-full flex items-center justify-between">
         {/* Logo and Branding */}
         <Link href="/" onClick={(e) => handleNavLinkClick(e, '#hero')} className={`flex items-center gap-2 transition-opacity duration-500 ease-in-out ${isMounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}>
-          <Image
-            src="/rooted_logo_circle.png"
-            alt="Rooted Logo"
-            width={60}
-            height={60}
-            className="object-contain transition-transform duration-200 ease-in-out hover:scale-110 md:w-[60px] md:h-[60px] w-[50px] h-[50px]" // Responsive size
-            priority
-          />
+          
           <span 
             className={`font-sans text-2xl font-bold text-shadow-gold hidden sm:block 
                         ${isScrolled ? 'text-[#1A1A1A]' : 'text-white'}`}>
-            Rooted
+            the ROOTED way
           </span>
         </Link>
 
