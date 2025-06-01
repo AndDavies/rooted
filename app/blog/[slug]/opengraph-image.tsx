@@ -109,7 +109,7 @@ export default async function Image({ params }: ImageProps) {
                 color: '#4A4A4A'
             }}
         >
-            https://www.rootedexecutiveretreats.com/blog/{slug}
+            https://www.therootedway.co/blog/{slug}
         </div>
       </div>
     ),

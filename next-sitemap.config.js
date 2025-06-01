@@ -16,7 +16,7 @@ if (!supabaseUrl || !supabaseKey) {
 const supabase = supabaseUrl && supabaseKey ? createClient(supabaseUrl, supabaseKey) : null;
 
 module.exports = {
-  siteUrl: "https://www.rootedexecutiveretreats.com",
+  siteUrl: "https://www.therootedway.co",
   generateRobotsTxt: true,
   sitemapSize: 7000, // Default is 50000, can be adjusted
   exclude: ["/admin/*", "/dashboard/*"], // Example exclusions, adjust as needed
@@ -77,7 +77,7 @@ module.exports = {
       // { userAgent: "*", disallow: ["/admin/*", "/dashboard/*"] },
     ],
     // additionalSitemaps: [
-    //   'https://www.rootedexecutiveretreats.com/server-sitemap.xml', // if you have a server-side sitemap
+    //   'https://www.therootedway.co/server-sitemap.xml', // if you have a server-side sitemap
     // ],
   },
 }; 

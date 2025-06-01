@@ -73,7 +73,7 @@ const playfairFont = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.rootedexecutiveretreats.com'), // IMPORTANT: Replace with your actual domain
+  metadataBase: new URL('https://www.therootedway.co'), // IMPORTANT: Replace with your actual domain
   title: {
     default: "ROOTED | A Playground of Wellbeing",
     template: `%s | Rooted Executive Retreats`, // Allows individual pages to set their title part
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ROOTED | A Playground of Wellbeing',
     description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
-    url: 'https://www.rootedexecutiveretreats.com', // IMPORTANT: Replace with your actual domain
+    url: 'https://www.therootedway.co', // IMPORTANT: Replace with your actual domain
     siteName: 'Rooted Executive Retreats',
     locale: 'en_US',
     type: 'website',

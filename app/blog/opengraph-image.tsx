@@ -79,7 +79,7 @@ export default async function Image() {
             color: '#F1BE49', // Maximum Yellow for call to action/site name
           }}
         >
-          https://www.rootedexecutiveretreats.com/
+          https://www.therootedway.co/
         </p>
       </div>
     ),
