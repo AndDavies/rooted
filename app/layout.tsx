@@ -64,11 +64,12 @@ const hkGrotesk = localFont({
   variable: "--font-hk-grotesk",
 })
 
-// Sage font setup
-const sageFont = localFont({
-  src: "../public/fonts/sage-webfont.ttf",
+// Playfair Display font setup (replacing sage font)
+const playfairFont = localFont({
+  src: "../public/fonts/PlayfairDisplay-VariableFont_wght.ttf",
   display: "swap",
-  variable: "--font-sage",
+  variable: "--font-playfair",
+  weight: "400 900", // Variable font supports full weight range
 });
 
 export const metadata: Metadata = {
@@ -119,7 +120,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${sageFont.variable}`}>
+    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${playfairFont.variable}`}>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         <Header />
         {children}

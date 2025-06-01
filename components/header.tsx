@@ -26,10 +26,10 @@ const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const navigationLinks = [
-  { label: "The Method", href: "/#about" },      // Points to AboutUs component
-  { label: "The Pillars", href: "/#why-rooted" }, // Points to WhyRooted component
-  { label: "The Tribe", href: "/#problem" },    // Points to Section2 component (which uses id="problem")
-  { label: "The Blog", href: "/blog" },    // Points to Section2 component (which uses id="problem")
+  { label: "About Us", href: "/#about" },      // Points to AboutUs component
+  { label: "The Method", href: "/#why-rooted" }, // Points to WhyRooted component
+  { label: "Upcoming Dates", href: "/#problem" },    // Points to Section2 component (which uses id="problem")
+  { label: "Rooted Insights", href: "/blog" },    // Points to Section2 component (which uses id="problem")
 ];
 
 export function Header() {

@@ -276,7 +276,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           )}
 
           {/* Article Content */}
-          <article className={`prose prose-lg max-w-none lg:w-${tocItems.length > 0 ? '3/5' : 'full'} text-[#4A4A4A] font-body prose-headings:font-heading prose-headings:text-[#317039] prose-h2:border-b-2 prose-h2:border-[#F1BE49] prose-h2:pb-2 prose-h2:mb-6 prose-strong:text-[#CC4824] prose-a:text-[#CC4824] hover:prose-a:text-[#317039]`}
+          <article className={`prose prose-lg max-w-none lg:w-${tocItems.length > 0 ? '3/5' : 'full'} text-[#4A4A4A] font-body prose-headings:text-[#317039] prose-h2:border-b-2 prose-h2:border-[#F1BE49] prose-h2:pb-2 prose-h2:mb-6 prose-strong:text-[#CC4824] prose-a:text-[#CC4824] hover:prose-a:text-[#317039]`}
             dangerouslySetInnerHTML={{ __html: processedContent }}
           >
             {/* 
