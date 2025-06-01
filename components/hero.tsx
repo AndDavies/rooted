@@ -42,21 +42,21 @@ export function Hero() {
           </div>
           
           {/* Description paragraph */}
-          <div className="text-white text-center mb-8 space-y-4 max-w-3xl mx-auto">
+          <div className="text-white text-center mb-8 space-y-2 max-w-3xl mx-auto">
             
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className="text-base md:text-lg ">
               We were taught to push through. To always aim higher.
             </p>
             
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className="text-base md:text-lg ">
               But no one warned us about the cost: our bodies, our energy, our joy.
             </p>
             
-            <p className="text-base md:text-lg leading-relaxed text-[#F1BE49]">
+            <p className="text-base md:text-lg text-[#F1BE49]">
               We're not broken. The model is.
             </p>
             
-            <p className="text-base md:text-lg leading-relaxed">
+            <p className="text-base md:text-lg ">
               ROOTED exists to rewrite the script for high performers - starting from the inside out.
             </p>
             
