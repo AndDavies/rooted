@@ -30,39 +30,40 @@ export function AboutUs() {
 
   return (
     <>
-      <section className="bg-white py-16 md:py-24" id="about">
-        <div className="container mx-auto px-4 md:px-8 max-w-6xl">
-          <div className="flex flex-col md:flex-row gap-12 lg:gap-16 items-center">
-            <div className="md:w-3/5 text-center md:text-left">
+      <section className="bg-white relative" id="about">
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 text-center md:text-left pl-4 md:pl-8 lg:pl-16 py-16 md:py-24">
+            <div className="max-w-2xl">
               <div className="mb-6">
                 <h1 className="text-4xl tracking-tighter italic mb-3 text-neutral-900">
                 The hidden cost of high performance
                 </h1>
               </div>
               <div className="space-y-6">
-                <p className="text-gray-700 text-sm leading-relaxed font-light tracking-tight antialiased">
-                Success often comes with a silent price. We are running full steam on adrenaline, digital overload, and a “push-through” mentality. Maybe outwardly thriving, but inwardly drained, afraid of what will happen if we step off the treadmill. At ROOTED we believe it doesn’t have to be this way.
-                </p>
-                <p className="text-gray-700 text-sm leading-relaxed font-light tracking-tight antialiased">
-                  We bridge high-performance activation with deep rest, guiding you to lead from the inside out with
-                  clarity, resilience, and purpose.
-                </p>
+              <p className="font-sans text-base md:text-lg lg:text-xl leading-relaxed tracking-tight">
+              Success often comes with a silent price. Running full steam on adrenaline, digital overload, and a "push-through" mentality.
+            </p>
+            <p className="font-sans text-base md:text-lg lg:text-xl leading-relaxed tracking-tight">
+              Maybe outwardly thriving, but inwardly drained, afraid of what will happen if we step off the treadmill. At ROOTED we believe there is another way.
+            </p>
               </div>
-              <div className="mt-10 md:mt-12 w-24 h-[2px] bg-[#c0c0b0] mx-auto md:mx-0"></div>
+              <div className="mt-10 md:mt-12 w-24 h-[2px] bg-[#c0c0b0]"></div>
             </div>
+          </div>
 
-            <div className="md:w-2/5 w-full">
-              <div className="w-full h-80 md:h-[400px] border-2 border-neutral-700 rounded-3xl shadow-md overflow-hidden relative">
-                <Image
-                  src="/rooted_site_600_600.jpg"
-                  alt="Serene natural environment at Rooted Executive Retreats"
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
+          <div className="md:w-1/2 w-full">
+            <div className="w-[500px] h-[500px] overflow-hidden relative ml-auto">
+              <Image
+                src="/rooted_about_us_section.jpg"
+                alt="Serene natural environment at Rooted Executive Retreats"
+                width={500}
+                height={500}
+                objectFit="cover"
+              />
             </div>
           </div>
         </div>
+        
       </section>
 
       <section style={{ backgroundColor: "#F1BE49" }} className="py-16">

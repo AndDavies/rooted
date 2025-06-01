@@ -42,10 +42,24 @@ export function Hero() {
           </div>
           
           {/* Description paragraph */}
-          <div className="text-white text-center mb-8">
-            <p className="font-sans text-base md:text-lg lg:text-xl leading-relaxed tracking-tight max-w-3xl mx-auto">
-              Success often comes with a silent price. Running full steam on adrenaline, digital overload, and a "push-through" mentality. Maybe outwardly thriving, but inwardly drained, afraid of what will happen if we step off the treadmill. At ROOTED we believe there is another way.
+          <div className="text-white text-center mb-8 space-y-4 max-w-3xl mx-auto">
+            
+            <p className="text-base md:text-lg leading-relaxed">
+              We were taught to push through. To always aim higher.
             </p>
+            
+            <p className="text-base md:text-lg leading-relaxed">
+              But no one warned us about the cost: our bodies, our energy, our joy.
+            </p>
+            
+            <p className="text-base md:text-lg leading-relaxed text-[#F1BE49]">
+              We're not broken. The model is.
+            </p>
+            
+            <p className="text-base md:text-lg leading-relaxed">
+              ROOTED exists to rewrite the script for high performers - starting from the inside out.
+            </p>
+            
           </div>
 
           {/* CTA Button */}
@@ -65,6 +79,19 @@ export function Hero() {
               </svg>
             </Link>
           </div>
+        </div>
+
+        {/* Subtle Continue Reading */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center">
+          <span className="text-white/60 text-sm mb-2">Continue reading</span>
+          <svg 
+            className="w-5 h-5 text-white/60" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </svg>
         </div>
       </div>
     </div>

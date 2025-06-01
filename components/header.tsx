@@ -82,9 +82,9 @@ export function Header() {
     <Link
       href="#booking" // Section 6
       onClick={(e) => handleNavLinkClick(e, '#booking')}
-      className="font-rufina font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-md shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap"
+      className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap"
     >
-      Book Now
+      Get Rooted
     </Link>
   );
 
