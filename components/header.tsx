@@ -97,7 +97,7 @@ export function Header() {
     >
       <div className="container mx-auto max-w-[1440px] px-5 h-full flex items-center justify-between">
         {/* Logo and Branding */}
-        <Link href="/" onClick={(e) => handleNavLinkClick(e, '#hero')} className={`flex items-center gap-2 transition-opacity duration-500 ease-in-out ${isMounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}>
+        <Link href="/" className={`flex items-center gap-2 transition-opacity duration-500 ease-in-out ${isMounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}>
           
           <span 
             className={`font-sans text-2xl font-bold text-shadow-gold hidden sm:block 
