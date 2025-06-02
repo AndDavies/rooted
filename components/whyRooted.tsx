@@ -281,7 +281,15 @@ export function WhyRooted() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
-                Why ROOTED
+                Why{" "}
+                <motion.span
+                  className="font-normal"
+                  style={{ color: "#317039" }}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  ROOTED
+                </motion.span>
               </h2>
               <motion.div
                 className="h-px"

@@ -1,9 +1,14 @@
 // lib/supabase-client.ts
+import { createClient as supabaseCreateClient } from '@supabase/supabase-js';
 
 export function createClient() {
-  // Supabase client initialization removed as per request.
-  // This function will no longer return a functional Supabase client.
-  // Any code relying on this to interact with Supabase will need to be updated.
-  console.warn("createClient in lib/supabase-client.ts was called, but Supabase integration is removed.");
-  return null; // Or throw an error, or return a mock client
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.error('Missing Supabase environment variables');
+    return null;
+  }
+
+  return supabaseCreateClient(supabaseUrl, supabaseAnonKey);
 }

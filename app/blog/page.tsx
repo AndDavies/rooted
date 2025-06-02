@@ -180,35 +180,35 @@ export default async function BlogIndexPage() {
                               {post.featured_image && (
                                 <div className={`relative w-full ${cardProps.isTall ? 'h-80 md:h-[calc(100%-7rem)]' : 'h-60 md:h-64'} overflow-hidden`}>
                                   <Link href={`/blog/${post.slug}`} className="block w-full h-full">
-                                    <Image
+                        <Image
                                       src={post.featured_image}
                                       alt={post.title || "Blog post image"}
                                       fill
                                       objectFit="cover"
                                       className="transform transition-transform duration-300 group-hover:scale-105"
-                                    />
+                        />
                                   </Link>
-                                </div>
-                              )}
+                      </div>
+                    )}
                               <div className="flex flex-col flex-grow p-4">
                                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1.5">5 MIN READ</p>
                                 <h3 className={`text-xl mb-2 text-neutral-800 transition-colors group-hover:text-[#CC4824]`}>
                                   <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                                 </h3>
                                 <p className="text-neutral-700 text-sm line-clamp-3 mb-3 flex-grow">
-                                  {post.excerpt || "No excerpt available"}
-                                </p>
+                        {post.excerpt || "No excerpt available"}
+                      </p>
                                 <div className="mt-auto">
-                                  <Button
-                                    asChild
+                      <Button
+                        asChild
                                     variant="link"
                                     className="text-[#CC4824] hover:text-[#e05c3a] p-0 h-auto font-medium group/link"
-                                  >
+                      >
                                     <Link href={`/blog/${post.slug}`} className="flex items-center">
                                       Read article
                                       <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover/link:translate-x-1" />
                                     </Link>
-                                  </Button>
+                      </Button>
                                 </div>
                               </div>
                             </div>

@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useWaitlistPopup } from "./WaitlistPopupContext";
 // localFont import and popsiesFont definition are no longer needed here
 // import localFont from "next/font/local"; 
 // const popsiesFont = localFont(...);
@@ -10,6 +11,13 @@ import Link from "next/link";
 // Geist font definition removed as it's now global
 
 export function Hero() {
+  const { openPopup } = useWaitlistPopup();
+
+  const handleWaitlistClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    openPopup();
+  };
+
   return (
     <div id="hero" className="relative h-screen w-full">
       {/* Background video */}
@@ -58,8 +66,8 @@ export function Hero() {
 
           {/* CTA Button */}
           <div className="flex justify-center">
-            <Link
-              href="#booking" // You can update this to your actual waitlist signup section
+            <button
+              onClick={handleWaitlistClick}
               className="inline-flex items-center px-8 py-4 bg-[#F1BE49] text-[#4A4A4A] font-semibold text-lg rounded-full hover:bg-[#D4AF37] hover:scale-105 transition-all duration-300 ease-in-out shadow-lg hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-[#F1BE49]/50 group"
             >
               Join the Waitlist
@@ -71,7 +79,7 @@ export function Hero() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
-            </Link>
+            </button>
           </div>
         </div>
 

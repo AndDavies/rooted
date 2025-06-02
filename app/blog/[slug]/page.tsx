@@ -210,31 +210,31 @@ export default async function BlogPostPage({ params }: PageProps) {
           <div className="max-w-2xl">
             {/* Removed font-heading, global style will apply */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl text-[#FFF8EB] mb-4">
-              {post.title}
-            </h1>
-            {post.excerpt && (
+            {post.title}
+          </h1>
+          {post.excerpt && (
               <p className="text-lg sm:text-xl text-[#FFF8EB]/90 font-body mb-6">
-                {post.excerpt}
-              </p>
-            )}
+              {post.excerpt}
+            </p>
+          )}
             <div className="flex flex-col sm:flex-row sm:items-center gap-x-6 gap-y-3 text-sm font-body text-[#FFF8EB]/80 uppercase tracking-wider">
-              {post.published_at && (
-                <div className="flex items-center">
-                  <Calendar className="h-4 w-4 mr-1.5" />
-                  <span>{format(new Date(post.published_at), "MMMM d, yyyy")}</span>
-                </div>
-              )}
-              {author && (
+            {post.published_at && (
+              <div className="flex items-center">
+                <Calendar className="h-4 w-4 mr-1.5" />
+                <span>{format(new Date(post.published_at), "MMMM d, yyyy")}</span>
+              </div>
+            )}
+            {author && (
                 <span className="mt-2 sm:mt-0">By {author.name}</span>
-              )}
-              {readingTimeMinutes > 0 && (
+            )}
+            {readingTimeMinutes > 0 && (
                 <div className="flex items-center mt-2 sm:mt-0">
-                  <Clock className="h-4 w-4 mr-1.5" />
-                  <span>{readingTimeMinutes} min read</span>
-                </div>
-              )}
-            </div>
+                <Clock className="h-4 w-4 mr-1.5" />
+                <span>{readingTimeMinutes} min read</span>
+              </div>
+            )}
           </div>
+        </div>
         </div>
 
         {/* Image - Right Column (Order 1 on mobile, Order 2 on md screens) */}
