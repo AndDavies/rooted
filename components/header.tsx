@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; // Use next/link for client-side navigation
 import { scrollToElement } from '@/lib/scroll'; // Assuming this path is correct
+import { useWaitlistPopup } from './WaitlistPopupContext';
 import localFont from "next/font/local"; // Import localFont
 
 // Define the Popsies font
@@ -36,6 +37,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
+  const { openPopup } = useWaitlistPopup();
 
   useEffect(() => {
     setIsMounted(true); // For animations on load
@@ -78,14 +80,21 @@ export function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleGetRootedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isMobileMenuOpen) {
+      setIsMobileMenuOpen(false);
+    }
+    openPopup('header'); // Pass source as 'header'
+  };
+
   const ctaButton = (
-    <Link
-      href="#booking" // Section 6
-      onClick={(e) => handleNavLinkClick(e, '#booking')}
+    <button
+      onClick={handleGetRootedClick}
       className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap"
     >
       Get Rooted
-    </Link>
+    </button>
   );
 
   return (
@@ -163,12 +172,22 @@ export function Header() {
               </Link>
             ))}
             <div className="pt-8 animate-fadeInUp" style={{ animationDelay: `${navigationLinks.length * 100 + 100}ms`}}>
-              {React.cloneElement(ctaButton, { onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleNavLinkClick(e, '#booking') })}
+              <button
+                onClick={handleGetRootedClick}
+                className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap"
+              >
+                Get Rooted
+              </button>
             </div>
           </nav>
            {/* Fixed CTA at bottom of mobile menu for easier access */}
           <div className="absolute bottom-0 left-0 right-0 p-5 bg-[#f5f5f0] border-t border-gray-200">
-             {React.cloneElement(ctaButton, { onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleNavLinkClick(e, '#booking') })}
+             <button
+                onClick={handleGetRootedClick}
+                className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap w-full"
+              >
+                Get Rooted
+              </button>
           </div>
         </div>
       )}

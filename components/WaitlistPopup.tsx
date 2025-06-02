@@ -7,7 +7,7 @@ import { useWaitlistPopup } from './WaitlistPopupContext';
 import { createClient } from '@/lib/supabase-client';
 
 export function WaitlistPopup() {
-  const { isPopupOpen, closePopup } = useWaitlistPopup();
+  const { isPopupOpen, source, closePopup } = useWaitlistPopup();
   const [isClosing, setIsClosing] = useState(false);
   const [email, setEmail] = useState('');
   const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
@@ -72,7 +72,8 @@ export function WaitlistPopup() {
         .insert([
           {
             email: email.toLowerCase().trim(),
-            agreed_to_privacy: agreedToPrivacy
+            agreed_to_privacy: agreedToPrivacy,
+            source: source || 'unknown'
           }
         ]);
 

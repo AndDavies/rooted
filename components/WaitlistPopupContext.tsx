@@ -4,7 +4,8 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface WaitlistPopupContextType {
   isPopupOpen: boolean;
-  openPopup: () => void;
+  source: string;
+  openPopup: (source: string) => void;
   closePopup: () => void;
 }
 
@@ -12,12 +13,20 @@ const WaitlistPopupContext = createContext<WaitlistPopupContextType | undefined>
 
 export function WaitlistPopupProvider({ children }: { children: ReactNode }) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [source, setSource] = useState('');
 
-  const openPopup = () => setIsPopupOpen(true);
-  const closePopup = () => setIsPopupOpen(false);
+  const openPopup = (source: string) => {
+    setSource(source);
+    setIsPopupOpen(true);
+  };
+  
+  const closePopup = () => {
+    setIsPopupOpen(false);
+    setSource('');
+  };
 
   return (
-    <WaitlistPopupContext.Provider value={{ isPopupOpen, openPopup, closePopup }}>
+    <WaitlistPopupContext.Provider value={{ isPopupOpen, source, openPopup, closePopup }}>
       {children}
     </WaitlistPopupContext.Provider>
   );

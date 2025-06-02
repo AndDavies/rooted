@@ -15,7 +15,7 @@ export function Hero() {
 
   const handleWaitlistClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    openPopup();
+    openPopup('hero');
   };
 
   return (
