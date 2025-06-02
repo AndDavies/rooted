@@ -5,8 +5,10 @@ import { Bebas_Neue, Rufina } from "next/font/google"
 import localFont from "next/font/local"
 import Script from 'next/script'
 import { Header } from "@/components/header"
+import { Footer } from "@/components/Footer"
 import { WaitlistPopup } from "@/components/WaitlistPopup"
 import { WaitlistPopupProvider } from "@/components/WaitlistPopupContext"
+import { CookieConsent } from "@/components/CookieConsent"
 
 // Geist font setup
 const geist = localFont({
@@ -77,13 +79,13 @@ const playfairFont = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.therootedway.co'), // IMPORTANT: Replace with your actual domain
   title: {
-    default: "ROOTED | A Playground of Wellbeing",
+    default: "The ROOTED Way | A systematic approach to wellbeing",
     template: `%s | Rooted Executive Retreats`, // Allows individual pages to set their title part
   },
   description: "Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.",
   generator: 'Next.js', // Updated generator
   openGraph: {
-    title: 'ROOTED | A Playground of Wellbeing',
+    title: 'ROOTED | A systematic approach to wellbeing',
     description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
     url: 'https://www.therootedway.co', // IMPORTANT: Replace with your actual domain
     siteName: 'Rooted Executive Retreats',
@@ -92,7 +94,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ROOTED | A Playground of Wellbeing',
+    title: 'ROOTED | A systematic approach to wellbeing',
     description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
     // siteId: '@YourTwitterID', // IMPORTANT: Replace with your Twitter ID if available
     creator: '@YourTwitterHandle', // IMPORTANT: Replace with your Twitter handle
@@ -127,7 +129,9 @@ export default function RootLayout({
         <WaitlistPopupProvider>
           <Header />
           {children}
+          <Footer />
           <WaitlistPopup />
+          <CookieConsent />
         </WaitlistPopupProvider>
         
         {/* Google Analytics Tag */}
