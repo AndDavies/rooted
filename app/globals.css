@@ -163,7 +163,7 @@
   .font-heading {
     font-family: var(--font-playfair), var(--font-geist), sans-serif;
   }
-  
+
   h4, h5, h6 {
     @apply font-medium tracking-tight;
     font-family: var(--font-glacial);

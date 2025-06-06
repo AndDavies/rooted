@@ -12,6 +12,7 @@ import { Section5 } from "@/components/section5"
 import { Section6 } from "@/components/section6"
 import { AboutUs } from "@/components/AboutUs"
 import { Program } from "@/components/program"
+import { FeaturedBlog } from "@/components/FeaturedBlog"
 
 // Added metadata for the homepage
 export const metadata: Metadata = {
@@ -43,10 +44,10 @@ export default function Home() {
         <AboutUs />
         <Program />
 
-        {/* Section 03: The Method (Formerly Section 3, now correctly placed) */}
-        {/* <Section3 id="solution" /> */}
-
         <WhyRooted />
+        {/* Featured Blog Articles */}
+        <FeaturedBlog />
+
         <Section2 />
         {/* Section 04: The Retreat (Formerly Section 4, now correctly placed) */}
         {/* <Section4 id="experience" /> */}

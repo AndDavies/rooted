@@ -127,13 +127,13 @@ export default function RootLayout({
     <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${playfairFont.variable}`}>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         <WaitlistPopupProvider>
-          <Header />
-          {children}
+        <Header />
+        {children}
           <Footer />
           <WaitlistPopup />
           <CookieConsent />
         </WaitlistPopupProvider>
-        
+
         {/* Google Analytics Tag */}
         <Script 
           strategy="afterInteractive" 
