@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Calendar, Mail } from "lucide-react";
 import { format } from "date-fns";
 import { notFound } from "next/navigation";
+import type { Metadata } from 'next';
 
 // BlogPost interface (matches schema)
 interface BlogPost {
@@ -28,6 +29,34 @@ interface TagPost {
 
 interface TagPageProps {
   params: Promise<{ tag: string }>; // Next.js 15 async params
+}
+
+// Generate dynamic metadata for tag pages
+export async function generateMetadata({ params }: TagPageProps): Promise<Metadata> {
+  const { tag } = await params;
+  
+  const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
+  
+  return {
+    title: `${capitalizedTag} Articles | Blog | Rooted Executive Retreats`,
+    description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from Rooted Executive Retreats.`,
+    alternates: {
+      canonical: `/blog/tag/${tag}`,
+    },
+    openGraph: {
+      title: `${capitalizedTag} Articles | Blog | Rooted Executive Retreats`,
+      description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from Rooted Executive Retreats.`,
+      url: `/blog/tag/${tag}`,
+      siteName: "Rooted Executive Retreats",
+      locale: "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: `${capitalizedTag} Articles | Blog | Rooted Executive Retreats`,
+      description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from Rooted Executive Retreats.`,
+    },
+  };
 }
 
 export default async function TagPage({ params }: TagPageProps) {

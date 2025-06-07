@@ -94,6 +94,9 @@ const getBentoGridLayout = (count: number): BentoLayout => {
 export const metadata: Metadata = {
   title: "Blog | Rooted Executive Retreats",
   description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
+  alternates: {
+    canonical: '/blog',
+  },
   openGraph: {
     title: "Blog | Rooted Executive Retreats",
     description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",

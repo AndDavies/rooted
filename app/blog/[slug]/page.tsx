@@ -107,6 +107,9 @@ export async function generateMetadata({ params }: PageProps) {
     title: `${post.title} | Rooted Executive Retreats`,
     description: description,
     keywords: finalKeywords,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: `${post.title} | Rooted Executive Retreats`,
       description: description,
