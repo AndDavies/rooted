@@ -13,6 +13,8 @@ import { Section6 } from "@/components/section6"
 import { AboutUs } from "@/components/AboutUs"
 import { Program } from "@/components/program"
 import { FeaturedBlog } from "@/components/FeaturedBlog"
+import { WhoAreWe } from "@/components/WhoAreWe"
+import { UpComingEvents } from "@/components/UpComingEvents"
 
 // Added metadata for the homepage
 export const metadata: Metadata = {
@@ -36,26 +38,19 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <Hero />
-        
-        {/* Section 01: The Foundation */}
-        {/* <Section1 /> */}
 
-        {/* Section 02: The Problem (Current Section 2) */}
         <AboutUs />
+    
         <Program />
 
         <WhyRooted />
-        {/* Featured Blog Articles */}
+        
+        <UpComingEvents />
+        
+        <WhoAreWe />
+    
         <FeaturedBlog />
 
-        <Section2 />
-        {/* Section 04: The Retreat (Formerly Section 4, now correctly placed) */}
-        {/* <Section4 id="experience" /> */}
-
-
-
-        {/* Section 06: Secure Your Spot (Booking) */}
-        {/* <Section6 id="booking" /> */}
 
 
       </main>

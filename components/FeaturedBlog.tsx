@@ -44,7 +44,7 @@ export async function FeaturedBlog() {
     }
 
     return (
-      <section className="py-12 md:py-16 lg:py-20 bg-white">
+      <section id="featured-blog" className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-3 mb-8 md:mb-12">
             <BookOpen className="h-6 w-6 text-[#CC4824]" />

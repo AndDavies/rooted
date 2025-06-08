@@ -34,7 +34,7 @@ const programStagesData: ProgramStage[] = [
 
 export function Program() {
   return (
-    <section id="program-overview" className="py-20 md:py-28 bg-stone-50">
+    <section id="program" className="py-20 md:py-28 bg-stone-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-stone-800 mb-4">A systematic approach to wellbeing</h2>
