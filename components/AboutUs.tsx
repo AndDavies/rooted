@@ -7,7 +7,7 @@ export function AboutUs() {
   const features = [
     {
       icon: <HeartPulse />,
-      title: "Science-Backed TRAINING",
+      title: "SCIENCE-BACKED TRAINING",
       subheading: "360 Recalibration",
       description: "We use biometrics to enhance mental cognition, cardiovascular fitness, stress resilience, and adrenal health. Rooted™ optimizes your metabolism, reduces inflammation, and boosts hormonal balance, shifting you from chronic output to sustainable vitality.",
       initialIconColor: "text-neutral-800",
@@ -16,7 +16,7 @@ export function AboutUs() {
     {
       icon: <Scale />,
       title: "MIND-BODY RESTORATION",
-      subheading: "Time-Rested Disciplines",
+      subheading: "Time-Tested Disciplines",
       description: "We guide you through breathwork, mindful movement, cold therapy, and meditation to restore physiological balance and sharpen mental clarity. These aren’t trends; they’re timeless tools for lasting transformation.",
       initialIconColor: "text-neutral-800",
       hoverIconColorClass: "group-hover:text-[#FFF1D4]",
@@ -77,7 +77,7 @@ export function AboutUs() {
             <div className="w-4 h-4 bg-amber-400 rounded-full"></div>
           </div>
           <h2 className="text-2xl md:text-3xl font-light text-stone-800 mb-4 tracking-tight">
-            Why Choose <span className="font-medium">ROOTED</span>
+            Why <span className="font-medium">ROOTED</span>
           </h2>
           <div className="w-16 h-px bg-stone-300 mx-auto"></div>
         </div>

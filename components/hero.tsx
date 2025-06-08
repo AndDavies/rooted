@@ -42,7 +42,7 @@ export function Hero() {
             <h1
               className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap"
             >
-              Lead with clarity. Live with alignment.
+              Live with alignment. Lead with clarity.
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl text-white/90 tracking-tight text-shadow-hero-h1">
               ROOTED is your return to what matters.
@@ -53,13 +53,9 @@ export function Hero() {
           <div className="text-white text-center mb-8 space-y-2 max-w-3xl mx-auto">
             
             <p className="text-base md:text-lg ">
-              We were taught to push through. To always aim higher.  But no one warned us about the cost: our bodies, our energy, our joy.
-
+              We were taught to push through. To always aim higher.  But no one warned us about the cost: our bodies, our energy, our emotional and mental health, our joy.
             
-            
-              We're not broken. The model is.
-            
-              ROOTED exists to rewrite the script for high performers - starting from the inside out.
+              ROOTED exists to help high achievers reclaim their health and vitality before <strong>burnout</strong> demands it.
             </p>
             
           </div>

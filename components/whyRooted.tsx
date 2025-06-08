@@ -281,14 +281,14 @@ export function WhyRooted() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-3xl md:text-4xl font-light text-stone-800 tracking-tight">
-                Why{" "}
+              What does it mean to{" "}
                 <motion.span
                   className="font-normal"
                   style={{ color: "#317039" }}
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
-                  ROOTED
+                  Get Rooted?
                 </motion.span>
               </h2>
               <motion.div

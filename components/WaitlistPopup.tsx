@@ -137,7 +137,7 @@ export function WaitlistPopup() {
                 Sign up for exclusive offers and transformational insights.
               </h2>
               <p className="text-[#4A4A4A]/80 text-base lg:text-lg leading-relaxed">
-                When you join our community, you're not just signing up to receive insights on traveling with purpose; you're also gaining exclusive early access to our newest experiences and early bird rates.
+              be a part of the movement – find out about upcoming health and wellness challenges and help us shape the future of healthy modern leadership. 
               </p>
             </div>
 
