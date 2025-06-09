@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'; // Use next/link for client-side navigation
-import { scrollToElement } from '@/lib/scroll'; // Assuming this path is correct
 import { useWaitlistPopup } from './WaitlistPopupContext';
 import localFont from "next/font/local"; // Import localFont
 
@@ -69,7 +68,16 @@ export function Header() {
 
     if (href.startsWith('#')) {
       e.preventDefault();
-      scrollToElement(href.substring(1));
+      const elementId = href.substring(1);
+      const element = document.getElementById(elementId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
       // No need to set isMobileMenuOpen here again, it's handled above
     }
     // If it's a normal page link (e.g., /blog), NextLink handles navigation,
@@ -209,6 +217,6 @@ export function Header() {
 }
 
 // Note: For the scroll to #hero to work, ensure your Hero component has id="hero"
-// The scroll functionality relies on `scrollToElement` from `@/lib/scroll.ts`.
+// The scroll functionality uses native scrollIntoView with smooth behavior.
 // Ensure Heroicons are installed if you plan to use them: npm install @heroicons/react or yarn add @heroicons/react
 // Or replace with your own SVG components.

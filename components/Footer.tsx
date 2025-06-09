@@ -2,7 +2,6 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { scrollToElement } from '@/lib/scroll';
 
 const navigationLinks = [
   { label: "About Us", href: "/#about" },
@@ -17,7 +16,16 @@ export function Footer() {
   const handleNavLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith('#')) {
       e.preventDefault();
-      scrollToElement(href.substring(1));
+      const elementId = href.substring(1);
+      const element = document.getElementById(elementId);
+      if (element) {
+        const headerOffset = 80;
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: 'smooth'
+        });
+      }
     }
     // For normal page links (e.g., /blog), NextLink handles navigation
   };
