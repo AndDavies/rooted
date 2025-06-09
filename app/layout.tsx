@@ -8,7 +8,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/Footer"
 import { WaitlistPopup } from "@/components/WaitlistPopup"
 import { WaitlistPopupProvider } from "@/components/WaitlistPopupContext"
-import { CookieConsent } from "@/components/CookieConsent"
+import { ConsentBanner } from "@/components/ConsentBanner"
 
 // Geist font setup
 const geist = localFont({
@@ -125,26 +125,46 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${playfairFont.variable}`}>
+      <head>
+        {/* Google Consent Mode v2 - Load before any other tracking scripts */}
+        <Script id="google-consent-mode" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+
+            // Set default consent states
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'functionality_storage': 'denied',
+              'personalization_storage': 'denied',
+              'security_storage': 'granted'
+            });
+          `}
+        </Script>
+      </head>
       <body className="font-sans antialiased"> {/* font-sans will be Geist, antialiased for smoother fonts */}
         <WaitlistPopupProvider>
         <Header />
         {children}
           <Footer />
           <WaitlistPopup />
-          <CookieConsent />
+          <ConsentBanner />
         </WaitlistPopupProvider>
 
-        {/* Google Analytics Tag */}
+        {/* Google Analytics - will respect consent mode */}
         <Script 
-          strategy="afterInteractive" 
-          src="https://www.googletagmanager.com/gtag/js?id=G-0ZZ8GGQTKE"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+          strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-0ZZ8GGQTKE');
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
           `}
         </Script>
       </body>
