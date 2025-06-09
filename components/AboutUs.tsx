@@ -1,8 +1,14 @@
+"use client"
 import Image from "next/image"
 import { HeartPulse, Scale, Users } from 'lucide-react';
 import React from 'react';
+import { scrollToElement } from '@/lib/scroll';
 
 export function AboutUs() {
+
+  const handleScrollToInterested = () => {
+    scrollToElement('interested');
+  };
 
   const features = [
     {
@@ -51,6 +57,19 @@ export function AboutUs() {
             </p>
               </div>
               <div className="mt-10 md:mt-12 w-24 h-[2px] bg-[#c0c0b0]"></div>
+              
+              {/* CTA Button */}
+              <div className="mt-8 text-center">
+                <button
+                  onClick={handleScrollToInterested}
+                  className="inline-flex items-center px-6 py-3 bg-[#D4AF37] hover:bg-[#B8941F] text-white text-sm font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
+                >
+                  Start Your Journey
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
 

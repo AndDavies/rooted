@@ -15,6 +15,7 @@ import { Program } from "@/components/program"
 import { FeaturedBlog } from "@/components/FeaturedBlog"
 import { WhoAreWe } from "@/components/WhoAreWe"
 import { UpComingEvents } from "@/components/UpComingEvents"
+import { Interested } from "@/components/Interested"
 
 // Added metadata for the homepage
 export const metadata: Metadata = {
@@ -51,7 +52,7 @@ export default function Home() {
     
         <FeaturedBlog />
 
-
+        <Interested />
 
       </main>
     </>
