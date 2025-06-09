@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Image from "next/image"
 
 export function Interested() {
@@ -13,6 +13,27 @@ export function Interested() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [error, setError] = useState("")
+  const [currentSource, setCurrentSource] = useState("I'm Interested")
+
+  // Effect to listen for event source updates
+  useEffect(() => {
+    const handleSetEventSource = (event: CustomEvent) => {
+      const { source, message } = event.detail;
+      console.log('Setting event source:', source, 'with message:', message); // Debug log
+      
+      setCurrentSource(source);
+      setFormData(prev => ({
+        ...prev,
+        message: message
+      }));
+    };
+
+    window.addEventListener('setEventSource', handleSetEventSource as EventListener);
+    
+    return () => {
+      window.removeEventListener('setEventSource', handleSetEventSource as EventListener);
+    };
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -27,6 +48,8 @@ export function Interested() {
     setIsSubmitting(true)
     setError("")
 
+    console.log('Submitting with source:', currentSource); // Debug log
+
     try {
       const response = await fetch('/api/interested', {
         method: 'POST',
@@ -35,7 +58,7 @@ export function Interested() {
         },
         body: JSON.stringify({
           ...formData,
-          source: "I'm Interested"
+          source: currentSource
         }),
       })
 
@@ -48,6 +71,7 @@ export function Interested() {
           email: "",
           message: ""
         })
+        setCurrentSource("I'm Interested") // Reset source
         // Hide success message after 5 seconds
         setTimeout(() => setShowSuccess(false), 5000)
       } else {
@@ -69,6 +93,7 @@ export function Interested() {
           src="/interested-bg.jpg"
           alt="Scenic landscape with birds flying"
           fill
+          sizes="100vw"
           style={{ objectFit: "cover" }}
           className="brightness-75"
         />
@@ -80,7 +105,7 @@ export function Interested() {
           {/* Left Side - Heading */}
           <div className="text-left">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
-              Let's explore what's possible when your team leads as one.
+            ROOTED offers a new way of living: one where performance and wellbeing are not mutually exclusive.
             </h2>
           </div>
 
@@ -167,7 +192,7 @@ export function Interested() {
                     onChange={handleInputChange}
                     rows={4}
                     className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 resize-none text-[#4A4A4A] placeholder-[#4A4A4A]/50"
-                    placeholder="Tell us about your team and what you'd like to explore..."
+                    placeholder="Tell us about yourself and what interests you about the ROOTED way."
                   />
                 </div>
 
@@ -191,7 +216,7 @@ export function Interested() {
                       SUBMITTING...
                     </div>
                   ) : (
-                    "EXPLORE WHAT'S POSSIBLE WITH YOUR TEAM"
+                    "EXPLORE WHAT'S POSSIBLE"
                   )}
                 </button>
               </form>

@@ -22,7 +22,7 @@ export function AboutUs() {
       icon: <HeartPulse />,
       title: "SCIENCE-BACKED TRAINING",
       subheading: "360 Recalibration",
-      description: "We use biometrics to enhance mental cognition, cardiovascular fitness, stress resilience, and adrenal health. Rooted™ optimizes your metabolism, reduces inflammation, and boosts hormonal balance, shifting you from chronic output to sustainable vitality.",
+      description: "We use biometrics to enhance mental cognition, cardiovascular fitness, stress resilience, and adrenal health. ROOTED optimizes your metabolism, reduces inflammation, and boosts hormonal balance, shifting you from chronic output to sustainable vitality.",
       initialIconColor: "text-neutral-800",
       hoverIconColorClass: "group-hover:text-[#CC4824]",
     },
@@ -30,15 +30,15 @@ export function AboutUs() {
       icon: <Scale />,
       title: "MIND-BODY RESTORATION",
       subheading: "Time-Tested Disciplines",
-      description: "We guide you through breathwork, mindful movement, cold therapy, and meditation to restore physiological balance and sharpen mental clarity. These aren’t trends; they’re timeless tools for lasting transformation.",
+      description: "We guide you through breathwork, mindful movement, cold therapy, and meditation to restore physiological balance and sharpen mental clarity. These aren't trends; they're timeless tools for lasting transformation.",
       initialIconColor: "text-neutral-800",
       hoverIconColorClass: "group-hover:text-[#FFF1D4]",
     },
     {
       icon: <Users />,
       title: "SUSTAINED CHANGE",
-      subheading: "We Don’t Do It Alone",
-      description: "We pair personalized coaching with community support to sustain your momentum long after the reset. Rooted™ fosters lasting transformation, empowering you to lead with balance and impact.",
+      subheading: "We Don't Do It Alone",
+      description: "We pair personalized coaching with community support to sustain your momentum long after the reset. ROOTED fosters lasting transformation, empowering you to lead with balance and impact.",
       initialIconColor: "text-neutral-800",
       hoverIconColorClass: "group-hover:text-[#FFF8EB]",
     },
@@ -87,7 +87,7 @@ export function AboutUs() {
                 alt="Serene natural environment at Rooted Executive Retreats"
                 width={500}
                 height={500}
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>

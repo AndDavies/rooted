@@ -223,7 +223,7 @@ export function WhyRooted() {
                         ◯
                       </motion.div>
                       <h2 className="text-2xl md:text-3xl font-light text-stone-800 tracking-tight">
-                        The Rooted Pillars
+                        The ROOTED Pillars
                       </h2>
                       <p className="text-stone-500 text-sm tracking-wide uppercase">
                         Six Foundations of Transformation
@@ -288,7 +288,7 @@ export function WhyRooted() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
-                  Get Rooted?
+                  Get ROOTED?
                 </motion.span>
               </h2>
               <motion.div

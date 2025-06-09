@@ -21,7 +21,7 @@ const programStagesData: ProgramStage[] = [
     title: "Reset",
     imageSrc: "/reset.jpg",
     description:
-      "Join a ROOTED reset to reconnect with yourself - body, mind and spirit. Let us customize a retreat program for your unique needs to rebalance your nervous system, reset your metabolism and regulate hormones.",
+      "Join a ROOTED retreat to rebalance your nervous system, reboot your metabolic health, regulate hormones, and reconnect with your deeper purpose.",
   },
   {
     id: "grow",
@@ -62,6 +62,7 @@ export function Program() {
                   src={stage.imageSrc || "/placeholder.svg"}
                   alt={`${stage.title} stage`}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   style={{ objectFit: "cover" }}
                   className="transition-transform duration-700 ease-in-out hover:scale-105"
                 />
