@@ -2,12 +2,19 @@
 import Image from "next/image"
 import { HeartPulse, Scale, Users } from 'lucide-react';
 import React from 'react';
-import { scrollToElement } from '@/lib/scroll';
 
 export function AboutUs() {
 
   const handleScrollToInterested = () => {
-    scrollToElement('interested');
+    const element = document.getElementById('interested');
+    if (element) {
+      const headerOffset = 80;
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const features = [

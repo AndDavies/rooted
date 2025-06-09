@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import { scrollToElement } from '@/lib/scroll'
 
 interface ProgramStage {
   id: string
@@ -14,25 +15,29 @@ const programStagesData: ProgramStage[] = [
     title: "Connect",
     imageSrc: "/connect.jpg",
     description:
-      "Set up an onboarding call with a ROOTED coach, establish your timeline, implement new protocols and tap into the ROOTED community",
+      "Set up an onboarding call with a ROOTED coach, establish your timeline, implement new protocols and tap into the ROOTED community.",
   },
   {
     id: "reset",
     title: "Reset",
     imageSrc: "/reset.jpg",
     description:
-      "After working with your coach and finding new systems that work for your life, join a ROOTED reset to go deeper: rebalance your nervous system, reset your metabolism and regulate hormones",
+      "Join a ROOTED reset to reconnect with yourself - body, mind and spirit. Let us customize a retreat program for your unique needs to rebalance your nervous system, reset your metabolism and regulate hormones.",
   },
   {
     id: "grow",
     title: "Grow",
     imageSrc: "/grow.jpg",
     description:
-      "Join fellow alumni and become a ROOTED mentor - deepen your journey within by passing it on and guiding others",
+      "Join fellow alumni and become a ROOTED mentor - deepen your journey within by passing it on and guiding others.",
   },
 ]
 
 export function Program() {
+  const handleScrollToInterested = () => {
+    scrollToElement('interested');
+  };
+
   return (
     <section id="program" className="py-20 md:py-28 bg-stone-50">
       <div className="container mx-auto px-4">
@@ -71,6 +76,19 @@ export function Program() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Button */}
+        <div className="text-center mt-12">
+          <button
+            onClick={handleScrollToInterested}
+            className="inline-flex items-center px-6 py-3 bg-[#D4AF37] hover:bg-[#B8941F] text-white text-sm font-semibold rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
+          >
+            I'm Interested
+            <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
         </div>
 
         {/* Minimal footer element */}
