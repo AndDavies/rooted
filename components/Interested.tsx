@@ -119,7 +119,7 @@ export function Interested() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-light text-[#4A4A4A] mb-2">Thank you for your interest!</h3>
-                <p className="text-[#4A4A4A]/80">We'll be in touch soon to explore what's possible for your team.</p>
+                <p className="text-[#4A4A4A]/80">Welcome to ROOTED! You've taken a proactive step toward a principle-centered lifestyle. We'll keep you updated on our micro-events and transformative retreats.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
