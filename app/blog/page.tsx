@@ -95,12 +95,12 @@ export const metadata: Metadata = {
   title: "Blog | Rooted Executive Retreats",
   description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
   alternates: {
-    canonical: '/blog',
+    canonical: 'https://www.therootedway.co/blog',
   },
   openGraph: {
     title: "Blog | Rooted Executive Retreats",
     description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
-    url: '/blog',
+    url: 'https://www.therootedway.co/blog',
   },
   twitter: {
     title: "Blog | Rooted Executive Retreats",

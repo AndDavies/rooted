@@ -5,7 +5,7 @@ import Link from "next/link";
 import Script from 'next/script'; // Added import for next/script
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
-import { ChevronLeft, ChevronRight, Calendar, Clock } from "lucide-react"; 
+import { ChevronLeft, Calendar, Clock } from "lucide-react"; 
 // Card components might not be needed for the main article, but maybe for CTA or related posts
 // import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 // Avatar not directly in this new design, but author data is still fetched
@@ -18,10 +18,9 @@ import { Button } from "@/components/ui/button";
 // import Breadcrumbs from "@/components/Breadcrumbs";
 import * as cheerio from 'cheerio'; // Import cheerio
 
-type BlogParams = Promise<{ slug: string }>;
-
+// -- Types -------------------------------------------------------------------
 interface PageProps {
-  params: BlogParams;
+  params: Promise<{ slug: string }>;
 }
 
 // Interface for Author data if you fetch it separately
@@ -60,8 +59,7 @@ const slugify = (text: string): string => {
 
 // Generate dynamic metadata for the blog post (remains largely the same)
 export async function generateMetadata({ params }: PageProps) {
-  const resolvedParams = await params;
-  const { slug } = resolvedParams;
+  const { slug } = await params;
 
   const supabase = await createClient();
   if (!supabase) {
@@ -108,12 +106,12 @@ export async function generateMetadata({ params }: PageProps) {
     description: description,
     keywords: finalKeywords,
     alternates: {
-      canonical: `/blog/${slug}`,
+      canonical: `https://www.therootedway.co/blog/${slug}`,
     },
     openGraph: {
       title: `${post.title} | Rooted Executive Retreats`,
       description: description,
-      url: `/blog/${slug}`,
+      url: `https://www.therootedway.co/blog/${slug}`,
       siteName: "Rooted Executive Retreats",
       locale: "en_US",
       type: "article",
@@ -135,8 +133,7 @@ interface TocItem {
 }
 
 export default async function BlogPostPage({ params }: PageProps) {
-  const resolvedParams = await params;
-  const { slug } = resolvedParams;
+  const { slug } = await params;
 
   const supabase = await createClient();
   if (!supabase) {
@@ -547,4 +544,34 @@ export default async function BlogPostPage({ params }: PageProps) {
       </footer>
     </div>
   );
+}
+
+// -- Static Generation -------------------------------------------------------
+
+// Revalidate each blog post page every 30 minutes so that new updates are picked
+// up relatively quickly without sacrificing the benefits of full static pages.
+export const revalidate = 1800;
+
+// Pre-render every blog post at build time so that each article has a fully
+// static HTML version available the first time Googlebot (or any visitor)
+// requests it. This removes the risk of the runtime Supabase call failing on
+// first request and guarantees that the <head> metadata (including canonical
+// tags) is available without JavaScript execution.
+export async function generateStaticParams() {
+  try {
+    const supabase = await createClient();
+    const { data, error } = await supabase
+      .from("blog_posts")
+      .select("slug");
+
+    if (error) {
+      console.error("generateStaticParams – Supabase error:", error.message);
+      return [];
+    }
+
+    return (data || []).map(({ slug }: { slug: string }) => ({ slug }));
+  } catch (err) {
+    console.error("generateStaticParams – Unexpected error:", err);
+    return [];
+  }
 }
