@@ -100,8 +100,8 @@ export function WhyRooted() {
 
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          {/* Left side - Interactive Display */}
-          <div className="flex justify-center order-2 lg:order-1">
+          {/* Left side - Interactive Display (hidden below md) */}
+          <div className="hidden md:flex justify-center order-2 lg:order-1">
             <div className="relative">
               {/* Main circle - consistent white background for readability */}
               <motion.div
@@ -273,6 +273,16 @@ export function WhyRooted() {
 
           {/* Right side - Pillar Navigation */}
           <div className="order-1 lg:order-2 space-y-8">
+            {/* Mobile icon display */}
+            <div className="flex justify-center md:hidden">
+              <span
+                className="text-4xl mb-4 transition-colors"
+                style={{ color: currentPillar ? currentPillar.color : "#9ca3af" }}
+              >
+                {currentPillar ? currentPillar.icon : "◯"}
+              </span>
+            </div>
+
             {/* Header with subtle animation */}
             <motion.div
               className="space-y-4"
