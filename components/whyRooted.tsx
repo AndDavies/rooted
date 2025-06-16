@@ -229,9 +229,12 @@ export function WhyRooted() {
                         Six Foundations of Transformation
                       </p>
                       <div className="w-16 h-px bg-stone-400 mx-auto"></div>
-                      <p className="text-stone-600 text-sm leading-relaxed">
-                        Hover over each pillar to explore our comprehensive approach to wellbeing
-                      </p>
+                      <div className="text-center space-y-3 px-4 text-stone-600">
+                        <p className="text-xs uppercase tracking-wide">Six Foundations of Transformation</p>
+                        <p className="text-sm leading-relaxed">
+                          Tap a pillar below to learn more about our comprehensive wellbeing approach.
+                        </p>
+                      </div>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -274,13 +277,40 @@ export function WhyRooted() {
           {/* Right side - Pillar Navigation */}
           <div className="order-1 lg:order-2 space-y-8">
             {/* Mobile icon display */}
-            <div className="flex justify-center md:hidden">
+            <div className="flex flex-col items-center md:hidden mb-6">
               <span
-                className="text-4xl mb-4 transition-colors"
+                className="text-4xl mb-2 transition-colors"
                 style={{ color: currentPillar ? currentPillar.color : "#9ca3af" }}
               >
                 {currentPillar ? currentPillar.icon : "◯"}
               </span>
+
+              {/* Mobile copy block – shown only before a pillar is selected */}
+              {selectedPillar === null && (
+                currentPillar ? (
+                  <div className="text-center space-y-3 px-4">
+                    <h3
+                      className="text-xl font-semibold"
+                      style={{ color: currentPillar.color }}
+                    >
+                      {currentPillar.title}
+                    </h3>
+                    <p className="text-xs uppercase tracking-wide text-stone-500">
+                      {currentPillar.subtitle}
+                    </p>
+                    <p className="text-sm text-stone-700 leading-relaxed">
+                      {currentPillar.description}
+                    </p>
+                  </div>
+                ) : (
+                  <div className="text-center space-y-3 px-4 text-stone-600">
+                    <p className="text-xs uppercase tracking-wide">Six Foundations of Transformation</p>
+                    <p className="text-sm leading-relaxed">
+                      Tap a pillar below to learn more about our comprehensive wellbeing approach.
+                    </p>
+                  </div>
+                )
+              )}
             </div>
 
             {/* Header with subtle animation */}
@@ -407,6 +437,24 @@ export function WhyRooted() {
                       )}
                     </motion.div>
                   </div>
+
+                  {/* Mobile accordion detail */}
+                  {selectedPillar === index && (
+                    <div
+                      className="md:hidden ml-8 mr-2 mb-4 rounded-lg p-4 bg-white shadow-sm border-l-4"
+                      style={{ borderColor: pillar.color }}
+                    >
+                      <h4 className="text-base font-semibold mb-1" style={{ color: pillar.color }}>
+                        {pillar.title}
+                      </h4>
+                      <p className="text-xs uppercase tracking-wide text-stone-500 mb-2">
+                        {pillar.subtitle}
+                      </p>
+                      <p className="text-sm text-stone-700 leading-relaxed">
+                        {pillar.description}
+                      </p>
+                    </div>
+                  )}
                 </motion.div>
               ))}
             </motion.div>
