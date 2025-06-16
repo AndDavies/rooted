@@ -105,7 +105,7 @@ export function WhyRooted() {
             <div className="relative">
               {/* Main circle - consistent white background for readability */}
               <motion.div
-                className="relative w-80 h-80 md:w-96 md:h-96 rounded-full bg-white flex flex-col items-center justify-center p-12 text-center shadow-xl"
+                className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-white flex flex-col items-center justify-center p-6 sm:p-8 md:p-10 text-center shadow-xl overflow-hidden"
                 style={{
                   border: `3px solid ${currentPillar ? currentPillar.color : "#d6d3d1"}`,
                 }}
@@ -126,7 +126,7 @@ export function WhyRooted() {
                     >
                       {/* Icon with subtle animation */}
                       <motion.div
-                        className="text-5xl mb-2"
+                        className="text-4xl sm:text-5xl mb-2"
                         style={{ color: currentPillar.color }}
                         animate={{
                           rotate: [0, 5, -5, 0],
@@ -142,7 +142,7 @@ export function WhyRooted() {
 
                       {/* Title - colored to match pillar */}
                       <motion.h3
-                        className="text-2xl md:text-3xl font-light tracking-tight"
+                        className="text-lg sm:text-xl md:text-2xl font-light tracking-tight break-words"
                         style={{ color: currentPillar.color }}
                         initial={{ scale: 0.9 }}
                         animate={{ scale: 1 }}
@@ -167,7 +167,7 @@ export function WhyRooted() {
 
                       {/* Description - consistent readable color */}
                       <motion.p
-                        className="text-stone-700 leading-relaxed text-sm md:text-base max-w-xs"
+                        className="text-stone-700 leading-relaxed text-xs sm:text-sm md:text-base max-w-[85%] mx-auto"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
@@ -239,7 +239,7 @@ export function WhyRooted() {
 
               {/* Animated outer rings */}
               <motion.div
-                className="absolute inset-0 rounded-full border-2 border-dashed"
+                className="absolute inset-0 rounded-full border-2 border-dashed hidden md:block"
                 style={{
                   borderColor: currentPillar ? currentPillar.color : "transparent",
                 }}
@@ -257,7 +257,7 @@ export function WhyRooted() {
               />
 
               <motion.div
-                className="absolute inset-0 rounded-full border"
+                className="absolute inset-0 rounded-full border hidden md:block"
                 style={{
                   borderColor: currentPillar ? currentPillar.color : "transparent",
                 }}
