@@ -221,4 +221,37 @@
   .prose td {
     vertical-align: top;
   }
+
+  /* --------------------------------------------
+     Blog lists – neat bullets & spacing
+     Applies primarily inside `.prose` content blocks
+  --------------------------------------------- */
+  .prose ul {
+    list-style: disc outside;
+    padding-left: 1.25rem; /* align with body text */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose ul li {
+    margin-bottom: 0.5rem; /* breathing room between items */
+  }
+
+  /* subtle brand-coloured bullet */
+  .prose ul li::marker {
+    color: hsl(var(--primary)); /* falls back to brand black; adjust if needed */
+    opacity: 0.6; /* subtle */
+  }
+
+  /* Ordered lists retain default numerals but align */
+  .prose ol {
+    list-style: decimal outside;
+    padding-left: 1.25rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .prose ol li {
+    margin-bottom: 0.5rem;
+  }
 }
