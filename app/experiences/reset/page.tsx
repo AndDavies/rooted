@@ -13,7 +13,7 @@ export default function ResetRetreatPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [error, setError] = useState("")
-  const currentSource = "October 2026 Retreat Waitlist"
+  const currentSource = "October 5 Retreat Waitlist"
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -137,7 +137,7 @@ export default function ResetRetreatPage() {
                 </div>
 
                 <div className="mt-8 p-6 bg-[#D4AF37]/10 rounded-xl">
-                  <p className="text-lg font-medium text-[#4A4A4A] mb-2">October 2026 • Madeira, Portugal</p>
+                  <p className="text-lg font-medium text-[#4A4A4A] mb-2">October 2025 • Madeira, Portugal</p>
                   <p className="text-[#4A4A4A]/70">Join the waitlist for early access and exclusive updates</p>
                 </div>
               </div>
@@ -153,7 +153,7 @@ export default function ResetRetreatPage() {
                     </div>
                     <h3 className="text-2xl font-light text-[#4A4A4A] mb-3">Welcome to the journey.</h3>
                     <p className="text-[#4A4A4A]/80 leading-relaxed">
-                      You've taken the first step toward transformation. We'll keep you updated as October 2026 approaches.
+                      You've taken the first step toward transformation. We'll keep you updated as October 2025 approaches.
                     </p>
                   </div>
                 ) : (
