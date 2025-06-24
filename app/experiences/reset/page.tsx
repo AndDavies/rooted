@@ -153,7 +153,7 @@ export default function ResetRetreatPage() {
                     </div>
                     <h3 className="text-2xl font-light text-[#4A4A4A] mb-3">Welcome to the journey.</h3>
                     <p className="text-[#4A4A4A]/80 leading-relaxed">
-                      You've taken the first step toward transformation. We'll keep you updated as October 2025 approaches.
+                      YYYYYou've taken the first step toward transformation. We'll keep you updated as October 2025 approaches.
                     </p>
                   </div>
                 ) : (
