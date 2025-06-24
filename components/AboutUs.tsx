@@ -111,9 +111,9 @@ export function AboutUs() {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
           {features.map((feature, index) => (
-            <div key={index} className="group text-center">
+            <div key={index} className="group text-center flex flex-col h-full">
               {/* Icon Container */}
-              <div className="mb-8">
+              <div className="mb-8 flex-shrink-0">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-2xl shadow-sm group-hover:shadow-md transition-all duration-300">
                   {React.cloneElement(feature.icon, {
                     className: "w-7 h-7 text-amber-600 group-hover:text-amber-700 transition-colors duration-300",
@@ -122,22 +122,24 @@ export function AboutUs() {
               </div>
 
               {/* Content */}
-              <div className="space-y-4">
+              <div className="space-y-4 flex-grow flex flex-col">
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-light text-stone-800 leading-tight">{feature.title}</h3>
+                <h3 className="text-xl md:text-2xl font-light text-stone-800 leading-tight h-16 flex items-center justify-center">{feature.title}</h3>
 
                 {/* Subheading */}
-                <div className="relative">
+                <div className="relative flex-shrink-0">
                   <h4 className="text-sm font-medium text-amber-700 tracking-wide uppercase">{feature.subheading}</h4>
                   <div className="w-8 h-px bg-amber-300 mx-auto mt-2"></div>
                 </div>
 
                 {/* Description */}
-                <p className="text-stone-600 leading-relaxed max-w-sm mx-auto">{feature.description}</p>
+                <div className="flex-grow flex items-start">
+                  <p className="text-stone-600 leading-relaxed max-w-sm mx-auto min-h-[120px] flex items-center">{feature.description}</p>
+                </div>
               </div>
 
               {/* Subtle bottom accent */}
-              <div className="mt-8 flex justify-center">
+              <div className="mt-8 flex justify-center flex-shrink-0">
                 <div className="w-1 h-1 bg-stone-300 rounded-full opacity-60"></div>
               </div>
             </div>
