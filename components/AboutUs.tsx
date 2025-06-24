@@ -20,9 +20,9 @@ export function AboutUs() {
   const features = [
     {
       icon: <HeartPulse />,
-      title: "SCIENCE-BACKED TRAINING",
+      title: "SCIENCE-BACKED",
       subheading: "360 Recalibration",
-      description: "We use biometrics to enhance mental cognition, cardiovascular fitness, stress resilience, and adrenal health. ROOTED optimizes your metabolism, reduces inflammation, and boosts hormonal balance, shifting you from chronic output to sustainable vitality.",
+      description: "We use biometrics to enhance mental cognition, cardiovascular fitness, stress resilience, and adrenal health. The ROOTED training method works to optimize your metabolism, reduce inflammation, and boost hormonal balance for renewed energy & vitality.",
       initialIconColor: "text-neutral-800",
       hoverIconColorClass: "group-hover:text-[#CC4824]",
     },
