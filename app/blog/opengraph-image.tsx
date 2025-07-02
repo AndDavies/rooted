@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'Blog | Rooted Executive Retreats';
+export const alt = 'Blog | The ROOTED Way';
 export const size = {
   width: 1200,
   height: 630,

@@ -92,19 +92,19 @@ const getBentoGridLayout = (count: number): BentoLayout => {
 
 // Added metadata for the blog index page
 export const metadata: Metadata = {
-  title: "Blog | Rooted Executive Retreats",
-  description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
+  title: "Blog | The ROOTED Way",
+  description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and leadership insights from The ROOTED Way.",
   alternates: {
     canonical: 'https://www.therootedway.co/blog',
   },
   openGraph: {
-    title: "Blog | Rooted Executive Retreats",
-    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
+    title: "Blog | The ROOTED Way",
+    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and leadership insights from The ROOTED Way.",
     url: 'https://www.therootedway.co/blog',
   },
   twitter: {
-    title: "Blog | Rooted Executive Retreats",
-    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and the latest updates from Rooted Executive Retreats.",
+    title: "Blog | The ROOTED Way",
+    description: "Explore insightful articles on wellbeing, mindfulness, personal growth, and leadership insights from The ROOTED Way.",
   },
 };
 

@@ -38,23 +38,23 @@ export async function generateMetadata({ params }: TagPageProps): Promise<Metada
   const capitalizedTag = tag.charAt(0).toUpperCase() + tag.slice(1);
   
   return {
-    title: `${capitalizedTag} Articles | Blog | Rooted Executive Retreats`,
-    description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from Rooted Executive Retreats.`,
+    title: `${capitalizedTag} Articles | Blog | The ROOTED Way`,
+    description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from The ROOTED Way.`,
     alternates: {
       canonical: `/blog/tag/${tag}`,
     },
     openGraph: {
-      title: `${capitalizedTag} Articles | Blog | Rooted Executive Retreats`,
-      description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from Rooted Executive Retreats.`,
+      title: `${capitalizedTag} Articles | Blog | The ROOTED Way`,
+      description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from The ROOTED Way.`,
       url: `/blog/tag/${tag}`,
-      siteName: "Rooted Executive Retreats",
+      siteName: "The ROOTED Way",
       locale: "en_US",
       type: "website",
     },
     twitter: {
       card: "summary",
-      title: `${capitalizedTag} Articles | Blog | Rooted Executive Retreats`,
-      description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from Rooted Executive Retreats.`,
+      title: `${capitalizedTag} Articles | Blog | The ROOTED Way`,
+      description: `Explore articles about ${tag} on wellbeing, mindfulness, and personal growth from The ROOTED Way.`,
     },
   };
 }

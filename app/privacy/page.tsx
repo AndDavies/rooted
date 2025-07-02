@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Rooted Executive Retreats",
-  description: "Read the Privacy Policy for Rooted Executive Retreats to understand how we collect, use, and protect your personal information, including data from connected health services like Garmin.",
+  title: "Privacy Policy | The ROOTED Way",
+  description: "Read the Privacy Policy for The ROOTED Way to understand how we collect, use, and protect your personal information, including data from connected health services like Garmin.",
   robots: { // Good practice to allow indexing of privacy policy
     index: true,
     follow: true,
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
       <main className="container mx-auto px-4 py-12 lg:py-16">
         <div className="prose prose-lg max-w-3xl mx-auto text-[#4A4A4A] font-body prose-headings:text-[#317039] prose-strong:text-[#CC4824] prose-a:text-[#CC4824] hover:prose-a:text-[#317039]">
           <p>
-            Welcome to Rooted Executive Retreats ("us", "we", or "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at privacy@rootedexecutiveretreats.com.
+            Welcome to The ROOTED Way ("us", "we", or "our"). We are committed to protecting your personal information and your right to privacy. If you have any questions or concerns about this privacy notice, or our practices with regards to your personal information, please contact us at privacy@rootedexecutiveretreats.com.
           </p>
 
           <p>
@@ -35,7 +35,7 @@ export default function PrivacyPolicyPage() {
           <ul>
             <li>Visit our website at https://www.therootedway.co</li>
             <li>Sign up for our newsletter (e.g., via MailerLite)</li>
-            <li>Choose to connect third-party services, such as the Garmin Health API, to your Rooted Executive Retreats account or experience.</li>
+            <li>Choose to connect third-party services, such as the Garmin Health API, to your The ROOTED Way account or experience.</li>
             <li>Engage with us in other related ways ― including any sales, marketing, or events</li>
           </ul>
           <p>
@@ -72,7 +72,7 @@ export default function PrivacyPolicyPage() {
             <li>To respond to user inquiries/offer support to users.</li>
             <li>To analyze usage trends and improve our Website and Services.</li>
             <li>For data backup and operational stability (e.g., through Supabase).</li>
-            <li><strong>To provide personalized insights and track progress (using Garmin Data):</strong> If you have connected your Garmin account, we use this data to tailor your retreat experience, offer personalized feedback on your wellbeing metrics (such as stress patterns, sleep quality, and recovery levels), guide you in achieving your wellness goals, and demonstrate the tangible benefits of our programs. This data is integral to our science-driven approach and is used solely for the purpose of enhancing your experience and outcomes with Rooted Executive Retreats.</li>
+            <li><strong>To provide personalized insights and track progress (using Garmin Data):</strong> If you have connected your Garmin account, we use this data to tailor your retreat experience, offer personalized feedback on your wellbeing metrics (such as stress patterns, sleep quality, and recovery levels), guide you in achieving your wellness goals, and demonstrate the tangible benefits of our programs. This data is integral to our science-driven approach and is used solely for the purpose of enhancing your experience and outcomes with The ROOTED Way.</li>
             <li>For other business purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Website, products, marketing and your experience.</li>
           </ul>
 
@@ -141,7 +141,7 @@ export default function PrivacyPolicyPage() {
             If you have questions or comments about this notice, you may email us at privacy@rootedexecutiveretreats.com or by post to:
           </p>
           <p>
-            Rooted Executive Retreats<br />
+            The ROOTED Way<br />
             privacy@rootedexecutiveretreats.com
           </p>
         </div>

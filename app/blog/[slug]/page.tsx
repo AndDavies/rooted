@@ -74,15 +74,15 @@ export async function generateMetadata({ params }: PageProps) {
 
   if (error || !post) {
     return {
-      title: "Blog Post Not Found | Rooted Executive Retreats",
+      title: "Blog Post Not Found | The ROOTED Way",
       description: "The blog post you are looking for does not exist.",
     };
   }
 
-  const description = post.meta_description || post.excerpt || "Read the latest insights from Rooted Executive Retreats.";
+  const description = post.meta_description || post.excerpt || "Read the latest insights from The ROOTED Way.";
 
   let finalKeywords: string[] = [];
-  const defaultKeywords = ["wellbeing", "Rooted Executive Retreats", "blog", "article"];
+  const defaultKeywords = ["wellbeing", "The ROOTED Way", "blog", "article"];
 
   if (post.meta_keywords && typeof post.meta_keywords === 'string' && post.meta_keywords.trim() !== '') {
     finalKeywords = post.meta_keywords.split(',').map(k => k.trim()).filter(k => k !== '');
@@ -94,31 +94,31 @@ export async function generateMetadata({ params }: PageProps) {
     finalKeywords = defaultKeywords;
   }
   // Ensure some base keywords are always present if not already included
-  if (!finalKeywords.includes("Rooted Executive Retreats")) {
-    finalKeywords.push("Rooted Executive Retreats");
+  if (!finalKeywords.includes("The ROOTED Way")) {
+    finalKeywords.push("The ROOTED Way");
   }
   if (!finalKeywords.includes("blog")) {
     finalKeywords.push("blog");
   }
 
   return {
-    title: `${post.title} | Rooted Executive Retreats`,
+    title: `${post.title} | The ROOTED Way`,
     description: description,
     keywords: finalKeywords,
     alternates: {
       canonical: `https://www.therootedway.co/blog/${slug}`,
     },
     openGraph: {
-      title: `${post.title} | Rooted Executive Retreats`,
+      title: `${post.title} | The ROOTED Way`,
       description: description,
       url: `https://www.therootedway.co/blog/${slug}`,
-      siteName: "Rooted Executive Retreats",
+      siteName: "The ROOTED Way",
       locale: "en_US",
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Rooted Executive Retreats`,
+      title: `${post.title} | The ROOTED Way`,
       description: description,
       creator: "@RootedSurvey", // Replace with actual Twitter handle
     },
@@ -539,7 +539,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               </Link> */}
           </div>
           <p>Published on: {post.published_at ? format(new Date(post.published_at), "MMMM d, yyyy") : "N/A"}</p>
-          <p className="mt-1">© {new Date().getFullYear()} Rooted Executive Retreats. All rights reserved.</p>
+          <p className="mt-1">© {new Date().getFullYear()} The ROOTED Way. All rights reserved.</p>
         </div>
       </footer>
     </div>

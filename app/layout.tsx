@@ -79,23 +79,23 @@ const playfairFont = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.therootedway.co'), // IMPORTANT: Replace with your actual domain
   title: {
-    default: "The ROOTED Way | A systematic approach to wellbeing",
-    template: `%s | Rooted Executive Retreats`, // Allows individual pages to set their title part
+    default: "The ROOTED Way - Live with alignment. Lead with clarity.",
+    template: `%s | The ROOTED Way`, // Allows individual pages to set their title part
   },
-  description: "Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.",
+  description: "ROOTED helps high-achieving leaders recalibrate before burnout strikes, using science-backed methods, mindful practices, and community support to restore clarity, vitality, and authentic alignment.",
   generator: 'Next.js', // Updated generator
   openGraph: {
-    title: 'ROOTED | A systematic approach to wellbeing',
-    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
+    title: 'The ROOTED Way - Live with alignment. Lead with clarity.',
+    description: 'ROOTED helps high-achieving leaders recalibrate before burnout strikes, using science-backed methods, mindful practices, and community support to restore clarity, vitality, and authentic alignment.',
     url: 'https://www.therootedway.co', // IMPORTANT: Replace with your actual domain
-    siteName: 'Rooted Executive Retreats',
+    siteName: 'The ROOTED Way',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ROOTED | A systematic approach to wellbeing',
-    description: 'Discover a new way of life that brings you back to your roots. Explore wellbeing, mindfulness, and personal growth with Rooted Executive Retreats.',
+    title: 'The ROOTED Way - Live with alignment. Lead with clarity.',
+    description: 'ROOTED helps high-achieving leaders recalibrate before burnout strikes, using science-backed methods, mindful practices, and community support to restore clarity, vitality, and authentic alignment.',
     // siteId: '@YourTwitterID', // IMPORTANT: Replace with your Twitter ID if available
     creator: '@YourTwitterHandle', // IMPORTANT: Replace with your Twitter handle
   },

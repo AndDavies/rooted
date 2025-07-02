@@ -84,7 +84,7 @@ export function AboutUs() {
             <div className="w-[500px] h-[500px] overflow-hidden relative ml-auto">
               <Image
                 src="/rooted_about_us_section.jpg"
-                alt="Serene natural environment at Rooted Executive Retreats"
+                alt="Serene natural environment at The ROOTED Way"
                 width={500}
                 height={500}
                 style={{ objectFit: "cover" }}
