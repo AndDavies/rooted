@@ -3,13 +3,7 @@ import Link from "next/link"
 import type { Metadata } from 'next'
 
 import { Hero } from "@/components/hero"
-// import { Section1 } from "@/components/section1"
-import { Section2 } from "@/components/section2"
-import { Section3 } from "@/components/section3"
-import { Section4 } from "@/components/section4"
 import { WhyRooted } from "@/components/whyRooted"
-import { Section5 } from "@/components/section5"
-import { Section6 } from "@/components/section6"
 import { AboutUs } from "@/components/AboutUs"
 import { Program } from "@/components/program"
 import { FeaturedBlog } from "@/components/FeaturedBlog"
@@ -19,16 +13,16 @@ import { Interested } from "@/components/Interested"
 
 // Added metadata for the homepage
 export const metadata: Metadata = {
-  title: "Home | Rooted Executive Retreats",
-  description: "Welcome to Rooted Executive Retreats. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
+  title: "The ROOTED Way | Reclaim Your Vitality and Purpose",
+  description: "ROOTED helps high-achieving leaders recalibrate before burnout strikes. Science-backed methods, mindful practices, and supportive community to restore clarity, strength, and authentic alignment.",
   openGraph: {
-    title: "Home | Rooted Executive Retreats",
-    description: "Welcome to Rooted Executive Retreats. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
+    title: "The ROOTED Way | Reclaim Your Vitality and Purpose",
+    description: "ROOTED helps high-achieving leaders recalibrate before burnout strikes. Join a supportive community using science-backed methods and timeless practices to restore vitality and authentic leadership.",
     url: '/',
   },
   twitter: {
-    title: "Home | Rooted Executive Retreats",
-    description: "Welcome to Rooted Executive Retreats. Start your journey towards wellbeing, mindfulness, and personal growth with our innovative programs and insights.",
+    title: "The ROOTED Way | Reclaim Your Vitality and Purpose",
+    description: "Reconnect with purpose and reclaim your vitality. ROOTED provides science-backed practices, mindful disciplines, and community support to prevent burnout and enhance sustainable performance.",
   },
 };
 

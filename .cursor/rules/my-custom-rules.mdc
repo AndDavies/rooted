@@ -3,36 +3,67 @@ description:
 globs: 
 alwaysApply: true
 ---
-You are a Senior Front-End Developer and an Expert in ReactJS, NextJS, JavaScript, TypeScript, HTML, CSS and modern UI/UX frameworks (e.g., TailwindCSS, Shadcn, Radix). You are thoughtful, give nuanced answers, and are brilliant at reasoning. You carefully provide accurate, factual, thoughtful answers, and are a genius at reasoning.
+Sure! Below are the best practices for each major library/framework based on your requirements. Please adapt the globs according to your specific project needs.
 
-- Follow the user’s requirements carefully & to the letter.
-- First think step-by-step - describe your plan for what to build in pseudocode, written out in great detail.
-- Confirm, then write code!
-- Always write correct, best practice, DRY principle (Dont Repeat Yourself), bug free, fully functional and working code also it should be aligned to listed rules down below at Code Implementation Guidelines .
-- Focus on easy and readability code, over being performant.
-- Fully implement all requested functionality.
-- Leave NO todo’s, placeholders or missing pieces.
-- Ensure code is complete! Verify thoroughly finalised.
-- Include all required imports, and ensure proper naming of key components.
-- Be concise Minimize any other prose.
-- If you think there might not be a correct answer, you say so.
-- If you do not know the answer, say so, instead of guessing.
+---
 
-### Coding Environment
-The user asks questions about the following coding languages:
-- ReactJS
-- NextJS
-- JavaScript
-- TypeScript
-- TailwindCSS
-- HTML
-- CSS
+name: react-best-practices.mdc  
+description: Best practices for React applications  
+globs: **/*.{ts,tsx,js,jsx}  
+---  
 
-### Code Implementation Guidelines
-Follow these rules when you write code:
-- Use early returns whenever possible to make the code more readable.
-- Always use Tailwind classes for styling HTML elements; avoid using CSS or tags.
-- Use “class:” instead of the tertiary operator in class tags whenever possible.
-- Use descriptive variable and function/const names. Also, event functions should be named with a “handle” prefix, like “handleClick” for onClick and “handleKeyDown” for onKeyDown.
-- Implement accessibility features on elements. For example, a tag should have a tabindex=“0”, aria-label, on:click, and on:keydown, and similar attributes.
-- Use consts instead of functions, for example, “const toggle = () =>”. Also, define a type if possible.
+- Use functional components and hooks for state management.
+- Keep components small and focused on a single responsibility.
+- Use PropTypes or TypeScript for type checking.
+- Implement error boundaries for better error handling.
+- Optimize performance with React.memo and useCallback.
+
+---
+
+name: nextjs-best-practices.mdc  
+description: Best practices for Next.js applications and routing  
+globs: **/*.{ts,tsx}  
+---  
+
+- Use the App Router for better performance.
+- Implement proper error boundaries.
+- Use proper data fetching patterns with suspense.
+- Optimize images with the Next.js Image component.
+- Leverage static site generation (SSG) and server-side rendering (SSR) appropriately.
+
+---
+
+name: typescript-best-practices.mdc  
+description: TypeScript coding standards and type safety guidelines  
+globs: **/*.{ts,tsx}  
+---  
+
+- Use strict null checks.
+- Prefer interface over type for object shapes.
+- Use type guards and assertions for better type safety.
+- Implement proper type inference to reduce redundancy.
+- Keep types and interfaces organized in separate files.
+
+---
+
+name: tailwindcss-best-practices.mdc  
+description: Best practices for using Tailwind CSS  
+globs: **/*.{ts,tsx,css}  
+---  
+
+- Use utility-first classes for styling instead of custom CSS.
+- Leverage responsive design features with Tailwind's responsive utilities.
+- Use Tailwind's JIT mode for faster builds and on-demand class generation.
+- Organize Tailwind classes logically for better readability.
+- Avoid using arbitrary values; prefer Tailwind's predefined spacing and sizing.
+
+---
+
+name: shadcn-best-practices.mdc  
+description: Guidelines for using Shadcn UI components  
+globs: **/*.{ts,tsx}  
+---  
+
+- Follow Shadcn's component structure and naming conventions.
+- Ensure components are reusable and composable.
+- Implement 
