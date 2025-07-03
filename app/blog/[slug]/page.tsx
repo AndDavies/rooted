@@ -70,6 +70,7 @@ export async function generateMetadata({ params }: PageProps) {
     .from("blog_posts")
     .select("title, excerpt, tags, featured_image, meta_description, meta_keywords") // Changed 'description' to 'excerpt' for consistency
     .eq("slug", slug)
+    .not('tags', 'cs', '{"archive"}') // Exclude posts with "archive" tag
     .single();
 
   if (error || !post) {
@@ -147,6 +148,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     .from("blog_posts")
     .select("id, title, slug, content, excerpt, published_at, author_id, tags, featured_image")
     .eq("slug", slug)
+    .not('tags', 'cs', '{"archive"}') // Exclude posts with "archive" tag
     .single<BlogPost>();
 
   if (error || !post) {
@@ -562,7 +564,8 @@ export async function generateStaticParams() {
     const supabase = await createClient();
     const { data, error } = await supabase
       .from("blog_posts")
-      .select("slug");
+      .select("slug")
+      .not('tags', 'cs', '{"archive"}'); // Exclude posts with "archive" tag
 
     if (error) {
       console.error("generateStaticParams – Supabase error:", error.message);
