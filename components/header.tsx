@@ -30,6 +30,7 @@ const navigationLinks = [
   { label: "The Method", href: "/#program" }, // Points to Program component
   { label: "Upcoming Dates", href: "/#upcoming-events" },    // Points to UpComingEvents component
   { label: "ROOTED Insights", href: "/#featured-blog" },    // Points to FeaturedBlog component
+  { label: "The ROOTED Weekly", href: "/blog/archive" },    // Points to Newsletter Archive
 ];
 
 export function Header() {
@@ -99,7 +100,7 @@ export function Header() {
   const ctaButton = (
     <button
       onClick={handleGetRootedClick}
-      className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap"
+      className="font-bold text-sm text-white bg-[#D4AF37] px-4 py-3 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap min-h-[44px]"
     >
       Get Rooted
     </button>
@@ -115,7 +116,13 @@ export function Header() {
       <div className="container mx-auto max-w-[1440px] px-5 h-full flex items-center justify-between">
         {/* Logo and Branding */}
         <Link href="/" className={`flex items-center gap-2 transition-opacity duration-500 ease-in-out ${isMounted ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-5'}`}>
+          {/* Mobile Brand Mark - Always visible on small screens */}
+          <div className={`sm:hidden w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm
+                          ${isScrolled ? 'bg-[#D4AF37] text-white' : 'bg-white/20 text-white backdrop-blur-sm'}`}>
+            R
+          </div>
           
+          {/* Desktop Logo */}
           <span 
             className={`font-sans text-2xl font-bold text-shadow-gold hidden sm:block 
                         ${isScrolled ? 'text-[#1A1A1A]' : 'text-white'}`}>
@@ -124,13 +131,13 @@ export function Header() {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-3 lg:space-x-6">
+        <nav className="hidden lg:flex items-center space-x-3 xl:space-x-6">
           {navigationLinks.map((link, index) => (
             <Link
               key={link.label}
               href={link.href}
               onClick={(e) => handleNavLinkClick(e, link.href)}
-              className={`font-hk-grotesk uppercase text-xs tracking-[0.03em] relative 
+              className={`font-hk-grotesk uppercase text-sm tracking-[0.03em] relative 
                           py-2 group transition-all duration-300 ease-in-out 
                           ${isScrolled ? 'text-[#1A1A1A]' : 'text-white'} 
                           ${isMounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}
@@ -149,7 +156,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={toggleMobileMenu}
             aria-label={isMobileMenuOpen ? "Close Menu" : "Open Menu"}
@@ -164,7 +171,7 @@ export function Header() {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div 
-          className="md:hidden fixed inset-x-0 top-[60px] h-[calc(100vh-60px)] bg-gradient-to-b from-white to-[#f5f5f0] overflow-y-auto transition-transform duration-300 ease-in-out transform animate-slideDown"
+          className="lg:hidden fixed inset-x-0 top-[60px] h-[calc(100vh-60px)] bg-gradient-to-b from-white to-[#f5f5f0] overflow-y-auto transition-transform duration-300 ease-in-out transform animate-slideDown"
           // style={{ transform: isMobileMenuOpen ? 'translateY(0)' : 'translateY(-100%)' }} // Using animation class now
         >
           <nav className="flex flex-col items-center justify-center h-full pt-8 pb-20 px-5 space-y-5">
@@ -173,7 +180,7 @@ export function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={(e) => handleNavLinkClick(e, link.href)}
-                className="font-hk-grotesk uppercase text-lg tracking-[0.03em] text-[#1A1A1A] hover:text-[#D4AF37] focus:text-[#D4AF37] focus:outline-none transition-colors duration-200 ease-in-out animate-fadeInUp"
+                className="font-hk-grotesk uppercase text-xl tracking-[0.03em] text-[#1A1A1A] hover:text-[#D4AF37] focus:text-[#D4AF37] focus:outline-none transition-colors duration-200 ease-in-out animate-fadeInUp py-2 min-h-[44px] flex items-center"
                 style={{ animationDelay: `${index * 100 + 100}ms`}}
               >
                 {link.label}
@@ -182,7 +189,7 @@ export function Header() {
             <div className="pt-8 animate-fadeInUp" style={{ animationDelay: `${navigationLinks.length * 100 + 100}ms`}}>
               <button
                 onClick={handleGetRootedClick}
-                className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap"
+                className="font-bold text-sm text-white bg-[#D4AF37] px-4 py-3 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap min-h-[44px] min-w-[44px]"
               >
                 Get Rooted
               </button>
@@ -192,7 +199,7 @@ export function Header() {
           <div className="absolute bottom-0 left-0 right-0 p-5 bg-[#f5f5f0] border-t border-gray-200">
              <button
                 onClick={handleGetRootedClick}
-                className="font-bold text-xs text-white bg-[#D4AF37] px-3.5 py-2.5 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap w-full"
+                className="font-bold text-sm text-white bg-[#D4AF37] px-4 py-3 rounded-full shadow-sm hover:scale-105 hover:shadow-gold-glow focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-200 ease-in-out whitespace-nowrap w-full min-h-[44px]"
               >
                 Get Rooted
               </button>

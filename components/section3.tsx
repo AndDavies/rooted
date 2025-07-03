@@ -50,7 +50,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ icon, title, description }) =
         {icon}
       </div>
       <h3 className="text-2xl font-semibold text-gray-800 mb-3 font-sans">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed mb-4 font-sans">{description}</p>
+      <p className="text-gray-600 text-base leading-relaxed mb-4 font-sans">{description}</p>
       {/* {imageSrc && imageAlt && ( // Removed image rendering
         <div className="mt-4 rounded-md overflow-hidden shadow-inner aspect-[9/16] max-w-xs mx-auto">
           <Image 

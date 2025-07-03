@@ -66,13 +66,13 @@ export async function FeaturedBlog() {
                     <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                   </h3>
                   {post.excerpt && (
-                    <p className="text-sm text-gray-700 mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
+                    <p className="text-base text-gray-700 mb-4 line-clamp-3 flex-grow">{post.excerpt}</p>
                   )}
 
                   {post.tags && post.tags.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags.slice(0, 2).map((tag: string, i: number) => (
-                        <span key={i} className="px-3 py-1 bg-[#fff0d4] text-[#CC4824] text-xs font-medium rounded-full">
+                        <span key={i} className="px-3 py-1 bg-[#fff0d4] text-[#CC4824] text-sm font-medium rounded-full">
                           {tag}
                         </span>
                       ))}

@@ -65,7 +65,7 @@ export function WhoAreWe() {
                 <div className="w-8 h-px bg-stone-200 mb-4"></div>
 
                 {/* Story */}
-                <p className="text-stone-600 text-sm leading-relaxed">{founder.story}</p>
+                <p className="text-stone-600 text-base leading-relaxed">{founder.story}</p>
               </div>
             </div>
           ))}

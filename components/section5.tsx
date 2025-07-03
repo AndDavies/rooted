@@ -134,7 +134,7 @@ export function Section5({ id }: Section5Props) { // Destructure id here
           {[...testimonialsData, ...testimonialsData].map((testimonial, index) => ( // Duplicate for infinite loop illusion
             <div key={index} className="snap-center flex-none w-[80vw] md:w-[calc(33.333%-1.5rem)] lg:w-[calc(33.333%-2rem)] group">
               <div className="bg-white/80 backdrop-blur-md rounded-xl shadow-xl p-6 md:p-8 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
-                <blockquote className="italic text-gray-700 text-md md:text-lg leading-relaxed mb-6 font-sans">
+                <blockquote className="italic text-gray-700 text-base md:text-lg leading-relaxed mb-6 font-sans">
                   &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="flex items-center">
@@ -156,7 +156,7 @@ export function Section5({ id }: Section5Props) { // Destructure id here
                   </div>
                   <div>
                     <p className="font-semibold text-gray-800 font-sans">{testimonial.author}</p>
-                    <p className="text-sm text-gray-600 font-sans">{testimonial.title}</p>
+                    <p className="text-base text-gray-600 font-sans">{testimonial.title}</p>
                   </div>
                   {testimonial.videoSrc && (
             <button 

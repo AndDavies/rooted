@@ -198,6 +198,12 @@
     margin-bottom: 0.5rem;
   }
 
+  /* Ensure minimum font size for prose content */
+  .prose p {
+    font-size: 1rem; /* Equivalent to text-base */
+    line-height: 1.75; /* Better readability */
+  }
+
   .prose table {
     width: 100%;
     border-collapse: collapse;

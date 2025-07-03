@@ -113,7 +113,7 @@ export function WhyRooted() {
                       collapsed: { height: 0, opacity: 0 },
                     }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="px-4 pb-4 sm:px-6 text-sm text-stone-700 leading-relaxed"
+                    className="px-4 pb-4 sm:px-6 text-base text-stone-700 leading-relaxed"
                   >
                     {pillar.description}
                   </motion.div>

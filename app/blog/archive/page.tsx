@@ -75,7 +75,7 @@ export default async function ArchiveIndexPage() {
         {/* Archive Content */}
         <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
           {/* Breadcrumb */}
-          <nav className="mb-8 text-sm">
+          <nav className="mb-8 text-base">
             <ol className="flex items-center space-x-2 text-[#4A4A4A]/70">
               <li><Link href="/" className="hover:text-[#CC4824]">Home</Link></li>
               <li>/</li>
@@ -121,7 +121,7 @@ export default async function ArchiveIndexPage() {
                         <div>
                           {/* Date */}
                           {post.published_at && (
-                            <div className="flex items-center text-sm text-[#4A4A4A]/60 mb-3">
+                            <div className="flex items-center text-base text-[#4A4A4A]/60 mb-3">
                               <Calendar className="h-4 w-4 mr-2" />
                               <time dateTime={post.published_at}>
                                 {format(new Date(post.published_at), "MMMM d, yyyy")}

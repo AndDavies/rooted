@@ -77,7 +77,7 @@ export function Section2() {
                   <h3 className="text-2xl font-semibold text-center mb-4 text-gray-900">
                     {card.title}
                   </h3>
-                  <p className="text-sm text-gray-700 mb-6 leading-relaxed flex-grow">
+                  <p className="text-base text-gray-700 mb-6 leading-relaxed flex-grow">
                     {card.copy}
                   </p>
                   <div className="bg-[#F1BE49] p-6 rounded-lg text-center mt-auto">

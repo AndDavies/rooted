@@ -128,13 +128,13 @@ export function AboutUs() {
 
                 {/* Subheading */}
                 <div className="relative flex-shrink-0">
-                  <h4 className="text-sm font-medium text-amber-700 tracking-wide uppercase">{feature.subheading}</h4>
+                  <h4 className="text-base font-medium text-amber-700 tracking-wide uppercase">{feature.subheading}</h4>
                   <div className="w-8 h-px bg-amber-300 mx-auto mt-2"></div>
                 </div>
 
                 {/* Description */}
                 <div className="flex-grow flex items-start">
-                  <p className="text-stone-600 leading-relaxed max-w-sm mx-auto min-h-[120px] flex items-center">{feature.description}</p>
+                  <p className="text-base text-stone-600 leading-relaxed max-w-sm mx-auto min-h-[120px] flex items-center">{feature.description}</p>
                 </div>
               </div>
 
