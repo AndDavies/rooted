@@ -5,6 +5,7 @@ import { format } from "date-fns"
 import { ArrowRight, Calendar, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { createClient } from "@/lib/supabase-server"
+import { NewsletterSignupBanner } from "@/components/NewsletterSignupBanner"
 
 interface ArchivePost {
   id: string
@@ -72,8 +73,13 @@ export default async function ArchiveIndexPage() {
           </div>
         </header>
 
+        {/* Newsletter Signup Banner */}
+        <div className="container mx-auto px-4 pt-6 md:pt-8">
+          <NewsletterSignupBanner />
+        </div>
+
         {/* Archive Content */}
-        <div className="container mx-auto px-4 py-12 md:py-16 lg:py-20">
+        <div className="container mx-auto px-4 pb-12 md:pb-16 lg:pb-20">
           {/* Breadcrumb */}
           <nav className="mb-8 text-base">
             <ol className="flex items-center space-x-2 text-[#4A4A4A]/70">

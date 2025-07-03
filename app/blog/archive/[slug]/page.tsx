@@ -5,6 +5,7 @@ import { format } from "date-fns"
 import { Calendar, Clock, Mail, ArrowLeft } from "lucide-react"
 import * as cheerio from "cheerio"
 import { createClient } from "@/lib/supabase-server"
+import { NewsletterSignupBanner } from "@/components/NewsletterSignupBanner"
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -291,29 +292,15 @@ export default async function ArchivePostPage({ params }: PageProps) {
           />
         </div>
 
-        {/* Newsletter Footer */}
-        <footer className="mt-12 pt-8 border-t border-[#4A4A4A]/20">
-          <div className="bg-[#F1BE49]/10 rounded-lg p-6 text-center">
-            <Mail className="h-8 w-8 text-[#CC4824] mx-auto mb-3" />
-            <h3 className="text-lg font-medium text-[#4A4A4A] mb-2">
-              Subscribe to Our Newsletter
-            </h3>
-            <p className="text-[#4A4A4A]/80 mb-4">
-              Get weekly insights on leadership, wellbeing, and personal growth delivered to your inbox.
-            </p>
-            <Link 
-              href="/#newsletter-signup" 
-              className="inline-flex items-center gap-2 bg-[#CC4824] text-white px-6 py-3 rounded-lg hover:bg-[#e05c3a] transition-colors font-medium"
-            >
-              Subscribe Now
-            </Link>
-          </div>
+        {/* Newsletter Signup */}
+        <div className="mt-12 pt-8 border-t border-[#4A4A4A]/20">
+          <NewsletterSignupBanner source={`newsletter - ${post.title}`} />
           
           <div className="mt-6 text-center text-sm text-[#4A4A4A]/60">
             <p>Published on: {post.published_at ? format(new Date(post.published_at), "MMMM d, yyyy") : "N/A"}</p>
             <p className="mt-1">© {new Date().getFullYear()} The ROOTED Way. All rights reserved.</p>
           </div>
-        </footer>
+        </div>
       </div>
     </div>
   )

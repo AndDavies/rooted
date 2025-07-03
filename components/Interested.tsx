@@ -119,36 +119,34 @@ export function Interested() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-light text-[#4A4A4A] mb-2">Thank you for your interest!</h3>
-                <p className="text-[#4A4A4A]/80">Welcome to ROOTED! You've taken a proactive step toward a principle-centered lifestyle. We'll keep you updated on our micro-events and transformative retreats.</p>
+                <p className="text-base text-[#4A4A4A]/80">Welcome to ROOTED! You've taken a proactive step toward a principle-centered lifestyle. We'll keep you updated on our micro-events and transformative retreats.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-[#4A4A4A] mb-2">
-                    Name <span className="text-[#4A4A4A]/50">(required)</span>
+                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">
+                    Name
                   </label>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs text-[#4A4A4A]/70 mb-1">First Name</label>
+                      <label className="block text-sm text-[#4A4A4A]/70 mb-1">First Name</label>
                       <input
                         type="text"
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50"
+                        className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50 min-h-[44px] text-base"
                         placeholder="First Name"
                       />
                     </div>
                     <div>
-                      <label className="block text-xs text-[#4A4A4A]/70 mb-1">Last Name</label>
+                      <label className="block text-sm text-[#4A4A4A]/70 mb-1">Last Name</label>
                       <input
                         type="text"
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50"
+                        className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50 min-h-[44px] text-base"
                         placeholder="Last Name"
                       />
                     </div>
@@ -156,20 +154,20 @@ export function Interested() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#4A4A4A] mb-2">Company</label>
+                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">Company</label>
                   <input
                     type="text"
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50"
+                    className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50 min-h-[44px] text-base"
                     placeholder="Your Company"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#4A4A4A] mb-2">
-                    Email <span className="text-[#4A4A4A]/50">(required)</span>
+                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">
+                    Email <span className="text-[#4A4A4A]/50">*</span>
                   </label>
                   <input
                     type="email"
@@ -177,13 +175,13 @@ export function Interested() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50"
+                    className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 text-[#4A4A4A] placeholder-[#4A4A4A]/50 min-h-[44px] text-base"
                     placeholder="your.email@company.com"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-[#4A4A4A] mb-2">
+                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">
                     Message
                   </label>
                   <textarea
@@ -191,21 +189,21 @@ export function Interested() {
                     value={formData.message}
                     onChange={handleInputChange}
                     rows={4}
-                    className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 resize-none text-[#4A4A4A] placeholder-[#4A4A4A]/50"
+                    className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 resize-none text-[#4A4A4A] placeholder-[#4A4A4A]/50 min-h-[44px] text-base"
                     placeholder="Tell us about yourself and what interests you about the ROOTED way."
                   />
                 </div>
 
                 {error && (
                   <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <p className="text-sm text-red-600">{error}</p>
+                    <p className="text-base text-red-600">{error}</p>
                   </div>
                 )}
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-[#4A4A4A] hover:bg-[#333] text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2"
+                  className="w-full bg-[#4A4A4A] hover:bg-[#333] text-white font-semibold py-4 px-6 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 min-h-[44px] text-base"
                 >
                   {isSubmitting ? (
                     <div className="flex items-center justify-center">
