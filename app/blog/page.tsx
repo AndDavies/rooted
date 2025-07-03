@@ -117,9 +117,10 @@ export default async function BlogIndexPage() {
       supabase
         .from("blog_posts")
         .select("id, title, slug, excerpt, published_at, featured_image, tags") // Removed card_icon
+        .not('tags', 'cs', '{"archive"}') // Exclude posts with "archive" tag
         .order("published_at", { ascending: false })
         .limit(12), // Fetch a few more for a fuller grid, e.g., 12
-      supabase.from("blog_posts").select("tags").returns<TagPost[]>(),
+      supabase.from("blog_posts").select("tags").not('tags', 'cs', '{"archive"}').returns<TagPost[]>(), // Exclude archive posts from tags as well
     ])
 
     if (postsError || tagsError) {
@@ -140,6 +141,7 @@ export default async function BlogIndexPage() {
         allTagsData
           ?.filter((post: TagPost) => post.tags && post.tags.length > 0)
           .flatMap((post: TagPost) => post.tags || [])
+          .filter((tag: string) => tag !== 'archive') // Also filter out 'archive' tag from the unique tags list
           || []
       )
     ).slice(0, 8) as string[]

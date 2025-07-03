@@ -24,6 +24,7 @@ export async function FeaturedBlog() {
       .from('blog_posts')
       .select('id, title, slug, excerpt, featured_image, tags')
       .eq('is_featured', true)
+      .not('tags', 'cs', '{"archive"}') // Exclude posts with "archive" tag
       .order('published_at', { ascending: false })
       .limit(4)
 
