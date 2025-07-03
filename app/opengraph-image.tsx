@@ -4,7 +4,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'ROOTED | A Playground of Wellbeing';
+export const alt = 'The ROOTED Way - Live with alignment. Lead with clarity.';
 export const size = {
   width: 1200,
   height: 630,
@@ -50,31 +50,33 @@ export default async function Image() {
               fill="#317039" // Emerald Green
             />
           </svg>
-          <span style={{ fontSize: 72, fontWeight: 700, color: '#4A4A4A' }}>
-            ROOTED
+          <span style={{ fontSize: 60, fontWeight: 700, color: '#4A4A4A' }}>
+            The ROOTED Way
           </span>
         </div>
         <p
           style={{
-            fontSize: 36,
+            fontSize: 32,
             color: '#CC4824', // Dark Pastel Red
             textAlign: 'center',
             lineHeight: '1.4',
-            fontWeight: 400,
+            fontWeight: 600,
+            marginBottom: '20px',
           }}
         >
-          A New Way of Life That Brings You Back to Your Roots.
+          Live with alignment. Lead with clarity.
         </p>
         <p
           style={{
-            fontSize: 24,
+            fontSize: 22,
             color: '#4A4A4A',
             textAlign: 'center',
-            marginTop: '20px',
+            lineHeight: '1.3',
             fontWeight: 400,
+            maxWidth: '900px',
           }}
         >
-          Explore wellbeing, mindfulness, and personal growth.
+          ROOTED helps high-achieving leaders recalibrate before burnout strikes, using science-backed methods and community support.
         </p>
       </div>
     ),

@@ -254,4 +254,21 @@
   .prose ol li {
     margin-bottom: 0.5rem;
   }
+
+  /* TipTap Editor Custom Styles */
+.key-takeaways-highlight {
+  background-color: #fef3c7; /* Tailwind yellow-100 */
+  padding: 0.125rem 0.25rem; /* Small padding for highlight effect */
+  border-radius: 0.25rem; /* Rounded corners */
+  border: 1px solid #fbbf24; /* Tailwind yellow-400 border */
+}
+
+/* Ensure float utilities work properly in editor content */
+.prose .float-left {
+  float: left;
+}
+
+.prose .float-right {
+  float: right;
+}
 }
