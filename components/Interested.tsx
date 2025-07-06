@@ -1,6 +1,7 @@
-"use client"
-import { useState, useEffect } from "react"
-import Image from "next/image"
+"use client";
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function Interested() {
   const [formData, setFormData] = useState({
@@ -9,85 +10,67 @@ export function Interested() {
     company: "",
     email: "",
     message: ""
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showSuccess, setShowSuccess] = useState(false)
-  const [error, setError] = useState("")
-  const [currentSource, setCurrentSource] = useState("I'm Interested")
+  });
+  const [addToNewsletter, setAddToNewsletter] = useState(true);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [error, setError] = useState("");
+  const [currentSource, setCurrentSource] = useState("I'm Interested");
 
-  // Effect to listen for event source updates
   useEffect(() => {
     const handleSetEventSource = (event: CustomEvent) => {
       const { source, message } = event.detail;
-      console.log('Setting event source:', source, 'with message:', message); // Debug log
-      
+      console.log("Setting event source:", source, "with message:", message);
       setCurrentSource(source);
-      setFormData(prev => ({
-        ...prev,
-        message: message
-      }));
+      setFormData((prev) => ({ ...prev, message }));
     };
 
-    window.addEventListener('setEventSource', handleSetEventSource as EventListener);
-    
-    return () => {
-      window.removeEventListener('setEventSource', handleSetEventSource as EventListener);
-    };
+    window.addEventListener("setEventSource", handleSetEventSource as EventListener);
+    return () => window.removeEventListener("setEventSource", handleSetEventSource as EventListener);
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setError("")
+    e.preventDefault();
+    setIsSubmitting(true);
+    setError("");
 
-    console.log('Submitting with source:', currentSource); // Debug log
+    const groups = ["INTERESTED"];
+    if (addToNewsletter) groups.push("NEWSLETTER");
 
     try {
-      const response = await fetch('/api/interested', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...formData,
-          source: currentSource
-        }),
-      })
+          source: currentSource,
+          groups
+        })
+      });
 
       if (response.ok) {
-        setShowSuccess(true)
-        setFormData({
-          firstName: "",
-          lastName: "",
-          company: "",
-          email: "",
-          message: ""
-        })
-        setCurrentSource("I'm Interested") // Reset source
-        // Hide success message after 5 seconds
-        setTimeout(() => setShowSuccess(false), 5000)
+        setShowSuccess(true);
+        setFormData({ firstName: "", lastName: "", company: "", email: "", message: "" });
+        setCurrentSource("I'm Interested");
+        setTimeout(() => setShowSuccess(false), 5000);
       } else {
-        const errorData = await response.json()
-        setError(errorData.message || 'Something went wrong. Please try again.')
+        const errorData = await response.json();
+        setError(errorData.message || "Something went wrong. Please try again.");
       }
-    } catch (error) {
-      setError('Network error. Please check your connection and try again.')
+    } catch {
+      setError("Network error. Please check your connection and try again.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <section id="interested" className="relative min-h-screen flex items-center justify-center py-20">
-      {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/interested-bg.jpg"
@@ -99,17 +82,14 @@ export function Interested() {
         />
       </div>
 
-      {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Heading */}
           <div className="text-left">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
-            ROOTED offers a new way of living: one where performance and wellbeing are not mutually exclusive.
+              ROOTED offers a new way of living: one where performance and wellbeing are not mutually exclusive.
             </h2>
           </div>
 
-          {/* Right Side - Form */}
           <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
             {showSuccess ? (
               <div className="text-center py-8">
@@ -124,9 +104,7 @@ export function Interested() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">
-                    Name
-                  </label>
+                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">Name</label>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm text-[#4A4A4A]/70 mb-1">First Name</label>
@@ -181,9 +159,7 @@ export function Interested() {
                 </div>
 
                 <div>
-                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">
-                    Message
-                  </label>
+                  <label className="block text-base font-medium text-[#4A4A4A] mb-2">Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
@@ -192,6 +168,19 @@ export function Interested() {
                     className="w-full px-4 py-3 border border-[#4A4A4A] rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 resize-none text-[#4A4A4A] placeholder-[#4A4A4A]/50 min-h-[44px] text-base"
                     placeholder="Tell us about yourself and what interests you about the ROOTED way."
                   />
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <input
+                    type="checkbox"
+                    id="newsletter"
+                    checked={addToNewsletter}
+                    onChange={(e) => setAddToNewsletter(e.target.checked)}
+                    className="mt-1"
+                  />
+                  <label htmlFor="newsletter" className="text-sm text-[#4A4A4A]/80">
+                    Subscribe me to <strong>The ROOTED Weekly</strong>
+                  </label>
                 </div>
 
                 {error && (
@@ -223,5 +212,5 @@ export function Interested() {
         </div>
       </div>
     </section>
-  )
+  );
 }

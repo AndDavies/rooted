@@ -4,13 +4,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { X, Check } from 'lucide-react';
 import { useWaitlistPopup } from './WaitlistPopupContext';
-import { createClient } from '@/lib/supabase-client';
 
 export function WaitlistPopup() {
   const { isPopupOpen, source, closePopup } = useWaitlistPopup();
   const [isClosing, setIsClosing] = useState(false);
   const [email, setEmail] = useState('');
   const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
+  const [addToNewsletter, setAddToNewsletter] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [error, setError] = useState('');
@@ -23,6 +23,7 @@ export function WaitlistPopup() {
       // Reset form state when closing
       setEmail('');
       setAgreedToPrivacy(false);
+      setAddToNewsletter(true);
       setIsSuccess(false);
       setError('');
     }, 300);
@@ -61,27 +62,32 @@ export function WaitlistPopup() {
 
     setIsSubmitting(true);
 
+    const groups = ["INTERESTED"];
+    if (addToNewsletter) groups.push("NEWSLETTER");
+
     try {
-      const supabase = createClient();
-      if (!supabase) {
-        throw new Error('Unable to connect to database');
-      }
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.toLowerCase().trim(),
+          firstName: "",
+          lastName: "",
+          company: "",
+          message: "",
+          source: source || 'Popup Waitlist',
+          groups
+        }),
+      });
 
-      const { data, error: supabaseError } = await supabase
-        .from('waitlist_emails')
-        .insert([
-          {
-            email: email.toLowerCase().trim(),
-            agreed_to_privacy: agreedToPrivacy,
-            source: source || 'unknown'
-          }
-        ]);
-
-      if (supabaseError) {
-        if (supabaseError.code === '23505') { // Unique constraint violation
+      if (!response.ok) {
+        const errorData = await response.json();
+        if (response.status === 409) {
           setError('This email is already on our waitlist!');
         } else {
-          setError('Something went wrong. Please try again.');
+          setError(errorData.message || 'Something went wrong. Please try again.');
         }
         return;
       }
@@ -137,7 +143,7 @@ export function WaitlistPopup() {
                 Sign up for exclusive offers and transformational insights.
               </h2>
               <p className="text-[#4A4A4A]/80 text-base lg:text-lg leading-relaxed">
-              be a part of the movement – find out about upcoming health and wellness challenges and help us shape the future of healthy modern leadership. 
+                Be a part of the movement – find out about upcoming health and wellness challenges and help us shape the future of healthy modern leadership. 
               </p>
             </div>
 
@@ -164,7 +170,7 @@ export function WaitlistPopup() {
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="Email Addresss"
+                      placeholder="Email Address"
                       className="flex-1 px-4 py-3 text-[#4A4A4A] placeholder-[#4A4A4A]/50 bg-white focus:outline-none"
                       disabled={isSubmitting}
                     />
@@ -176,6 +182,21 @@ export function WaitlistPopup() {
                       {isSubmitting ? 'CONFIRMING...' : 'CONFIRM'}
                     </button>
                   </div>
+                </div>
+
+                {/* Newsletter Checkbox */}
+                <div className="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="popup-newsletter"
+                    checked={addToNewsletter}
+                    onChange={(e) => setAddToNewsletter(e.target.checked)}
+                    className="mt-1 w-4 h-4 text-[#4A4A4A] border-[#4A4A4A] rounded focus:ring-[#4A4A4A]"
+                    disabled={isSubmitting}
+                  />
+                  <label htmlFor="popup-newsletter" className="text-sm text-[#4A4A4A] leading-tight">
+                    Subscribe me to <strong>The ROOTED Weekly</strong>
+                  </label>
                 </div>
 
                 {/* Privacy Policy Checkbox */}

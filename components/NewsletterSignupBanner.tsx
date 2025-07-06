@@ -31,7 +31,7 @@ export function NewsletterSignupBanner({ source = "archive" }: NewsletterSignupB
     setError("")
 
     try {
-      const response = await fetch('/api/interested', {
+      const response = await fetch('/api/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -39,7 +39,8 @@ export function NewsletterSignupBanner({ source = "archive" }: NewsletterSignupB
         body: JSON.stringify({
           ...formData,
           company: "", // Not needed for newsletter signup
-          source: source // Use the provided source prop
+          source: source, // Use the provided source prop
+          groups: ["INTERESTED", "NEWSLETTER"] // Always include both groups for newsletter signups
         }),
       })
 

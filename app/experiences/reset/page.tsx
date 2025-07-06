@@ -1,3 +1,8 @@
+// app/experiences/reset/page.tsx
+// This is the page for the Reset Retreat waitlist
+// It is a simple form that allows users to join the waitlist
+// It is a static page that does not require any data from the database
+// It is a simple form that allows users to join the waitlist
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image"
@@ -10,6 +15,7 @@ export default function ResetRetreatPage() {
     email: "",
     message: ""
   })
+  const [addToNewsletter, setAddToNewsletter] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showSuccess, setShowSuccess] = useState(false)
   const [error, setError] = useState("")
@@ -28,8 +34,11 @@ export default function ResetRetreatPage() {
     setIsSubmitting(true)
     setError("")
 
+    const groups = ["INTERESTED"];
+    if (addToNewsletter) groups.push("NEWSLETTER");
+
     try {
-      const response = await fetch('/api/interested', {
+      const response = await fetch('/api/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -37,7 +46,8 @@ export default function ResetRetreatPage() {
         body: JSON.stringify({
           ...formData,
           source: currentSource,
-          message: formData.message || "Interested in joining the October 2025 ROOTED Retreat waitlist"
+          message: formData.message || "Interested in joining the October 2025 ROOTED Retreat waitlist",
+          groups
         }),
       })
 
@@ -240,6 +250,19 @@ export default function ResetRetreatPage() {
                           className="w-full px-4 py-3 border-2 border-[#4A4A4A]/20 rounded-lg focus:ring-2 focus:ring-[#D4AF37] focus:border-[#D4AF37] transition-all duration-200 resize-none text-[#4A4A4A] placeholder-[#4A4A4A]/50"
                           placeholder="Share what calls you to this experience..."
                         />
+                      </div>
+
+                      <div className="flex items-start gap-2">
+                        <input
+                          type="checkbox"
+                          id="newsletter"
+                          checked={addToNewsletter}
+                          onChange={(e) => setAddToNewsletter(e.target.checked)}
+                          className="mt-1"
+                        />
+                        <label htmlFor="newsletter" className="text-sm text-[#4A4A4A]/80">
+                          Subscribe me to <strong>The ROOTED Weekly</strong>
+                        </label>
                       </div>
 
                       {error && (
