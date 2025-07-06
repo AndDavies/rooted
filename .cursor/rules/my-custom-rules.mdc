@@ -3,9 +3,6 @@ description:
 globs: 
 alwaysApply: true
 ---
-Sure! Below are the best practices for each major library/framework based on your requirements. Please adapt the globs according to your specific project needs.
-
----
 
 name: react-best-practices.mdc  
 description: Best practices for React applications  

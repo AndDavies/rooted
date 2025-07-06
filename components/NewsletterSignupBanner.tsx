@@ -88,7 +88,7 @@ export function NewsletterSignupBanner({ source = "archive" }: NewsletterSignupB
             <div className="flex items-center justify-center gap-3 mb-4">
               <Mail className="h-6 w-6 text-[#CC4824]" />
               <h3 className="text-2xl md:text-3xl font-bold text-[#4A4A4A]">
-                Join The ROOTED Weekly
+              Want The ROOTED Weekly in your inbox weekly?
               </h3>
             </div>
             <p className="text-base text-[#4A4A4A]/80 max-w-2xl mx-auto">
