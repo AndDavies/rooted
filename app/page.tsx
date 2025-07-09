@@ -19,19 +19,10 @@ export const metadata: Metadata = {
     title: "The ROOTED Way | Reclaim Your Vitality and Purpose",
     description: "ROOTED helps high-achieving leaders recalibrate before burnout strikes. Join a supportive community using science-backed methods and timeless practices to restore vitality and authentic leadership.",
     url: '/',
-    images: [
-      {
-        url: '/opengraph-image',
-        width: 1200,
-        height: 630,
-        alt: 'The ROOTED Way - Live with alignment. Lead with clarity.'
-      }
-    ],
   },
   twitter: {
     title: "The ROOTED Way | Reclaim Your Vitality and Purpose",
     description: "Reconnect with purpose and reclaim your vitality. ROOTED provides science-backed practices, mindful disciplines, and community support to prevent burnout and enhance sustainable performance.",
-    images: ['/opengraph-image'],
   },
 };
 
