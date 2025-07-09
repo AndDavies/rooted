@@ -20,6 +20,9 @@ export default async function Image() {
   const glacialBold = fetch(
     new URL('../public/fonts/GlacialIndifference-Bold.otf', import.meta.url)
   ).then((res) => res.arrayBuffer());
+  const playfair = fetch(
+    new URL('../public/fonts/PlayfairDisplay-VariableFont_wght.ttf', import.meta.url)
+  ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
@@ -50,22 +53,8 @@ export default async function Image() {
           boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
         }}>
           {/* Placeholder for a logo - e.g., a simple SVG or Unicode character */}
-          <svg
-            width="90"
-            height="90"
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ 
-              marginRight: '24px',
-              filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1))'
-            }}
-          >
-            <path
-              d="M50 2.5C23.77 2.5 2.5 23.77 2.5 50S23.77 97.5 50 97.5 97.5 76.23 97.5 50 76.23 2.5 50 2.5zm0 15C69.33 17.5 85 33.17 85 52.5H15C15 33.17 30.67 17.5 50 17.5zM35 67.5c0 8.28 6.72 15 15 15s15-6.72 15-15H35z"
-              fill="#317039" // Emerald Green
-            />
-          </svg>
-          <span style={{ fontSize: 60, fontWeight: 700, color: '#4A4A4A' }}>
+
+          <span style={{ fontSize: 60, fontWeight: 700, fontFamily: 'Playfair Display, serif' }}>
             The ROOTED Way
           </span>
         </div>
@@ -108,6 +97,12 @@ export default async function Image() {
         {
           name: 'GlacialIndifference',
           data: await glacialBold,
+          style: 'normal',
+          weight: 700,
+        },
+        {
+          name: 'Playfair Display',
+          data: await playfair,
           style: 'normal',
           weight: 700,
         },
