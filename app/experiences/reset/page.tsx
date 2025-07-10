@@ -6,6 +6,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Head from "next/head"
 
 export default function ResetRetreatPage() {
   const [formData, setFormData] = useState({
@@ -101,7 +102,19 @@ export default function ResetRetreatPage() {
   }
 
   return (
-    <div className="min-h-screen">
+    <>
+      <Head>
+        <title>ROOTED Fall Reset – High-Performer Health & Clarity Retreat</title>
+        <meta
+          name="description"
+          content="A science-backed retreat for high performers ready to reset. Join us in Madeira, Portugal for medical-grade diagnostics, nervous system restoration, and nature-fueled clarity this October 2025."
+        />
+        <meta
+          name="keywords"
+          content="rooted fall reset, executive wellness retreat, burnout recovery retreat, nervous system reset, functional medicine retreat, high performer retreat, Madeira October 2025 retreat, gut-healing nutrition, breathwork retreat, medical diagnostics retreat"
+        />
+      </Head>
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
@@ -225,6 +238,15 @@ export default function ResetRetreatPage() {
               />
             </div>
           </div>
+        </div>
+        {/* CTA Button: Start the Conversation */}
+        <div className="text-center mt-10">
+          <button
+            onClick={() => handleScroll('form')}
+            className="inline-block bg-[#D4AF37] hover:bg-[#C19B25] text-white text-sm font-medium px-6 py-3 rounded-full tracking-wide transition-colors"
+          >
+            Start the Conversation
+          </button>
         </div>
       </section>
 
@@ -359,20 +381,33 @@ export default function ResetRetreatPage() {
             <h2 className="text-3xl md:text-4xl font-light text-white mb-4">Let’s Start With a Conversation</h2>
             <p className="text-lg text-white/70">Send your details and we will be in touch or book a time directly</p>
           </div>
+
+          {/* Options Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-white/80 text-center mb-8">
+            <div>
+              <h3 className="text-sm uppercase tracking-wide mb-1">Submit Your Details</h3>
+              <p className="text-sm">Send us your details and we’ll follow up to share more</p>
+            </div>
+            <div>
+              <h3 className="text-sm uppercase tracking-wide mb-1">Book a Call</h3>
+              <p className="text-sm">Schedule a call directly to begin the conversation</p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             {/* Left: Form */}
             <div>
-              {showSuccess ? (
-                <div className="text-center py-8">
+          {showSuccess ? (
+            <div className="text-center py-8">
                   <div className="w-16 h-16 bg-[#D4AF37]/10 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg className="w-8 h-8 text-[#D4AF37]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
                   <h3 className="text-2xl font-light text-white mb-2">You're on the list</h3>
                   <p className="text-white/70">We'll be in touch soon with next steps</p>
-                </div>
-              ) : (
+            </div>
+          ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
@@ -388,16 +423,16 @@ export default function ResetRetreatPage() {
                         className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white text-sm placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                         placeholder="Last name"
                       />
-                    </div>
-                  </div>
+              </div>
+              </div>
                   <div>
                     <label className="block text-sm text-white/80 mb-1">Email</label>
                     <input type="email" name="email" value={formData.email} onChange={handleInputChange} required
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white text-sm placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
                       placeholder="you@example.com"
                     />
-                  </div>
-                  <div>
+              </div>
+              <div>
                     <label className="block text-sm text-white/80 mb-1">Message (Optional)</label>
                     <textarea name="message" value={formData.message} onChange={handleInputChange} rows={3}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-md text-white text-sm placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
@@ -414,10 +449,11 @@ export default function ResetRetreatPage() {
                     className="w-full bg-[#D4AF37] hover:bg-[#C19B25] text-white text-sm font-semibold px-6 py-3 rounded-md transition-colors"
                   >
                     {isSubmitting ? "Submitting..." : "Apply & Schedule a Call"}
-                  </button>
+                </button>
                 </form>
               )}
             </div>
+
             {/* Right: Calendly Embed */}
             {!showSuccess && (
               <div className="w-full">
@@ -444,5 +480,6 @@ export default function ResetRetreatPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
