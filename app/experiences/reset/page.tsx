@@ -105,14 +105,15 @@ export default function ResetRetreatPage() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          <Image
-            src="/reset_vanity_bg.jpg"
-            alt="Madeira coastline at golden hour - dramatic cliffs meeting wild ocean"
-            fill
-            sizes="100vw"
-            style={{ objectFit: "cover" }}
-            priority
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover w-full h-full"
+          >
+            <source src="/events/rooted_reset_hero_retreat.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
         </div>
         <div className="relative z-10 container px-6 max-w-4xl mx-auto text-center">
@@ -263,7 +264,7 @@ export default function ResetRetreatPage() {
       </section>
 
       {/* What to Expect Section - Offset Grid */}
-      <section className="py-20 bg-[#fefbe8]">
+      <section className="py-10 bg-[#fefbe8]">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
