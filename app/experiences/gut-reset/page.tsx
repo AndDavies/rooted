@@ -107,7 +107,7 @@ export default function GutResetPage() {
             {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6">
               <span className="block">14-Day Gut Reset:</span>
-              <span className="block text-[#D4AF37] font-normal">Restore. Rebalance. Revive.</span>
+              <span className="block text-[#D4AF36] font-normal">Restore. Rebalance. Revive.</span>
             </h1>
 
             {/* Subheading */}
