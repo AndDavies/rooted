@@ -115,7 +115,7 @@ export default function ResetRetreatPage() {
         />
         <meta property="og:title" content="ROOTED Fall Reset – High-Performer Health & Clarity Retreat" />
         <meta property="og:description" content="Join us in Madeira for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
-        <meta property="og:image" content="/events/retreat_opengraph.jpg" />
+        <meta property="og:image" content="https://therootedway.co/events/retreat_opengraph.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
