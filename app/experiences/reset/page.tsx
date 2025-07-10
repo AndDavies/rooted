@@ -178,9 +178,9 @@ export default function ResetRetreatPage() {
 
       {/* How We Deliver the ROOTED Reset Section */}
       <section id="how-we-deliver" className="bg-white py-10 border-t border-slate-100">
-        <div className="container mx-auto px-6 max-w-6xl flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div className="container mx-auto px-6 max-w-6xl flex flex-col-reverse lg:flex-row items-start gap-10">
           {/* Left: Steps */}
-          <div className="w-full lg:w-1/2 space-y-10">
+          <div className="w-full lg:w-7/12 space-y-10">
             <h3 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">A Transformative Experience</h3>
 
             <div className="space-y-8">
@@ -189,11 +189,12 @@ export default function ResetRetreatPage() {
                   01
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Establishing a Baseline</h3>
+                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Establish Your Baseline</h3>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Get clear on where you are, so you can reset with precision.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
-                    <li>Biomarker review – hormonal and metabolic panels</li>
-                    <li>Movement assessment</li>
-                    <li>Individual goal setting with coaches</li>
+                    <li>Comprehensive biomarker review (hormonal & metabolic panels)</li>
+                    <li>Functional movement assessment and personalized sleep evaluation</li>
+                    <li>Individual goal setting with expert practitioners and dedicated coaches</li>
                   </ul>
                 </div>
               </div>
@@ -204,10 +205,11 @@ export default function ResetRetreatPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Grounding in Your Body</h3>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Reconnect to your physical foundation for energy and presence.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
-                    <li>Mobility exercises and mindful movement</li>
-                    <li>Individualized strength training</li>
-                    <li>Meditation and breathwork</li>
+                    <li>Daily mobility and mindful movement practices</li>
+                    <li>Personalized training protocols</li>
+                    <li>Guided meditation and nervous system-focused breathwork</li>
                   </ul>
                 </div>
               </div>
@@ -218,13 +220,30 @@ export default function ResetRetreatPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Reflecting on Your Purpose</h3>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Clarify your story and reclaim what matters most.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
-                    <li>Understanding your unique story</li>
-                    <li>Reviewing components of your identity</li>
-                    <li>Writing your next chapter</li>
+                    <li>Explore the personal narrative that has shaped who you are</li>
+                    <li>Identify the values and patterns that define your unique identity</li>
+                    <li>Begin writing the next chapter with intention and clarity</li>
                   </ul>
                 </div>
               </div>
+
+              <div className="flex items-start gap-5">
+                <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-sm font-mono">
+                  04
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Create Lasting Change</h3>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Leave with a new operating system, not just fleeting inspiration.</p>
+                  <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
+                    <li>Detox with nourishing, anti-inflammatory meals</li>
+                    <li>Reboot your metabolism through intentional, sustainable practices that restore your relationship with food</li>
+                    <li>Build a personalized post-retreat integration plan with accountability and support</li>
+                  </ul>
+                </div>
+              </div>
+
             </div>
 
             <div className="mt-10 text-center lg:text-left animate-bounce text-[#4A4A4A]/60 text-xs tracking-tight">
@@ -233,8 +252,8 @@ export default function ResetRetreatPage() {
           </div>
 
           {/* Right: Visual */}
-          <div className="w-full lg:w-1/2">
-            <div className="aspect-[4/3] w-full rounded-lg overflow-hidden shadow-xl">
+          <div className="w-full lg:w-5/12">
+            <div className="aspect-[3/4] w-full rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="/events/retreat_how.jpg"
                 alt="Retreat participants grounding in nature"
@@ -270,21 +289,11 @@ export default function ResetRetreatPage() {
             <div className="container mx-auto px-6">
               <div className="max-w-xl">
                 <h2 className="text-3xl md:text-4xl font-light text-white mb-6">Fall Is for Shedding</h2>
-                <p className="text-lg text-white/90 mb-8">As the leaves fall, nature teaches us the beauty of release. This is your season to slow down, clear the fog, and come back to yourself.</p>
-                <div className="space-y-4">
-                  <p className="flex items-center gap-3 text-white/80">
-                    <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>
-                    <span>Medical-grade bloodwork + biomarker testing</span>
-                  </p>
-                  <p className="flex items-center gap-3 text-white/80">
-                    <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>
-                    <span>1:1 sleep and movement assessments</span>
-                  </p>
-                  <p className="flex items-center gap-3 text-white/80">
-                    <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>
-                    <span>Anti-inflammatory, gut-healing nutrition</span>
-                  </p>
-                </div>
+                
+                <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>Your calendar is full, your inbox overflows, but you feel like you’re running on half a battery.</p>
+                <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>You’re not alone. Most high-functioning adults in their late 30s, 40s, and 50s feel the same: stretched thin, foggy, disconnected from themselves and their health. This retreat is your pause. A reset grounded in nature, guided by science, and built for real life.</p>
+                <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>You will release what’s no longer serving you, by spending time in nature through mountain hikes, ocean plunges, and quiet reflection in the wild — this is not just for rest, but reconnection. </p>
+
               </div>
             </div>
           </div>
@@ -299,19 +308,19 @@ export default function ResetRetreatPage() {
               <div className="lg:col-span-5 lg:col-start-1">
                 <div className="sticky top-20">
                   <h2 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">What You Can Expect</h2>
-                  <p className="text-lg text-[#4A4A4A]/80 mb-8">The ROOTED Fall Reset isn't a trendy escape. It's a scientifically grounded recalibration for your nervous system, metabolism, and mindset.</p>
+                  <p className="text-lg text-[#4A4A4A]/80 mb-8">This is a highly customized 6-day reset designed for high performers that are seeking to reclaim their energy, health, and mental edge with science, structure, and support.</p>
                   <div className="space-y-4">
                     <p className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
-                      <span>Breathwork & nervous system mastery</span>
+                      <span>Post-retreat integration plan</span>
                     </p>
                     <p className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
-                      <span>Nature immersion with hikes and ocean plunges</span>
+                      <span>A like-minded community of professionals who get it</span>
                     </p>
                     <p className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
-                      <span>Personalized 90-day roadmap</span>
+                      <span>Dedicated coach to support you after you return home from the retreat</span>
                     </p>
                   </div>
                 </div>
@@ -338,7 +347,7 @@ export default function ResetRetreatPage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
               <div className="lg:col-span-7 lg:col-start-1 relative">
-                <div className="aspect-[16/9] relative rounded-xl overflow-hidden">
+                <div className="aspect-[16/9] relative rounded-xl overflow-hidden border-2 border-gray-500">
                   <Image
                     src="/events/retreat_5.jpg"
                     alt="Target audience visualization"
@@ -346,7 +355,7 @@ export default function ResetRetreatPage() {
                     style={{ objectFit: "cover" }}
                   />
                 </div>
-                <div className="absolute -bottom-12 -right-12 w-2/3 aspect-square rounded-xl overflow-hidden border-8 border-white shadow-xl hidden lg:block">
+                <div className="absolute -bottom-12 -right-12 w-2/3 aspect-square rounded-xl overflow-hidden border-2 border-gray-500 shadow-xl hidden lg:block">
                   <Image
                     src="/events/retreat_6.png"
                     alt="Additional retreat imagery"
