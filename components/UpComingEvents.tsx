@@ -193,7 +193,7 @@ export function UpComingEvents() {
                       </div>
 
                       {/* Price */}
-                      <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+                      <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
                         <span className="text-sm font-bold text-white">
                           {event.price}
                         </span>
