@@ -27,7 +27,7 @@ const eventsData: Event[] = [
   },
   {
     id: "event-2",
-    tag: "Group Event",
+    tag: "Group Retreat",
     title: "ROOTED Retreat: Reset. Realign. Rise.",
     location: "Madeira, Portugal", 
     dates: "October, 2025",
