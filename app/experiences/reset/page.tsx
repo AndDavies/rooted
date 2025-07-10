@@ -113,6 +113,12 @@ export default function ResetRetreatPage() {
           name="keywords"
           content="rooted fall reset, executive wellness retreat, burnout recovery retreat, nervous system reset, functional medicine retreat, high performer retreat, Madeira October 2025 retreat, gut-healing nutrition, breathwork retreat, medical diagnostics retreat"
         />
+        <meta property="og:title" content="ROOTED Fall Reset – High-Performer Health & Clarity Retreat" />
+        <meta property="og:description" content="Join us in Madeira for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
+        <meta property="og:image" content="/events/retreat_opengraph.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
       </Head>
       <div className="min-h-screen">
       {/* Hero Section */}
@@ -143,7 +149,7 @@ export default function ResetRetreatPage() {
               onClick={() => handleScroll('form')}
               className="inline-block bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-full backdrop-blur-sm transition-all"
             >
-            Apply for Your Spot Now
+            Start the Conversation
             </button>
             <button 
               onClick={() => handleScroll('how-we-deliver')}
