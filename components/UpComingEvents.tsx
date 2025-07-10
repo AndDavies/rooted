@@ -1,6 +1,7 @@
 "use client"
 import { useState, useRef } from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 interface Event {
   id: string
@@ -10,37 +11,30 @@ interface Event {
   dates: string
   price: string
   imageSrc: string
+  link: string
 }
 
 const eventsData: Event[] = [
   {
     id: "event-1",
-    tag: "Group Event",
-    title: "30 day gut reset",
+    tag: "Virtual Group",
+    title: "14-Day Gut Reset",
     location: "Virtual",
-    dates: "July, 2025",
+    dates: "August, 2025",
     price: "Free",
     imageSrc: "/events/gut_reset.jpg",
+    link: "/experiences/gut-reset",
   },
   {
     id: "event-2",
     tag: "Group Event",
-    title: "30-Minute Morning Renewal",
-    location: "Virtual", 
-    dates: "Starting Soon!",
-    price: "No Cost",
-    imageSrc: "/events/movement_challenge.jpg",
+    title: "ROOTED Retreat: Reset. Realign. Rise.",
+    location: "Madeira, Portugal", 
+    dates: "October, 2025",
+    price: "",
+    imageSrc: "/events/reset_vanity_bg_flipped.jpg",
+    link: "/experiences/reset",
   },
-  {
-    id: "event-3",
-    tag: "Group Event",
-    title: "21 days of Abundance - Meditation Series",
-    location: "Virtual",
-    dates: "July, 2025", 
-    price: "Free",
-    imageSrc: "/events/meditation_challenge.jpg",
-  },
-
 ]
 
 export function UpComingEvents() {
@@ -144,13 +138,13 @@ export function UpComingEvents() {
           {/* Carousel Track */}
           <div
             ref={carouselRef}
-            className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
-            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            className="flex justify-center gap-8 flex-wrap"
+            style={{ overflow: 'visible' }}
           >
             {eventsData.map((event) => (
               <div
                 key={event.id}
-                className="flex-shrink-0 w-[300px] md:w-[350px] h-[550px] md:h-[600px] relative rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group"
+                className="w-[90%] md:w-[420px] h-[550px] md:h-[600px] relative rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer group"
               >
                 {/* Background Image */}
                 <Image
@@ -208,12 +202,12 @@ export function UpComingEvents() {
 
                     {/* Event CTA Button */}
                     <div className="pt-4">
-                      <button
-                        onClick={() => handleEventClick(event.title)}
-                        className="w-full px-4 py-3 bg-[#D4AF37] hover:bg-[#B8941F] text-white text-sm font-semibold rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-black/20"
+                      <Link
+                        href={event.link}
+                        className="w-full inline-block text-center px-4 py-3 bg-[#D4AF37] hover:bg-[#B8941F] text-white text-sm font-semibold rounded-lg transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] focus:ring-offset-2 focus:ring-offset-black/20"
                       >
                         I'm Interested
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
