@@ -29,7 +29,7 @@ const navigationLinks = [
   { label: "About Us", href: "/#about" },      // Points to AboutUs component
   { label: "The Method", href: "/#program" }, // Points to Program component
   { label: "Upcoming Dates", href: "/#upcoming-events" },    // Points to UpComingEvents component
-  { label: "ROOTED Insights", href: "/#featured-blog" },    // Points to FeaturedBlog component
+  { label: "ROOTED Insights", href: "/blog" },    // Points to FeaturedBlog component
   { label: "The ROOTED Weekly", href: "/blog/archive" },    // Points to Newsletter Archive
 ];
 
