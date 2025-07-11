@@ -190,7 +190,7 @@ export default function ResetRetreatPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Establish Your Baseline</h3>
-                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Get clear on where you are, so you can reset with precision.</p>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Get clear on where you are, so you can reset with precision.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Comprehensive biomarker review (hormonal & metabolic panels)</li>
                     <li>Functional movement assessment and personalized sleep evaluation</li>
@@ -205,7 +205,7 @@ export default function ResetRetreatPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Grounding in Your Body</h3>
-                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Reconnect to your physical foundation for energy and presence.</p>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Reconnect to your physical foundation for energy and presence.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Daily mobility and mindful movement practices</li>
                     <li>Personalized training protocols</li>
@@ -220,7 +220,7 @@ export default function ResetRetreatPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Reflecting on Your Purpose</h3>
-                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Clarify your story and reclaim what matters most.</p>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Clarify your story and reclaim what matters most.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Explore the personal narrative that has shaped who you are</li>
                     <li>Identify the values and patterns that define your unique identity</li>
@@ -235,10 +235,10 @@ export default function ResetRetreatPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Create Lasting Change</h3>
-                  <p className="text-sm text-[#4A4A4A]/80 mb-1">Leave with a new operating system, not just fleeting inspiration.</p>
+                  <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Leave with a new operating system, not just fleeting inspiration.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Detox with nourishing, anti-inflammatory meals</li>
-                    <li>Reboot your metabolism through intentional, sustainable practices that restore your relationship with food</li>
+                    <li>Reboot your metabolism through intentional, sustainable practices</li>
                     <li>Build a personalized post-retreat integration plan with accountability and support</li>
                   </ul>
                 </div>
