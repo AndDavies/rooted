@@ -3,7 +3,7 @@ import { createClient } from '@/lib/supabase-server'; // To fetch post title
 
 export const runtime = 'edge';
 
-export const alt = 'The ROOTED Way Blog Post'; // Default alt, can be improved if title is accessible here easily
+export const alt = 'The ROOTED Weekly'; // Default alt, can be improved if title is accessible here easily
 export const size = {
   width: 1200,
   height: 630,
