@@ -73,13 +73,10 @@ export default async function ArchiveIndexPage() {
           </div>
         </header>
 
-        {/* Newsletter Signup Banner */}
-        <div className="container mx-auto px-4 pt-6 md:pt-8">
-          <NewsletterSignupBanner />
-        </div>
+
 
         {/* Archive Content */}
-        <div className="container mx-auto px-4 pb-12 md:pb-16 lg:pb-20">
+        <div className="container mx-auto px-4 pt-10 pb-12 md:pb-16 lg:pb-20">
           {/* Breadcrumb */}
           <nav className="mb-8 text-base">
             <ol className="flex items-center space-x-2 text-[#4A4A4A]/70">
@@ -177,6 +174,12 @@ export default async function ArchiveIndexPage() {
             </div>
           )}
         </div>
+        
+        {/* Newsletter Signup Banner */}
+        <div className="container mx-auto px-4 pt-6 md:pt-8">
+          <NewsletterSignupBanner />
+        </div>
+
       </div>
     )
   } catch (error) {
