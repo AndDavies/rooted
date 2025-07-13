@@ -5,15 +5,15 @@ import { NextRequest } from 'next/server';
 
 export const runtime = 'edge';
 
-const glacialRegular = fetch(
-  new URL('../../../public/fonts/GlacialIndifference-Regular.otf', import.meta.url)
-).then(res => res.arrayBuffer());
-
-const glacialBold = fetch(
-  new URL('../../../public/fonts/GlacialIndifference-Bold.otf', import.meta.url)
-).then(res => res.arrayBuffer());
-
 export async function GET(req: NextRequest) {
+  const glacialRegular = fetch(
+    new URL('../../../public/fonts/GlacialIndifference-Regular.otf', import.meta.url)
+  ).then(res => res.arrayBuffer());
+
+  const glacialBold = fetch(
+    new URL('../../../public/fonts/GlacialIndifference-Bold.otf', import.meta.url)
+  ).then(res => res.arrayBuffer());
+
   const [fontRegular, fontBold] = await Promise.all([glacialRegular, glacialBold]);
 
   return new ImageResponse(
