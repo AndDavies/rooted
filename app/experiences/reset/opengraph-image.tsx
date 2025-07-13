@@ -52,7 +52,7 @@ export default async function Image() {
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
           </svg>
           <span style={{ fontSize: 72, fontWeight: 700 }}>
-            RESET 2025
+            The ROOTED Way RESET 2025
           </span>
         </div>
         <p
