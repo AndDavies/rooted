@@ -65,7 +65,7 @@ export default async function Image() {
             marginBottom: '20px',
           }}
         >
-          Gouveia, Portugal · October 2025
+          Serra Estrela, Portugal · October 2025
         </p>
         <p
           style={{
