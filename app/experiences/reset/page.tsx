@@ -7,6 +7,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Head from "next/head"
+import Gallery from "@/components/Gallery"
 
 export default function ResetRetreatPage() {
   const [formData, setFormData] = useState({
@@ -107,14 +108,14 @@ export default function ResetRetreatPage() {
         <title>ROOTED Fall Reset – Health & Clarity Reset</title>
         <meta
           name="description"
-          content="A science-backed retreat for high performers ready to reset. Join us in Madeira, Portugal for medical-grade diagnostics, nervous system restoration, and nature-fueled clarity this October 2025."
+          content="A science-backed retreat for high performers ready to reset. Join us at the exclusive Estrela Serenity Resort in Gouveia, Portugal for medical-grade diagnostics, nervous system restoration, and nature-fueled clarity this October 2025."
         />
         <meta
           name="keywords"
           content="rooted fall reset, executive wellness retreat, burnout recovery retreat, nervous system reset, functional medicine retreat, high performer retreat, Madeira October 2025 retreat, gut-healing nutrition, breathwork retreat, medical diagnostics retreat"
         />
         <meta property="og:title" content="ROOTED Fall Reset – High-Performer Health & Clarity Retreat" />
-        <meta property="og:description" content="Join us in Madeira for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
+        <meta property="og:description" content="Join us in Gouveia, Portugal for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
         <meta property="og:image" content="https://therootedway.co/events/retreat_opengraph.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -123,6 +124,7 @@ export default function ResetRetreatPage() {
       <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center">
+
         <div className="absolute inset-0">
           <video
             autoPlay
@@ -140,7 +142,7 @@ export default function ResetRetreatPage() {
             THE ROOTED FALL RESET 
           </h1>
           <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#D4AF37] tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap">Reset. Realign. Rise.</h2>
-          <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 2025 | Madeira, Portugal</p>
+          <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 2025 | Gouveia, Portugal</p>
           <p className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8">
             A science-backed, nature-immersive retreat for high performers ready to reclaim their health, clarity, and energy
           </p>
@@ -176,12 +178,29 @@ export default function ResetRetreatPage() {
         </div>
       </section>
 
+      {/* Static Section Navigation */}
+      <section className="bg-[#fff8ea] border-b border-slate-200 py-3 sticky top-[70px] z-30">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <ul className="flex flex-wrap justify-center gap-3 text-sm font-medium text-[#4A4A4A] tracking-tight">
+            <li><a href="#experience" className="hover:text-[#D4AF37] transition">Transformation</a></li>
+            <li>|</li>
+            <li><a href="#expect" className="hover:text-[#D4AF37] transition">What to Expect</a></li>
+            <li>|</li>
+            <li><a href="#who" className="hover:text-[#D4AF37] transition">Who It's For</a></li>
+            <li>|</li>
+            <li><a href="#location" className="hover:text-[#D4AF37] transition">Estrela Serenity Resort</a></li>
+            <li>|</li>
+            <li><a href="#form" className="hover:text-[#D4AF37] transition">Start the Conversation</a></li>
+          </ul>
+        </div>
+      </section>
+
       {/* How We Deliver the ROOTED Reset Section */}
-      <section id="how-we-deliver" className="bg-white py-10 border-t border-slate-100">
+      <section id="experience" className="scroll-mt-[90px] bg-white py-10 border-t border-slate-100">
         <div className="container mx-auto px-6 max-w-6xl flex flex-col-reverse lg:flex-row items-start gap-10">
           {/* Left: Steps */}
           <div className="w-full lg:w-7/12 space-y-10">
-            <h3 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">A Transformative Experience</h3>
+            <h3 className="scroll-mt-[90px] text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">A Transformative Experience</h3>
 
             <div className="space-y-8">
               <div className="flex items-start gap-5">
@@ -189,7 +208,7 @@ export default function ResetRetreatPage() {
                   01
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Establish Your Baseline</h3>
+                  <h3 id="baseline" className="text-lg font-semibold text-[#4A4A4A] mb-1">Establishing Your Baseline</h3>
                   <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Get clear on where you are, so you can reset with precision.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Comprehensive biomarker review (hormonal & metabolic panels)</li>
@@ -204,7 +223,7 @@ export default function ResetRetreatPage() {
                   02
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Grounding in Your Body</h3>
+                  <h3 id="grounding" className="text-lg font-semibold text-[#4A4A4A] mb-1">Grounding in Your Body</h3>
                   <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Reconnect to your physical foundation for energy and presence.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Daily mobility and mindful movement practices</li>
@@ -219,7 +238,7 @@ export default function ResetRetreatPage() {
                   03
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Reflecting on Your Purpose</h3>
+                  <h3 id="purpose" className="text-lg font-semibold text-[#4A4A4A] mb-1">Reflecting on Your Purpose</h3>
                   <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Clarify your story and reclaim what matters most.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Explore the personal narrative that has shaped who you are</li>
@@ -234,7 +253,7 @@ export default function ResetRetreatPage() {
                   04
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-[#4A4A4A] mb-1">Create Lasting Change</h3>
+                  <h3 id="change" className="text-lg font-semibold text-[#4A4A4A] mb-1">Creating Lasting Change</h3>
                   <p className="text-sm text-[#4A4A4A]/80 mb-1 font-bold">Leave with a new operating system, not just fleeting inspiration.</p>
                   <ul className="list-disc list-inside text-[#4A4A4A]/80 text-sm space-y-1">
                     <li>Detox with nourishing, anti-inflammatory meals</li>
@@ -301,7 +320,7 @@ export default function ResetRetreatPage() {
       </section>
 
       {/* What to Expect Section - Offset Grid */}
-      <section className="py-10 bg-[#fefbe8]">
+      <section id="expect" className="scroll-mt-[90px] py-10 bg-[#fefbe8]">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
@@ -342,7 +361,7 @@ export default function ResetRetreatPage() {
       </section>
 
       {/* Who This Is For Section - Overlapping Elements */}
-      <section className="py-20 bg-slate-50 relative overflow-hidden">
+      <section id="who" className="scroll-mt-[90px] py-20 bg-slate-50 relative overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -389,8 +408,39 @@ export default function ResetRetreatPage() {
         </div>
       </section>
 
+      {/* Estrela Resort & Gallery Section */}
+      <section id="location" className="scroll-mt-[90px] py-20 bg-[#317039] text-white">
+        <div className="container mx-auto px-0 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5">
+            <h2 className="text-3xl md:text-4xl font-light mb-6">Estrela Serenity Resort</h2>
+            <h3 className="text-xl font-semibold mb-4">
+              A Mountain Retreat Where Tranquility Meets Nature, Sports, Wellness and Gastronomy
+            </h3>
+            <p className="mb-4 text-white/90">
+              Estrela Serenity offers the perfect blend of tranquility and adventure. Deep dive into the breathtaking Serra da Estrela Mountains while enjoying premium amenities and personalised service.
+            </p>
+            <p className="mb-4 text-white/80">
+              From solo sports or nature adventures, romantic getaways to group retreats, events and more. A premium resort, offering class amenities at a more affordable price point than high-end competitors.
+            </p>
+            <p className="mb-6 text-white/80">
+              Estrela Serenity is your ideal escape – discover this hidden gem.
+            </p>
+            <h4 className="text-lg font-medium mb-2">The Serra da Estrela Natural Park</h4>
+            <p className="text-white/70">
+              Discover a world of natural wonders in the Serra da Estrela Natural Park. Explore hiking trails, cycle through picturesque landscapes, or simply relax and soak in the tranquility of the mountains.
+            </p>
+            <p className="mt-2 text-white/70">
+              With its diverse flora and fauna, breathtaking scenery, and charming villages, the park offers something for everyone.
+            </p>
+          </div>
+          <div className="lg:col-span-7">
+            <Gallery />
+          </div>
+        </div>
+      </section>
+
       {/* Form & Calendly Section */}
-      <section className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-20" id="form">
+      <section className="bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 py-20 scroll-mt-[90px]" id="form">
         <div className="container px-4 mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-light text-white mb-4">Let’s Start With a Conversation</h2>
@@ -483,14 +533,61 @@ export default function ResetRetreatPage() {
         </div>
       </section>
 
-      {/* Bottom Social Proof Section */}
-      <section className="py-12 bg-slate-50 relative">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-[#4A4A4A]/60 font-light">
-              Join industry leaders who are choosing transformation over burnout.
+
+
+      {/* FAQ Section */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto px-6 max-w-6xl grid md:grid-cols-2 gap-12 items-start">
+          {/* Image Side */}
+          <div>
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-md">
+              <Image
+                src="/estrella/4.jpg"
+                alt="Nature bird calmness"
+                width={800}
+                height={600}
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* FAQ Content Side */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-4">
+              Program FAQs: <em className="italic">Your guide to a seamless journey</em>
+            </h2>
+            <p className="text-[#4A4A4A]/80 mb-8">
+              We know stepping into a transformational retreat comes with questions. Here are answers to a few we hear often. Still wondering something? Just reach out.
             </p>
 
+            <div className="divide-y divide-slate-200">
+              {[
+                {
+                  q: "Who is this program designed for?",
+                  a: "The ROOTED Reset is for high-functioning professionals who feel burned out, unbalanced, or misaligned — and are ready to reset physically, mentally, and emotionally."
+                },
+                {
+                  q: "What kind of people book this experience?",
+                  a: "Entrepreneurs, executives, founders, and high-achieving creatives. People who are used to pushing through — and are ready to pause and come home to themselves."
+                },
+                {
+                  q: "Is this a physically demanding retreat?",
+                  a: "There are daily movement and nature-based activities, but each session is adapted to your needs. No extreme fitness levels are required — just openness and curiosity."
+                },
+                {
+                  q: "Do I have to attend every session?",
+                  a: "We recommend full participation, but everything is optional. This is your time to recalibrate, and we honor your autonomy."
+                }
+              ].map(({ q, a }, i) => (
+                <details key={i} className="py-4 group">
+                  <summary className="cursor-pointer text-[#4A4A4A] font-medium flex justify-between items-center">
+                    <span>{q}</span>
+                    <span className="text-xl group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="text-sm text-[#4A4A4A]/80 mt-2">{a}</p>
+                </details>
+              ))}
+            </div>
           </div>
         </div>
       </section>
