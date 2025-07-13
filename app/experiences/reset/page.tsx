@@ -191,6 +191,8 @@ export default function ResetRetreatPage() {
             <li><a href="#location" className="hover:text-[#D4AF37] transition">Estrela Serenity Resort</a></li>
             <li>|</li>
             <li><a href="#form" className="hover:text-[#D4AF37] transition">Start the Conversation</a></li>
+            <li>|</li>
+            <li><a href="#faq" className="hover:text-[#D4AF37] transition">FAQ</a></li>
           </ul>
         </div>
       </section>
@@ -536,7 +538,7 @@ export default function ResetRetreatPage() {
 
 
       {/* FAQ Section */}
-      <section className="bg-white py-20">
+      <section id="faq" className="bg-white py-20 scroll-mt-[90px]">
         <div className="container mx-auto px-6 max-w-6xl grid md:grid-cols-2 gap-12 items-start">
           {/* Image Side */}
           <div>
