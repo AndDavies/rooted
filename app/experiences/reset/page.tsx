@@ -108,14 +108,14 @@ export default function ResetRetreatPage() {
         <title>ROOTED Fall Reset – Health & Clarity Reset</title>
         <meta
           name="description"
-          content="A science-backed retreat for high performers ready to reset. Join us at the exclusive Estrela Serenity Resort in Gouveia, Portugal for medical-grade diagnostics, nervous system restoration, and nature-fueled clarity this October 2025."
+          content="A science-backed retreat for high performers ready to reset. Join us at the exclusive Estrela Serenity Resort in Serra Estrela, Portugal for medical-grade diagnostics, nervous system restoration, and nature-fueled clarity this October 2025."
         />
         <meta
           name="keywords"
           content="rooted fall reset, executive wellness retreat, burnout recovery retreat, nervous system reset, functional medicine retreat, high performer retreat, Madeira October 2025 retreat, gut-healing nutrition, breathwork retreat, medical diagnostics retreat"
         />
         <meta property="og:title" content="ROOTED Fall Reset – High-Performer Health & Clarity Retreat" />
-        <meta property="og:description" content="Join us in Gouveia, Portugal for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
+        <meta property="og:description" content="Join us in Serra Estrela, Portugal for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
         <meta property="og:image" content="https://therootedway.co/experiences/reset/opengraph-image" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -142,7 +142,7 @@ export default function ResetRetreatPage() {
             THE ROOTED FALL RESET 
           </h1>
           <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#D4AF37] tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap">Reset. Realign. Rise.</h2>
-          <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 2025 | Gouveia, Portugal</p>
+          <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 2025 | Serra Estrela, Portugal</p>
           <p className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8">
             A science-backed, nature-immersive retreat for high performers ready to reclaim their health, clarity, and energy
           </p>
