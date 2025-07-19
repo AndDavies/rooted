@@ -1,7 +1,7 @@
 import type React from "react"
 import "./globals.css"
 import type { Metadata } from "next"
-import { Bebas_Neue, Rufina } from "next/font/google"
+import { Bebas_Neue, Rufina, Cinzel } from "next/font/google"
 import localFont from "next/font/local"
 import Script from 'next/script'
 import { Header } from "@/components/header"
@@ -55,6 +55,14 @@ const rufina = Rufina({
   weight: ["400", "700"], // For regular and bold
   display: "swap",
   variable: "--font-rufina",
+})
+
+// Cinzel font setup
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"], // Cinzel supports multiple weights
+  display: "swap",
+  variable: "--font-cinzel",
 })
 
 // HK Grotesk local font setup
@@ -124,7 +132,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${playfairFont.variable}`}>
+    <html lang="en" className={`${glacial.variable} ${geist.variable} ${bebasNeue.variable} ${rufina.variable} ${hkGrotesk.variable} ${playfairFont.variable} ${cinzel.variable}`}>
       <head>
         {/* Google Consent Mode v2 - Load before any other tracking scripts */}
         <Script id="google-consent-mode" strategy="beforeInteractive">

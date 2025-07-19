@@ -156,12 +156,36 @@
   h1,
   h2,
   h3 {
-    font-family: var(--font-playfair), var(--font-geist), sans-serif;
     font-weight: normal !important;
+  }
+
+  h1 {
+    font-family: var(--font-cinzel), ui-serif, Georgia, serif;
+  }
+
+  h2,
+  h3 {
+    font-family: var(--font-playfair), var(--font-rufina), ui-serif, Georgia, serif;
   }
   
   .font-heading {
-    font-family: var(--font-playfair), var(--font-geist), sans-serif;
+    font-family: var(--font-playfair), var(--font-rufina), ui-serif, Georgia, serif;
+  }
+
+  .font-serif {
+    font-family: var(--font-playfair), var(--font-rufina), ui-serif, Georgia, serif;
+  }
+
+  .font-playfair {
+    font-family: var(--font-playfair), ui-serif, Georgia, serif;
+  }
+
+  .font-rufina {
+    font-family: var(--font-rufina), ui-serif, Georgia, serif;
+  }
+
+  .font-cinzel {
+    font-family: var(--font-cinzel), ui-serif, Georgia, serif;
   }
 
   h4, h5, h6 {

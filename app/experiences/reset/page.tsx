@@ -64,7 +64,7 @@ export default function ResetRetreatPage() {
     setIsSubmitting(true)
     setError("")
 
-    const groups = ["INTERESTED"];
+    const groups = ["OCT_RESET"];
     if (addToNewsletter) groups.push("NEWSLETTER");
 
     try {

@@ -74,13 +74,15 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-glacial)", "var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
-        serif: ["var(--font-glacial)", "var(--font-geist)", "ui-serif", "Georgia", "serif"],
+        serif: ["var(--font-playfair)", "var(--font-rufina)", "ui-serif", "Georgia", "serif"],
         body: ["var(--font-glacial)", "var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
-        heading: ["var(--font-glacial)", "var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
+        heading: ["var(--font-playfair)", "var(--font-rufina)", "ui-serif", "Georgia", "serif"],
         glacial: ["var(--font-glacial)", "var(--font-geist)", "ui-sans-serif", "system-ui", "sans-serif"],
         bebas: ["var(--font-bebas-neue)"],
         "hk-grotesk": ["var(--font-hk-grotesk)"],
         rufina: ["var(--font-rufina)"],
+        playfair: ["var(--font-playfair)"],
+        cinzel: ["var(--font-cinzel)"],
       },
       keyframes: {
         "accordion-down": {
