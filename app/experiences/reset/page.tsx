@@ -114,7 +114,7 @@ export default function ResetRetreatPage() {
           name="keywords"
           content="rooted fall reset, executive wellness retreat, burnout recovery retreat, nervous system reset, functional medicine retreat, high performer retreat, Madeira October 2025 retreat, gut-healing nutrition, breathwork retreat, medical diagnostics retreat"
         />
-        <meta property="og:title" content="ROOTED Fall Reset – High-Performer Health & Clarity Retreat" />
+        <meta property="og:title" content="ROOTED Fall Retreat – High-Performer Health & Clarity Retreat" />
         <meta property="og:description" content="Join us in Serra Estrela, Portugal for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
         <meta property="og:image" content="https://therootedway.co/experiences/reset/opengraph-image" />
         <meta property="og:image:width" content="1200" />
@@ -139,10 +139,10 @@ export default function ResetRetreatPage() {
         </div>
         <div className="relative z-10 container px-6 max-w-4xl mx-auto text-center">
           <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap">
-            THE ROOTED FALL RESET 
+            THE ROOTED FALL RETREAT 
           </h1>
           <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#D4AF37] tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap">Reset. Realign. Rise.</h2>
-          <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 2025 | Serra Estrela, Portugal</p>
+          <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 9-15, 2025 | Serra da Estrela Natural Park – UNESCO geopark</p>
           <p className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8">
             A science-backed, nature-immersive retreat for high performers ready to reclaim their health, clarity, and energy
           </p>
@@ -313,7 +313,7 @@ export default function ResetRetreatPage() {
                 
                 <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>Your calendar is full, your inbox overflows, but you feel like you’re running on half a battery.</p>
                 <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>You’re not alone. Most high-functioning adults in their late 30s, 40s, and 50s feel the same: stretched thin, foggy, disconnected from themselves and their health. This retreat is your pause. A reset grounded in nature, guided by science, and built for real life.</p>
-                <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>You will release what’s no longer serving you, by spending time in nature through mountain hikes, ocean plunges, and quiet reflection in the wild — this is not just for rest, but reconnection. </p>
+                <p className="text-lg text-white/90 mb-8"><span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0"></span>You will release what’s no longer serving you, with daily detoxifying practices like hot-cold contrast therapy, mindful movement, mountain hikes, waterfalls, lake plunges and quiet reflections in nature. This is not just rest; it’s recalibration and reconnection.</p>
 
               </div>
             </div>
@@ -329,19 +329,19 @@ export default function ResetRetreatPage() {
               <div className="lg:col-span-5 lg:col-start-1">
                 <div className="sticky top-20">
                   <h2 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">What You Can Expect</h2>
-                  <p className="text-lg text-[#4A4A4A]/80 mb-8">This is a highly customized 6-day reset designed for high performers that are seeking to reclaim their energy, health, and mental edge with science, structure, and support.</p>
+                  <p className="text-lg text-[#4A4A4A]/80 mb-8">From the moment you arrive, your reset is uniquely yours.</p>
                   <div className="space-y-4">
                     <p className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
-                      <span>Post-retreat integration plan</span>
+                      <span>You’ll begin with 1:1 assessments across bloodwork, movement, sleep, breath, and nervous system balance - all designed to build a personalized foundation for deep transformation.</span>
                     </p>
                     <p className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
-                      <span>A like-minded community of professionals who get it</span>
+                      <span>Each day weaves together mindful movement, contrast therapy, and nature immersion - from lakeside mobility sessions to nature hikes and bike rides through quiet mountain towns.</span>
                     </p>
                     <p className="flex items-start gap-3">
                       <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
-                      <span>Dedicated coach to support you after you return home from the retreat</span>
+                      <span>And it doesn’t start on arrival; your coach will guide you through a tailored pre-reset protocol the week before departure, so your mind and body are fully prepared to receive.</span>
                     </p>
                   </div>
                 </div>
@@ -349,10 +349,10 @@ export default function ResetRetreatPage() {
               <div className="lg:col-span-6 lg:col-start-7 space-y-8">
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden">
                   <Image
-                    src="/events/retreat_3.jpg"
+                    src="/estrella/4.jpg"
                     alt="Reset retreat experience"
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
 
@@ -370,7 +370,7 @@ export default function ResetRetreatPage() {
               <div className="lg:col-span-7 lg:col-start-1 relative">
                 <div className="aspect-[16/9] relative rounded-xl overflow-hidden border-2 border-gray-500">
                   <Image
-                    src="/events/retreat_5.jpg"
+                    src="/events/retreat_girl_forest.jpg"
                     alt="Target audience visualization"
                     fill
                     style={{ objectFit: "cover" }}
@@ -378,7 +378,7 @@ export default function ResetRetreatPage() {
                 </div>
                 <div className="absolute -bottom-12 -right-12 w-2/3 aspect-square rounded-xl overflow-hidden border-2 border-gray-500 shadow-xl hidden lg:block">
                   <Image
-                    src="/events/retreat_6.png"
+                    src="/events/retreat_man_forest.jpg"
                     alt="Additional retreat imagery"
                     fill
                     style={{ objectFit: "cover" }}
@@ -391,16 +391,20 @@ export default function ResetRetreatPage() {
                   <p className="text-lg text-[#4A4A4A]/80 mb-8">This isn't for everyone — and that's the point. Each cohort is small, curated, and deeply intentional.</p>
                   <div className="space-y-4">
                     <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
+                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0 self-start mt-2"></span>
                       <span>You're outwardly successful but inwardly running on fumes</span>
                     </p>
                     <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
+                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0 self-start mt-2"></span>
                       <span>You've optimized your career, but not your health</span>
                     </p>
                     <p className="flex items-start gap-3">
-                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full mt-2"></span>
+                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0 self-start mt-2"></span>
                       <span>You're ready to trade burnout for clarity and purpose</span>
+                    </p>
+                    <p className="flex items-start gap-3">
+                      <span className="w-2 h-2 bg-[#D4AF37] rounded-full flex-shrink-0 self-start mt-2"></span>
+                      <span>You’re craving a circle of peers who understand the tension between performance and purpose, and are choosing to live with more intention.</span>
                     </p>
                   </div>
                 </div>
@@ -411,28 +415,28 @@ export default function ResetRetreatPage() {
       </section>
 
       {/* Estrela Resort & Gallery Section */}
-      <section id="location" className="scroll-mt-[90px] py-20 bg-[#317039] text-white">
+      <section id="location" className="scroll-mt-[90px] py-20 bg-[#6C4F57] text-white">
         <div className="container mx-auto px-0 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-5">
             <h2 className="text-3xl md:text-4xl font-light mb-6">Estrela Serenity Resort</h2>
-            <h3 className="text-xl font-semibold mb-4">
-              A Mountain Retreat Where Tranquility Meets Nature, Sports, Wellness and Gastronomy
-            </h3>
-            <p className="mb-4 text-white/90">
-              Estrela Serenity offers the perfect blend of tranquility and adventure. Deep dive into the breathtaking Serra da Estrela Mountains while enjoying premium amenities and personalised service.
-            </p>
-            <p className="mb-4 text-white/80">
-              From solo sports or nature adventures, romantic getaways to group retreats, events and more. A premium resort, offering class amenities at a more affordable price point than high-end competitors.
-            </p>
-            <p className="mb-6 text-white/80">
-              Estrela Serenity is your ideal escape – discover this hidden gem.
-            </p>
-            <h4 className="text-lg font-medium mb-2">The Serra da Estrela Natural Park</h4>
-            <p className="text-white/70">
-              Discover a world of natural wonders in the Serra da Estrela Natural Park. Explore hiking trails, cycle through picturesque landscapes, or simply relax and soak in the tranquility of the mountains.
+            <h4 className="text-lg font-medium mb-2">Why Serra da Estrela?</h4>
+            <p className="mt-2 text-white/70">
+              We’ve chosen a premium mountain resort tucked inside Portugal’s UNESCO Global Geopark — the breathtaking Serra da Estrela. This tranquil haven offers the ideal setting for transformation: peaceful, powerful, and far from daily noise.
             </p>
             <p className="mt-2 text-white/70">
-              With its diverse flora and fauna, breathtaking scenery, and charming villages, the park offers something for everyone.
+              Surrounded by 375 km of marked trails, it’s a playground for hiking, trail running, gravel biking, or simply wandering in stillness.
+            </p>
+            <p className="mt-2 text-white/70">
+              On-site, you’ll find everything needed to support your reset:
+            </p>
+            <ul className="list-disc list-inside text-white/70 mt-2 space-y-1 pl-4">
+              <li>A heated pool, two saunas, Turkish bath, and gym</li>
+              <li>A lake and ice bath for daily hot-cold therapy</li>
+              <li>Optional massage treatments</li>
+              <li>And a private chef crafting anti-inflammatory meals and outdoor picnics, all designed to nourish and restore</li>
+            </ul>
+            <p className="mt-4 text-white/80">
+              This is more than a retreat center; it’s a sanctuary for deep reset, movement, and reconnection.
             </p>
           </div>
           <div className="lg:col-span-7">

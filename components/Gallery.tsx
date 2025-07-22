@@ -7,21 +7,24 @@ import Image from "next/image";
 import clsx from "clsx";
 
 const images = [
-  "/estrella/1.jpg",
-  "/estrella/2.jpg",
+//  "/estrella/1.jpg",
+//  "/estrella/2.jpg",
+  "/estrella/18.jpg",
+  "/estrella/19.jpg",
   "/estrella/3.jpg",
   "/estrella/6.jpg",
   "/estrella/5.jpg",
   "/estrella/4.jpg",
-  "/estrella/7.jpg",
-  "/estrella/8.jpg",
+//  "/estrella/7.jpg",
+//  "/estrella/8.jpg",
   "/estrella/9.jpg",
-  "/estrella/10.jpg",
+//  "/estrella/10.jpg",
+  "/estrella/20.jpg",
   "/estrella/11.jpg",
   "/estrella/12.jpg",
   "/estrella/13.jpg",
   "/estrella/14.jpg",
-  "/estrella/15.jpg",
+//  "/estrella/15.jpg",
 ];
 
 export default function Gallery() {
