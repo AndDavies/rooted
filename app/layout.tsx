@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer"
 import { WaitlistPopup } from "@/components/WaitlistPopup"
 import { WaitlistPopupProvider } from "@/components/WaitlistPopupContext"
 import { ConsentBanner } from "@/components/ConsentBanner"
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 // Geist font setup
 const geist = localFont({
@@ -158,6 +159,9 @@ export default function RootLayout({
         <Header />
         {children}
           <Footer />
+          <div>
+            <WhatsAppButton />
+          </div>
           <WaitlistPopup />
           <ConsentBanner />
         </WaitlistPopupProvider>
