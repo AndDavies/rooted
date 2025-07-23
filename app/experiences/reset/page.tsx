@@ -8,6 +8,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Head from "next/head"
 import Gallery from "@/components/Gallery"
+import VisualMap from "@/components/fall-reset/visualMap"
 
 export default function ResetRetreatPage() {
   const [formData, setFormData] = useState({
@@ -105,17 +106,17 @@ export default function ResetRetreatPage() {
   return (
     <>
       <Head>
-        <title>ROOTED Fall Reset – Health & Clarity Reset</title>
+        <title>ROOTED Fall Reset – Health & Clarity Reset Retreat</title>
         <meta
           name="description"
-          content="A science-backed retreat for high performers ready to reset. Join us at the exclusive Estrela Serenity Resort in Serra Estrela, Portugal for medical-grade diagnostics, nervous system restoration, and nature-fueled clarity this October 2025."
+          content="ROOTED is a science-backed, soul-infused retreat for high performers ready to reset and rebuild. Experience a personalized, data-informed, nature-grounded reset this October 2025 in Portugal’s Estrela mountains."
         />
         <meta
           name="keywords"
-          content="rooted fall reset, executive wellness retreat, burnout recovery retreat, nervous system reset, functional medicine retreat, high performer retreat, Madeira October 2025 retreat, gut-healing nutrition, breathwork retreat, medical diagnostics retreat"
+          content="ROOTED retreat, burnout recovery, executive wellness, nervous system reset, HRV diagnostics, Serra Estrela Portugal, high-performer healing, 2025 retreat, breathwork, sleep optimization, functional medicine, post-retreat integration"
         />
-        <meta property="og:title" content="ROOTED Fall Retreat – High-Performer Health & Clarity Retreat" />
-        <meta property="og:description" content="Join us in Serra Estrela, Portugal for a science-backed, nature-fueled transformation. Nervous system reset, biomarker testing, and radical clarity for high performers." />
+        <meta property="og:title" content="ROOTED Fall Reset – Clarity, Healing, and Leadership" />
+        <meta property="og:description" content="October 2025 | A guided, research-backed, nature-immersive retreat for ambitious professionals seeking physiological recovery and a renewed inner compass." />
         <meta property="og:image" content="https://therootedway.co/experiences/reset/opengraph-image" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -182,6 +183,8 @@ export default function ResetRetreatPage() {
       <section className="bg-[#fff8ea] border-b border-slate-200 py-3 sticky top-[70px] z-30">
         <div className="container mx-auto px-6 max-w-6xl">
           <ul className="flex flex-wrap justify-center gap-3 text-sm font-medium text-[#4A4A4A] tracking-tight">
+            <li><a href="#itinerary" className="hover:text-[#D4AF37] transition">Retreat Itinerary</a></li>
+            <li>|</li>
             <li><a href="#experience" className="hover:text-[#D4AF37] transition">Transformation</a></li>
             <li>|</li>
             <li><a href="#expect" className="hover:text-[#D4AF37] transition">What to Expect</a></li>
@@ -196,6 +199,10 @@ export default function ResetRetreatPage() {
           </ul>
         </div>
       </section>
+
+    
+      {/* Visual Map Section */}
+      <VisualMap />
 
       {/* How We Deliver the ROOTED Reset Section */}
       <section id="experience" className="scroll-mt-[90px] bg-white py-10 border-t border-slate-100">
@@ -583,6 +590,31 @@ export default function ResetRetreatPage() {
                 {
                   q: "Do I have to attend every session?",
                   a: "We recommend full participation, but everything is optional. This is your time to recalibrate, and we honor your autonomy."
+                },
+                // Additional FAQs
+                {
+                  q: "How is ROOTED different from other wellness retreats?",
+                  a: "ROOTED goes beyond rest. We integrate science (HRV, biometrics, mindset frameworks) with soul (ritual, breathwork, nature immersion) for embodied, lasting transformation. This isn’t inspiration — it’s recalibration."
+                },
+                {
+                  q: "What happens before I even arrive?",
+                  a: "Your journey begins with a pre-retreat intake: optional bloodwork, HRV & sleep tracking, a guided values inventory, and a personalized coaching check-in to ensure you arrive grounded and ready to receive."
+                },
+                {
+                  q: "What kind of follow-up support is included?",
+                  a: "After the retreat, you’ll receive a 90-day integration plan, weekly check-ins with a guide, and access to our private community space — because transformation requires support, not a login and luck."
+                },
+                {
+                  q: "I’m not in burnout, but I’m feeling unfulfilled. Is this for me?",
+                  a: "Yes. ROOTED isn’t just for people in crisis — it’s for those at a threshold: ready to reclaim presence, realign health, and lead with clarity."
+                },
+                {
+                  q: "Is ROOTED religious or spiritual?",
+                  a: "ROOTED is not affiliated with any religion, but we create space for spiritual exploration through nature, breath, reflection, and embodied presence. Guests of all beliefs (or none) are welcomed."
+                },
+                {
+                  q: "How physically demanding is the retreat?",
+                  a: "ROOTED is intentionally designed with rhythm, not rigor. All movement and hikes are optional and scalable to your baseline. The goal is restoration, not exhaustion."
                 }
               ].map(({ q, a }, i) => (
                 <details key={i} className="py-4 group">
