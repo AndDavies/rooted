@@ -57,7 +57,7 @@ const itinerary: {
   },
   {
     day: "Day 2",
-    title: "Reset the System",
+    title: "Reconnect to the Body",
     theme: "Detoxify & Regulate",
     mantra: "Let go of what's weighing you down.",
     pillars: ["Movement", "Breath", "Nutrition", "Joy", "Mindset"],
@@ -69,7 +69,7 @@ const itinerary: {
   },
   {
     day: "Day 3",
-    title: "Release & Rewire",
+    title: "Retrain the Mind",
     theme: "Letting Go of Old Patterns",
     mantra: "What mask am I ready to release?",
     pillars: ["Mindset", "Movement", "Breath", "Sleep", "Nutrition"],
@@ -77,7 +77,6 @@ const itinerary: {
       "Strength & stability training",
       "Gravel biking adventure",
       "Evening breath session"
-      
     ]
   },
   {
@@ -207,11 +206,11 @@ export default function VisualMap() {
             );
           })}
 
-          <div className="mt-12">
+          {/* <div className="mt-12">
             <a href="/reset-itinerary.pdf" target="_blank" className="inline-flex items-center gap-2 text-[#D4AF37] text-sm hover:underline">
               <FileDown className="w-4 h-4" /> Download Full Retreat Itinerary
             </a>
-          </div>
+          </div> */}
           <div className="mt-10 border-t border-slate-200 pt-8">
             <h4 className="text-lg font-medium text-[#4A4A4A] mb-4">Ready to Take the Next Step?</h4>
             <p className="text-sm text-[#4A4A4A]/80 mb-6">
