@@ -9,11 +9,11 @@ import { FileDown, CalendarCheck, Landmark, Brain, RefreshCw, Sun, HeartHandshak
 import Image from "next/image";
 
 import imgDay1 from "@/public/estrella/2.jpg";
-import imgDay2 from "@/public/estrella/21.jpg";
+import imgDay2 from "@/public/estrella/2.jpg";
 import imgDay3 from "@/public/estrella/22.jpg";
-import imgDay4 from "@/public/estrella/23.jpg";
+import imgDay4 from "@/public/estrella/22.jpg";
 import imgDay5 from "@/public/estrella/24.jpg";
-import imgDay6 from "@/public/estrella/25.jpg";
+import imgDay6 from "@/public/estrella/24.jpg";
 
 type Pillar = "Movement" | "Breath" | "Nutrition" | "Mindset" | "Sleep" | "Joy";
 
