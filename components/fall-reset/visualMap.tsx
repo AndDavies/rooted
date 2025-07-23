@@ -126,7 +126,7 @@ export default function VisualMap() {
   const dayColors = ["#317039", "#D08C60", "#8C9B5A", "#6C4F57", "#A8B2A1"];
 
   return (
-    <section className="bg-[#fefbe8] py-24 scroll-smooth">
+    <section className="bg-[#fefbe8] py-24 scroll-smooth scroll-mt-[90px]">
       <div className="container mx-auto max-w-7xl px-4 md:px-6 grid md:grid-cols-12 gap-10">
         {/* Left: Journey */}
         <div ref={containerRef} className="md:col-span-6 space-y-12 relative">
@@ -138,6 +138,30 @@ export default function VisualMap() {
                 style={{ backgroundColor: dayColors[i % dayColors.length], opacity: 0.7 }}
               />
             ))}
+          </div>
+          {/* About the Event Section */}
+          <div className="mb-16 scroll-mt-[120px]" id="about-event">
+            <h2 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">About the Event</h2>
+            <p className="text-[#4A4A4A]/80 mb-8 max-w-2xl">
+              The ROOTED Reset is a fully immersive 6-day retreat designed to help you reconnect to your body, reset your health, and return with clarity. Here’s what’s included — and what’s not:
+            </p>
+            <div className="grid md:grid-cols-2 gap-12 max-w-4xl">
+              <div>
+                <h3 className="text-lg font-medium text-[#4A4A4A] mb-4">✅ Included</h3>
+                <ul className="list-disc list-inside text-[#4A4A4A]/90 space-y-2">
+                  <li>Lodging</li>
+                  <li>Breakfast, Lunch and Dinner</li>
+                  <li>Custom-made ROOTED Journal</li>
+                  <li>Transportation from/to Porto Airport and the venue in Serra da Estrela</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium text-[#4A4A4A] mb-4">🚫 Not Included</h3>
+                <ul className="list-disc list-inside text-[#4A4A4A]/90 space-y-2">
+                  <li>Airfare to and from Portugal</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div id="itinerary">
             <h2 className="text-4xl font-light mb-8">
