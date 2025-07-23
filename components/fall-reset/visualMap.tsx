@@ -7,17 +7,24 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FileDown, CalendarCheck, Landmark, Brain, RefreshCw, Sun, HeartHandshake } from "lucide-react";
 import Image from "next/image";
-import day1Image from "@/public/estrella/2.jpg";
+
+import imgDay1 from "@/public/estrella/2.jpg";
+import imgDay2 from "@/public/estrella/21.jpg";
+import imgDay3 from "@/public/estrella/22.jpg";
+import imgDay4 from "@/public/estrella/23.jpg";
+import imgDay5 from "@/public/estrella/24.jpg";
+import imgDay6 from "@/public/estrella/25.jpg";
 
 type Pillar = "Movement" | "Breath" | "Nutrition" | "Mindset" | "Sleep" | "Joy";
 
-const imageMap: Record<string, string> = {
-  "Day 1": "/estrella/2.jpg",
-  "Day 2": "/estrella/21.jpg",
-  "Day 3": "/estrella/22.jpg",
-  "Day 4": "/estrella/23.jpg",
-  "Day 5": "/estrella/24.jpg",
-  "Day 6": "/estrella/25.jpg",
+import type { StaticImageData } from "next/image";
+const imageMap: Record<string, StaticImageData> = {
+  "Day 1": imgDay1,
+  "Day 2": imgDay2,
+  "Day 3": imgDay3,
+  "Day 4": imgDay4,
+  "Day 5": imgDay5,
+  "Day 6": imgDay6,
 };
 
 const iconMap: Record<Pillar, React.ReactNode> = {
@@ -118,7 +125,7 @@ const itinerary: {
 
 export default function VisualMap() {
   const containerRef = useRef(null);
-  const [activeImage, setActiveImage] = useState(imageMap["Day 1"]);
+  const [activeImage, setActiveImage] = useState<StaticImageData>(imageMap["Day 1"]);
 
 
   const tagColors = ["#317039", "#D08C60", "#8C9B5A", "#6C4F57", "#A8B2A1"];
@@ -216,7 +223,7 @@ export default function VisualMap() {
         <div className="md:col-span-6 sticky top-24 h-[500px] rounded-lg overflow-hidden shadow-lg">
           <AnimatePresence mode="wait">
             <motion.div
-              key={activeImage}
+              key={activeImage.src}
               initial={{ opacity: 0, scale: 1.05 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0 }}
@@ -224,14 +231,14 @@ export default function VisualMap() {
               className="w-full h-full relative"
             >
               <Image
-                src={activeImage === imageMap["Day 1"] ? day1Image : activeImage}
-                alt="Retreat visual"
+                src={activeImage}
+                alt={`Retreat day image`}
                 width={800}
                 height={500}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 800px"
                 className="w-full h-full object-cover transition-transform duration-[3000ms] scale-[1.05]"
                 priority={activeImage === imageMap["Day 1"]}
-                placeholder={activeImage === imageMap["Day 1"] ? "blur" : undefined}
+                placeholder="blur"
               />
             </motion.div>
           </AnimatePresence>
