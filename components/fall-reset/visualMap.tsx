@@ -217,6 +217,36 @@ export default function VisualMap() {
               <FileDown className="w-4 h-4" /> Download Full Retreat Itinerary
             </a>
           </div>
+          <div className="mt-10 border-t border-slate-200 pt-8">
+            <h4 className="text-lg font-medium text-[#4A4A4A] mb-4">Ready to Take the Next Step?</h4>
+            <p className="text-sm text-[#4A4A4A]/80 mb-6">
+              Whether you're curious, ready to commit, or somewhere in between — we're here to guide the conversation.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#form"
+                className="inline-block bg-[#317039] hover:bg-[#26572d] text-white px-5 py-2 rounded-full text-sm transition"
+              >
+                Start the Conversation
+              </a>
+              <a
+                href="#form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#CC4B24] hover:bg-[#b43f1f] text-white px-5 py-2 rounded-full text-sm transition"
+              >
+                Schedule a Call
+              </a>
+              <a
+                href="https://wa.me/12894725592?text=Hi%20there%2C%20I'm%20interested%20in%20the%20ROOTED%20Retreat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-[#25D366] hover:bg-[#1ebd5f] text-white px-5 py-2 rounded-full text-sm transition"
+              >
+                Message Us on WhatsApp
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Right: Scroll-Responsive Image */}
