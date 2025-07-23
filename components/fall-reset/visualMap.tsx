@@ -132,7 +132,7 @@ export default function VisualMap() {
   const dayColors = ["#317039", "#D08C60", "#8C9B5A", "#6C4F57", "#A8B2A1"];
 
   return (
-    <section className="bg-[#fefbe8] py-4 scroll-smooth">
+    <section className="bg-[#fefbe8] py-24 scroll-smooth">
       <div className="container mx-auto max-w-7xl px-4 md:px-6 grid md:grid-cols-12 gap-10">
         {/* Left: Journey */}
         <div ref={containerRef} className="md:col-span-6 space-y-12 relative">
