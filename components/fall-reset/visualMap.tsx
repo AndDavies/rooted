@@ -51,10 +51,8 @@ const itinerary: {
     mantra: "Set your compass inward.",
     pillars: ["Mindset", "Movement", "Sleep", "Breath", "Nutrition"],
     highlights: [
-      "1:1 assessments with each coach",
-      "Movement & mobility analysis",
-      "Welcome dinner + breathwork",
-      "Evening journal: 'What’s working / not working?'"
+      "1:1 talk with the coaches",
+      "Welcome dinner + breathwork"
     ]
   },
   {
@@ -66,8 +64,7 @@ const itinerary: {
     highlights: [
       "Mobility + breathwork morning session",
       "Guided nature hike to hidden lake",
-      "Hot-cold therapy with breathwork",
-      "Evening journal: 'Where am I holding tension — and why?'"
+      "Hot-cold therapy with breathwork"
     ]
   },
   {
@@ -79,8 +76,8 @@ const itinerary: {
     highlights: [
       "Strength & stability training",
       "Gravel biking adventure",
-      "Evening breath session",
-      "Journal: 'What mask am I ready to release?'"
+      "Evening breath session"
+      
     ]
   },
   {
@@ -92,8 +89,7 @@ const itinerary: {
     highlights: [
       "Values & aligned living workshop",
       "Reflection walk + journaling",
-      "Fireside connection circle",
-      "Journal: 'When do I feel most alive?'"
+      "Fireside connection circle"
     ]
   },
   {
@@ -105,8 +101,7 @@ const itinerary: {
     highlights: [
       "Energy + mobility training",
       "Personal coaching check-in",
-      "Group dinner celebration",
-      "Journal: 'What’s the next version of me?'"
+      "Group dinner celebration"
     ]
   },
   {
@@ -118,7 +113,7 @@ const itinerary: {
     highlights: [
       "Integration circle: 'What I’m taking home'",
       "Brunch picnic",
-      "Departure + 90-day integration plan"
+      "Departure + 30-day integration plan"
     ]
   }
 ];
