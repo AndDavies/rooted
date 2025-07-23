@@ -8,12 +8,12 @@ import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FileDown, CalendarCheck, Landmark, Brain, RefreshCw, Sun, HeartHandshake } from "lucide-react";
 import Image from "next/image";
 
-import imgDay1 from "@/public/estrella/2.jpg";
-import imgDay2 from "@/public/estrella/2.jpg";
+import imgDay1 from "@/public/estrella/21.jpg";
+import imgDay2 from "@/public/estrella/21.jpg";
 import imgDay3 from "@/public/estrella/22.jpg";
-import imgDay4 from "@/public/estrella/22.jpg";
+import imgDay4 from "@/public/estrella/23.jpg";
 import imgDay5 from "@/public/estrella/24.jpg";
-import imgDay6 from "@/public/estrella/24.jpg";
+import imgDay6 from "@/public/estrella/25.jpg";
 
 type Pillar = "Movement" | "Breath" | "Nutrition" | "Mindset" | "Sleep" | "Joy";
 
@@ -236,7 +236,7 @@ export default function VisualMap() {
                 width={800}
                 height={500}
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 800px"
-                className="w-full h-full object-cover transition-transform duration-[3000ms] scale-[1.05]"
+                className="w-full h-full object-cover transition duration-[3000ms] scale-[1.05]"
                 priority={activeImage === imageMap["Day 1"]}
                 placeholder="blur"
               />
