@@ -51,7 +51,8 @@ const itinerary: {
     mantra: "Set your compass inward.",
     pillars: ["Mindset", "Movement", "Sleep", "Breath", "Nutrition"],
     highlights: [
-      "1:1 talk with the coaches",
+        "Personalized bloodwork / baseline biometrics",
+        "1:1 talk with the coaches",
       "Welcome dinner + breathwork"
     ]
   },
