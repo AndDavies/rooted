@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
 import { FileDown, CalendarCheck, Landmark, Brain, RefreshCw, Sun, HeartHandshake } from "lucide-react";
 import Image from "next/image";
+import day1Image from "@/public/estrella/2.jpg";
 
 type Pillar = "Movement" | "Breath" | "Nutrition" | "Mindset" | "Sleep" | "Joy";
 
@@ -150,7 +151,12 @@ export default function VisualMap() {
             const inView = useInView(dayRef, { amount: 0.5 });
 
             useEffect(() => {
-              if (inView) setActiveImage(imageMap[day.day]);
+              if (inView) {
+                const timeout = setTimeout(() => {
+                  setActiveImage(imageMap[day.day]);
+                }, 150);
+                return () => clearTimeout(timeout);
+              }
             }, [inView, day.day]);
 
             return (
@@ -218,11 +224,14 @@ export default function VisualMap() {
               className="w-full h-full relative"
             >
               <Image
-                src={activeImage}
+                src={activeImage === imageMap["Day 1"] ? day1Image : activeImage}
                 alt="Retreat visual"
-                fill
-                style={{ objectFit: "cover" }}
-                className="transition-transform duration-[3000ms] scale-[1.05]"
+                width={800}
+                height={500}
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 800px"
+                className="w-full h-full object-cover transition-transform duration-[3000ms] scale-[1.05]"
+                priority={activeImage === imageMap["Day 1"]}
+                placeholder={activeImage === imageMap["Day 1"] ? "blur" : undefined}
               />
             </motion.div>
           </AnimatePresence>
