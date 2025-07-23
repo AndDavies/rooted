@@ -5,7 +5,7 @@ import React from "react";
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { FileDown, CalendarCheck, Landmark, Brain, RefreshCw, Sun, HeartHandshake } from "lucide-react";
+import { FileDown, CalendarCheck, Landmark, Brain, RefreshCw, Sun, HeartHandshake, MapPin, CalendarDays, BedDouble, Euro, CheckCircle, XCircle } from "lucide-react";
 import Image from "next/image";
 
 import imgDay1 from "@/public/estrella/21.jpg";
@@ -142,34 +142,57 @@ export default function VisualMap() {
           {/* About the Event Section */}
           <div className="mb-16 scroll-mt-[120px]" id="about-event">
             <h2 className="text-3xl md:text-4xl font-light text-[#4A4A4A] mb-6">About the Event</h2>
-            <p className="text-[#4A4A4A]/80 mb-8 max-w-2xl">
-              The ROOTED Reset is a fully immersive 6-day retreat designed to help you reconnect to your body, reset your health, and return with clarity. Here’s what’s included — and what’s not:
-            </p>
-            <div className="grid md:grid-cols-2 gap-12 max-w-4xl">
-              <div>
-                <h3 className="text-lg font-medium text-[#4A4A4A] mb-4">✅ Included</h3>
-                <ul className="list-disc list-inside text-[#4A4A4A]/90 space-y-2">
-                  <li>Lodging</li>
-                  <li>Breakfast, Lunch and Dinner</li>
-                  <li>Custom-made ROOTED Journal</li>
-                  <li>Transportation from/to Porto Airport and the venue in Serra da Estrela</li>
-                </ul>
+            <div className="grid md:grid-cols-2 gap-6 text-sm text-[#4A4A4A]/90 max-w-4xl">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <MapPin className="w-4 h-4 text-[#317039]" />
+                  <span><strong>Location:</strong> Serra da Estrela Natural Park – UNESCO geopark</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CalendarDays className="w-4 h-4 text-[#D08C60]" />
+                  <span><strong>Dates:</strong> 10 Oct – 15 Oct 2025</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <BedDouble className="w-4 h-4 text-[#8C9B5A]" />
+                  <span><strong>Accommodation:</strong> Estrela Serenity Resort</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Euro className="w-4 h-4 text-[#6C4F57]" />
+                  <span><strong>Pricing starts at:</strong> €2,950</span>
+                </div>
               </div>
-              <div>
-                <h3 className="text-lg font-medium text-[#4A4A4A] mb-4">🚫 Not Included</h3>
-                <ul className="list-disc list-inside text-[#4A4A4A]/90 space-y-2">
-                  <li>Airfare to and from Portugal</li>
-                </ul>
+              <div className="space-y-3">
+                <div>
+                  <strong>Includes:</strong>
+                  <ul className="list-none pl-0 mt-1 space-y-1">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 mt-0.5 text-[#317039]" />
+                      <span>Lodging</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 mt-0.5 text-[#317039]" />
+                      <span>All meals (breakfast, lunch, dinner)</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 mt-0.5 text-[#317039]" />
+                      <span>Custom-made ROOTED journal</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-4 h-4 mt-0.5 text-[#317039]" />
+                      <span>Transportation from/to Porto Airport</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="flex items-start gap-2">
+                  <XCircle className="w-4 h-4 mt-0.5 text-[#CC4B24]" />
+                  <span>
+                    <strong>Does Not Include:</strong> Airfare
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-          <div id="itinerary">
-            <h2 className="text-4xl font-light mb-8">
-              Retreat Itinerary Journey
-              <br />
-              <span className="text-[#4A4A4A]/70 text-lg">From mind back into the body</span>
-            </h2>
-          </div>
+
 
           {itinerary.map((day, i) => {
             const dayRef = useRef(null);
@@ -259,7 +282,7 @@ export default function VisualMap() {
                 href="https://wa.me/12894725592?text=Hi%20there%2C%20I'm%20interested%20in%20the%20ROOTED%20Retreat"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-[#25D366] hover:bg-[#1ebd5f] text-white px-5 py-2 rounded-full text-sm transition"
+                className="inline-block bg-[#8C9B5A] hover:bg-[#7c8b4e] text-white px-5 py-2 rounded-full text-sm transition"
               >
                 Message Us on WhatsApp
               </a>
