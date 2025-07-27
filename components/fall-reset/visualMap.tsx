@@ -46,62 +46,69 @@ const itinerary: {
 }[] = [
   {
     day: "Day 1",
-    title: "Arrival & Assessment",
-    theme: "Grounding & Personalization",
-    mantra: "Set your compass inward.",
+    title: "Arrival & Grounding",
+    theme: "Grounding, Personalization & Introductions",
+    mantra: "Begin by arriving fully.",
     pillars: ["Mindset", "Movement", "Sleep", "Breath", "Nutrition"],
     highlights: [
-        "Personalized bloodwork / baseline biometrics",
-        "1:1 talk with the coaches",
-      "Welcome dinner + breathwork"
+      "Staggered guest arrivals + detox tea & fruits",
+      "ROOTED welcome gift + personalized journal",
+      "Guided tour of property + lake walk",
+      "Welcome dinner + opening circle",
+      "Evening breathwork + meditation with Ash"
     ]
   },
   {
     day: "Day 2",
     title: "Reconnect to the Body",
-    theme: "Detoxify & Regulate",
+    theme: "Drop out of the head and into the body",
     mantra: "Let go of what's weighing you down.",
-    pillars: ["Movement", "Breath", "Nutrition", "Joy", "Mindset"],
+    pillars: ["Movement", "Breath", "Nutrition", "Joy"],
     highlights: [
-      "Mobility + breathwork morning session",
-      "Guided nature hike to hidden lake",
-      "Hot-cold therapy with breathwork"
+      "Morning Ritual + mobility with Zeger",
+      "Movement session with Ash/Andrew",
+      "Workshop: Ice Bath Prep & education",
+      "Guided nature hike + picnic lunch",
+      "Evening hot/cold therapy + reflection circle"
     ]
   },
   {
     day: "Day 3",
-    title: "Retrain the Mind",
-    theme: "Letting Go of Old Patterns",
-    mantra: "What mask am I ready to release?",
+    title: "Reclaim Energy & Train the Mind",
+    theme: "Nutrition's impact on energy & focus",
+    mantra: "Fuel clarity. Train presence.",
     pillars: ["Mindset", "Movement", "Breath", "Sleep", "Nutrition"],
     highlights: [
-      "Strength & stability training",
-      "Gravel biking adventure",
-      "Evening breath session"
+      "Morning Ritual + mobility with Zeger",
+      "Functional Nutrition Workshop",
+      "Guided hike + picnic lunch",
+      "Evening hot/cold therapy + group reflection"
     ]
   },
   {
     day: "Day 4",
     title: "Clarity & Connection",
     theme: "Purpose, Presence & Leadership",
-    mantra: "When do I feel most alive?",
+    mantra: "What truly matters right now?",
     pillars: ["Mindset", "Breath", "Joy", "Movement", "Nutrition"],
     highlights: [
+      "Morning Ritual + movement reset",
       "Values & aligned living workshop",
-      "Reflection walk + journaling",
-      "Fireside connection circle"
+      "Free time + guided hike",
+      "Evening hot/cold therapy + reflection"
     ]
   },
   {
     day: "Day 5",
     title: "Embody & Integrate",
     theme: "Building Your New Operating System",
-    mantra: "What’s the next version of me?",
+    mantra: "You are your best environment.",
     pillars: ["Joy", "Mindset", "Sleep", "Movement", "Nutrition"],
     highlights: [
-      "Energy + mobility training",
-      "Personal coaching check-in",
-      "Group dinner celebration"
+      "Morning Ritual + movement with energy focus",
+      "Lifestyle Integration Workshop",
+      "Gravel bike to historic village + picnic lunch",
+      "Evening celebration & gratitude circle"
     ]
   },
   {
@@ -111,9 +118,10 @@ const itinerary: {
     mantra: "Leave with clarity. Return with power.",
     pillars: ["Movement", "Joy", "Mindset", "Sleep"],
     highlights: [
-      "Integration circle: 'What I’m taking home'",
-      "Brunch picnic",
-      "Departure + 30-day integration plan"
+      "Closing breath & movement session",
+      "Integration circle + 30-day plan",
+      "Brunch picnic + community connection",
+      "Departures + optional airport transfers"
     ]
   }
 ];
@@ -127,7 +135,7 @@ export default function VisualMap() {
   const dayColors = ["#317039", "#D08C60", "#8C9B5A", "#6C4F57", "#A8B2A1"];
 
   return (
-    <section className="bg-[#fefbe8] py-24 scroll-smooth scroll-mt-[90px]">
+    <section className="bg-[#fefbe8] py-4 scroll-smooth scroll-mt-[120px]">
       <div className="container mx-auto max-w-7xl px-4 md:px-6 grid md:grid-cols-12 gap-10">
         {/* Left: Journey */}
         <div ref={containerRef} className="md:col-span-6 space-y-12 relative">
@@ -292,7 +300,7 @@ export default function VisualMap() {
         </div>
 
         {/* Right: Scroll-Responsive Image */}
-        <div className="md:col-span-6 sticky top-24 h-[500px] rounded-lg overflow-hidden shadow-lg">
+        <div className="md:col-span-6 sticky top-36 h-[500px] rounded-lg overflow-hidden shadow-lg">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeImage.src}

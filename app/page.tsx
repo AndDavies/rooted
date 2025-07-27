@@ -3,6 +3,7 @@ import Link from "next/link"
 import type { Metadata } from 'next'
 
 import { Hero } from "@/components/hero"
+import { RetreatShowcase } from "@/components/RetreatShowcase"
 import { WhyRooted } from "@/components/whyRooted"
 import { AboutUs } from "@/components/AboutUs"
 import { Program } from "@/components/program"
@@ -33,6 +34,7 @@ export default function Home() {
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
         <Hero />
+        <RetreatShowcase />
 
         <AboutUs />
     
