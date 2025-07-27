@@ -262,11 +262,17 @@ export default function VisualMap() {
             );
           })}
 
-          {/* <div className="mt-12">
-            <a href="/reset-itinerary.pdf" target="_blank" className="inline-flex items-center gap-2 text-[#D4AF37] text-sm hover:underline">
-              <FileDown className="w-4 h-4" /> Download Full Retreat Itinerary
+          <div className="mt-10 flex">
+            <a
+              href="/files/THE ROOTED FALL RETREAT - 10-15 Oct.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-white border border-[#D4AF37] text-[#D4AF37] text-sm font-medium shadow-sm hover:bg-[#fdf4d6] transition"
+            >
+              <FileDown className="w-5 h-5" />
+              Download Full Retreat Itinerary (PDF)
             </a>
-          </div> */}
+          </div>
           <div className="mt-10 border-t border-slate-200 pt-8">
             <h4 className="text-lg font-medium text-[#4A4A4A] mb-4">Ready to Take the Next Step?</h4>
             <p className="text-sm text-[#4A4A4A]/80 mb-6">

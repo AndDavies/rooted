@@ -40,13 +40,15 @@ export function RetreatShowcase() {
           transition={{ duration: 1.2, ease: 'easeOut' }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading leading-tight drop-shadow-md">
-            We're thrilled to announce The ROOTED Fall Retreat.
+            We're thrilled to announce The ROOTED Fall Reset Retreat.
           </h2>
           <p className="mt-4 text-lg sm:text-xl leading-relaxed drop-shadow-sm">
-            Join us in the mountains of Serra da Estrela for an immersive week of guided breathwork, ice baths, hiking, daily rituals, movement sessions, and expert coaching. 
+          Join us in the mountains of Serra da Estrela, Portugal for an immersive week of guided breathwork, ice baths, hiking, biking, movement sessions, gut healing nutrition, expert coaching and community. 
           </p>
           <p className="mt-4 text-lg sm:text-xl leading-relaxed drop-shadow-sm">
-          Plus a personal <a href="https://choosemuse.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-200 transition">Muse</a> headset and platform access that integrates data from Muse, Garmin, and Whoop for 30 days of personalized guidance after the retreat.
+          
+          Plus a personal <a href="https://choosemuse.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-200 transition">Muse</a> headset and platform access that integrates data from Muse, Garmin, and Whoop for personalized guidance after the retreat.
+
           </p>
           <p className="mt-2 text-lg sm:text-xl font-medium drop-shadow-sm">
             Reconnect to your body. Restore your energy. Return home with a new rhythm.

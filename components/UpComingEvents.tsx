@@ -30,7 +30,7 @@ const eventsData: Event[] = [
     tag: "Health Retreat",
     title: "Fall Retreat: Reset. Realign. Rise.",
     location: "Serra Estrela, Portugal", 
-    dates: "October 9-15, 2025",
+    dates: "October 10-15, 2025",
     price: "",
     imageSrc: "/events/reset_vanity_bg_flipped.jpg",
     link: "/experiences/reset",
