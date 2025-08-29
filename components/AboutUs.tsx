@@ -48,7 +48,7 @@ export function AboutUs() {
     <>
       <section className="bg-white relative py" id="about">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 text-center md:text-left pl-4 md:pl-8 lg:pl-16 py-16 md:py-24">
+          <div className="w-full md:w-1/2 text-center md:text-left px-4 md:pl-8 lg:pl-16 py-16 md:py-24">
             <div className="max-w-2xl">
               <div className="mb-6">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-tighter italic mb-3 text-neutral-900 leading-tight px-2">
@@ -80,14 +80,15 @@ export function AboutUs() {
             </div>
           </div>
 
-          <div className="md:w-1/2 w-full">
-            <div className="w-[500px] h-[500px] overflow-hidden relative ml-auto">
+          <div className="hidden md:block md:w-1/2">
+            <div className="w-full max-w-[500px] h-[500px] overflow-hidden relative ml-auto">
               <Image
                 src="/rooted_about_us_section.jpg"
                 alt="Serene natural environment at The ROOTED Way"
                 width={500}
                 height={500}
                 style={{ objectFit: "cover" }}
+                className="w-full h-full"
               />
             </div>
           </div>
