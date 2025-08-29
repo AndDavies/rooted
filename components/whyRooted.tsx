@@ -70,7 +70,7 @@ export function WhyRooted() {
     <section className="py-16" style={{ backgroundColor: "#FFF8EB" }}>
       {/* Mobile / Small screens -> Accordion style */}
       <div className="container mx-auto px-4 max-w-3xl md:hidden">
-        <h2 className="text-2xl sm:text-3xl font-light text-stone-800 mb-8 text-center">
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-light text-stone-800 mb-8 text-center leading-tight px-2">
           The <span className="font-normal text-[#317039]">ROOTED</span> Pillars
         </h2>
 

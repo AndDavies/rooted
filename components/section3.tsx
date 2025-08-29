@@ -130,7 +130,7 @@ export function Section3({ id }: Section3Props) {
 
       {/* Content Section - Now always visible */} 
       <div className="container mx-auto px-4 md:px-8 text-center"> {/* Removed transition and opacity classes */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 text-shadow-md">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 text-shadow-md leading-tight px-2">
           Rooted™: Your Path to Balance
         </h2>
         <p className="text-md md:text-lg text-gray-700 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">

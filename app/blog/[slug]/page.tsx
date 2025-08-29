@@ -211,7 +211,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         <div className="w-full md:w-1/2 flex flex-col justify-center items-start p-6 sm:p-8 md:p-12 lg:p-16 order-2 md:order-1">
           <div className="max-w-2xl">
             {/* Removed font-heading, global style will apply */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl text-[#FFF8EB] mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#FFF8EB] mb-4 leading-tight">
             {post.title}
           </h1>
           {post.excerpt && (

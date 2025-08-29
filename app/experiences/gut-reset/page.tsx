@@ -105,7 +105,7 @@ export default function GutResetPage() {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight mb-6">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light text-white leading-tight mb-6 px-2">
               <span className="block">14-Day Gut Reset:</span>
               <span className="block text-[#D4AF36] font-normal">Restore. Rebalance. Revive.</span>
             </h1>

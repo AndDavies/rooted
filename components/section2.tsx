@@ -57,7 +57,7 @@ export function Section2() {
             <span className="block text-gray-500 text-sm font-medium tracking-wider uppercase mb-2 text-shadow-sm">
               The Unseen Toll
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 text-shadow-md">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 text-shadow-md leading-tight px-2">
               The High Cost of Always-On Leadership
             </h2>
         </div>

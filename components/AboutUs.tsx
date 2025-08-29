@@ -51,7 +51,7 @@ export function AboutUs() {
           <div className="md:w-1/2 text-center md:text-left pl-4 md:pl-8 lg:pl-16 py-16 md:py-24">
             <div className="max-w-2xl">
               <div className="mb-6">
-                <h1 className="text-4xl tracking-tighter italic mb-3 text-neutral-900">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl tracking-tighter italic mb-3 text-neutral-900 leading-tight px-2">
                 The hidden cost of high performance
                 </h1>
               </div>

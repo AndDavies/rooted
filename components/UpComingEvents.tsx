@@ -101,7 +101,7 @@ export function UpComingEvents() {
     <section id="upcoming-events" className="py-20 md:py-28 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light text-stone-800 mb-4">Upcoming Events</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light text-stone-800 mb-4 leading-tight px-2">Upcoming Events</h2>
           <div className="w-16 h-px bg-stone-300 mx-auto"></div>
         </div>
 
