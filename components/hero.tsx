@@ -35,16 +35,16 @@ export function Hero() {
       </div>
       
       {/* Content */}
-      <div className="relative z-20 container mx-auto h-full flex flex-col justify-center items-center px-4 text-center">
+      <div className="relative z-20 container mx-auto h-full flex flex-col justify-center items-center px-4 sm:px-6 text-center">
         <div className="max-w-7xl w-full">
           <div className="mb-8">
             {/* Removed popsiesFont.className and font-bold, font applied globally */}
             <h1
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl text-white tracking-tighter text-shadow-hero-h1 mb-6 leading-tight px-2"
             >
               Live with alignment. Lead with clarity.
             </h1>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl text-white/90 tracking-tight text-shadow-hero-h1">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-white/90 tracking-tight text-shadow-hero-h1 px-2">
               ROOTED is your return to what matters.
             </h2>
           </div>

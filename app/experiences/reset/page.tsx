@@ -139,10 +139,10 @@ export default function ResetRetreatPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10"></div>
         </div>
         <div className="relative z-10 container px-6 max-w-4xl mx-auto text-center">
-          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap">
+          <h1 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-white tracking-tighter text-shadow-hero-h1 mb-6 leading-tight">
             THE ROOTED FALL RETREAT 
           </h1>
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#D4AF37] tracking-tighter text-shadow-hero-h1 mb-6 whitespace-nowrap">Reset. Realign. Rise.</h2>
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-[#D4AF37] tracking-tighter text-shadow-hero-h1 mb-6 leading-tight">Reset. Realign. Rise.</h2>
           <p className="text-xl md:text-2xl text-white/90 font-medium mb-4">October 10-15, 2025 | Serra da Estrela Natural Park – UNESCO geopark</p>
           <p className="text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-8">
             A science-backed, nature-immersive retreat for high performers ready to reclaim their health, clarity, and energy
